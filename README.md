@@ -3,7 +3,7 @@ Continuation of work done by original EmuGators, building on their use of FCEUX 
 
 ## Work Completed
 ### Pre-Alpha Build
-Rudolph Civil
+Rudolph Civil - I tried to run the on MAC M1 chip, I ran into some issues, so i will be putting this set up on pause until further notice. I joined the Team's task to get it up and running on Linux to help result some issues. I Downloaded Virtual box and used Debian Linux OS and attempted to set up the emulator. I Cloned and tried to build previous teams's repo on my linux system. Ran into same QT GUI issues that Chritian is working on solving. 
 
 Fatima Elfasi - Cloned and built previous team's efforts on local machine and worked on getting demo LUA script to work and ensured that ROMs and ROM cartidge images load too. Worked with Christian to build fceux emulator on Renegade board. Worked on clarifying build documentation based on snags we hit and how we worked around it. Arranged meeting for Emugators Supergroup (both teams) to show us the structure of their code-base and how to run their project. Worked on aesthetic choices and made mockups which inspired our new GUI.
 
@@ -12,7 +12,7 @@ Zachary Thrasher - Extenuating circumstances.
 Christian Walk - Built previous team's progress on local machine with emugator_demo.lua script working properly. Research Qt libraries in C++ and started creating the interface based on the mockup in the design revision with the ROM images(image in pre-alpha documentation) currently not connected to FCEUX. Got board setup with Raspbian and worked with Fatima to get fceux emulator running with emugator_demo on the board(current lua script still not displaying due to dependency issue).
 
 ## Next Steps
-Rudolph Civil
+Rudolph Civil - I will be doing further reaserch on the QT GUI with Chritian. On my spare time, I will also be working on the Mac M1 chip to run this. Working on creating a schedule where we would work together on the project, in order for us to be on the same page with this build process. 
 
 Fatima Elfasi - Research methods for implementing SNES emulation using either Snes9x or bsnes. Support with implementing smooth communication between GUI and emulator.
 
