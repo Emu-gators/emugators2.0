@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
     curRom = 0;
+    draggedRom = 0;
     loadROMImages();
     //viewROMImages();
     displayCurROM();
@@ -142,8 +143,17 @@ void MainWindow::on_previousButton_clicked()
 
 void MainWindow::mousePressEvent(QMouseEvent *event)
 {
-    if (ui->label->geometry().contains(event->globalPos().x(),event->globalPos().y())) {
+    QPoint globalCursorPos = QCursor::pos();
+    int x = globalCursorPos.x();
+    int y = globalCursorPos.y();
+    if (ui->label->geometry().contains(x,y)) {
+        draggedRom = curRom;
 
+        /*qDebug( "Mouse Press event" );
+        qDebug() << "X: " << x << "position!";
+        qDebug() << "Y: " << y << "position!";
+        qDebug() << "X: " << event->globalPosition().x() << "position!";
+        qDebug() << "Y: " << event->globalPosition().y() << "position!";*/
         QDrag *drag = new QDrag(this);
 
         QMimeData *mimeData = new QMimeData;
@@ -152,9 +162,22 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         drag->setMimeData(mimeData);
 
         drag->setPixmap(QPixmap::fromImage(roms.at(curRom)));
-        //drag->exec();
-        Qt::DropAction dropAction = drag->exec();
-
+        drag->exec();
+        globalCursorPos = QCursor::pos();
+        x = globalCursorPos.x();
+        y = globalCursorPos.y();
+        //Qt::DropAction dropAction = drag->exec();
+        if(ui->famicom->geometry().contains(x,y))
+        {
+            ui->label->raise();
+            ui->label->setPixmap(QPixmap::fromImage(roms.at(draggedRom+1)));
+        }
+        /*qDebug( "After Drop Action" );
+        qDebug() << "X: " << x << "position!";
+        qDebug() << "Y: " << y << "position!";
+        qDebug() <<"Contained in Famicom "<<ui->famicom->geometry().contains(x,y)<< "!";*/
     }
 }
+
+
 

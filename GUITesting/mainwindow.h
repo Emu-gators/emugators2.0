@@ -28,6 +28,7 @@ private:
     void displayCurROM();
     std::vector<QImage> roms;
     int curRom;
+    int draggedRom;
 
 };
 #endif // MAINWINDOW_H
