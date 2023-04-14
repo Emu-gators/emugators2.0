@@ -25,10 +25,12 @@ private:
     Ui::MainWindow *ui;
     void viewROMImages();
     void loadROMImages();
+    void loadROMPaths();
     void displayCurROM();
     std::vector<QImage> roms;
     int curRom;
     int draggedRom;
+    std::vector<std::string> romPaths;
 
 };
 #endif // MAINWINDOW_H

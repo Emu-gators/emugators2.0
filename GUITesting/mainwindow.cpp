@@ -5,6 +5,8 @@
 #include <QDrag>
 #include <QMouseEvent>
 #include <QMimeData>
+#include <string>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -15,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     curRom = 0;
     draggedRom = 0;
     loadROMImages();
+    loadROMPaths();
     //viewROMImages();
     displayCurROM();
 }
@@ -22,6 +25,37 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::loadROMPaths()
+{
+    std::string str0 = "../../../ROMS/emugator/ROMs/BalloonFight(Japan).nes";
+    romPaths.push_back(str0);
+    std::string str1 = "../../../ROMS/emugator/ROMs/B-Wings (Japan).nes";
+    romPaths.push_back(str1);
+    std::string str2 = "../../../ROMS/emugator/ROMs/Crisis Force (Japan).nes";
+    romPaths.push_back(str2);
+    std::string str3 = "../../../ROMS/emugator/ROMs/Dig Dug (Japan).nes";
+    romPaths.push_back(str3);
+    std::string str4 = "../../../ROMS/emugator/ROMs/Dr. Mario (Japan, USA).nes";
+    romPaths.push_back(str4);
+    std::string str5 = "../../../ROMS/emugator/ROMs/Final Fantasy III (Japan).nes";
+    romPaths.push_back(str5);
+    std::string str6 = "../../../ROMS/emugator/ROMs/Gradius (Japan).nes";
+    romPaths.push_back(str6);
+    std::string str7 = "../../../ROMS/emugator/ROMs/Gradius II (Japan).nes";
+    romPaths.push_back(str7);
+    std::string str8 = "../../../ROMS/emugator/ROMs/Ice Climber (Japan).nes";
+    romPaths.push_back(str8);
+    std::string str9 = "../../../ROMS/emugator/ROMs/LegendOfZelda2_JP.nes";
+    romPaths.push_back(str9);
+    std::string str10 = "../../../ROMS/emugator/ROMs/Pac-Man (Japan).nes";
+    romPaths.push_back(str10);
+    std::string str11 = "../../../ROMS/emugator/ROMs/Super Mario Bros. 3 (Japan).nes";
+    romPaths.push_back(str11);
+    std::string str12 = "../../../ROMS/emugator/ROMs/superMarioBros.nes";
+    romPaths.push_back(str12);
+
 }
 
 void MainWindow::loadROMImages()
@@ -169,8 +203,9 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         //Qt::DropAction dropAction = drag->exec();
         if(ui->famicom->geometry().contains(x,y))
         {
-            ui->label->raise();
-            ui->label->setPixmap(QPixmap::fromImage(roms.at(draggedRom+1)));
+            qDebug() << "ROM Path: " << romPaths.at(curRom).data();
+            //ui->label->raise();
+            //ui->label->setPixmap(QPixmap::fromImage(roms.at(draggedRom+1)));
         }
         /*qDebug( "After Drop Action" );
         qDebug() << "X: " << x << "position!";
