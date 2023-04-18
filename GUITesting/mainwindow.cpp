@@ -6,6 +6,9 @@
 #include <QMouseEvent>
 #include <QMimeData>
 #include <string>
+#include <QProcess>
+//#include <QTest>
+
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -16,17 +19,25 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     curRom = 0;
     draggedRom = 0;
+    OpenFCEUX();
     loadROMImages();
     loadROMPaths();
     //viewROMImages();
     displayCurROM();
+    
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-
+void MainWindow::OpenFCEUX(){
+    
+    QString program = "./fceux";
+        QStringList arguments;
+        QProcess::startDetached(program, arguments);
+    
+};
 void MainWindow::loadROMPaths()
 {
     std::string str0 = "../../../ROMS/emugator/ROMs/BalloonFight(Japan).nes";

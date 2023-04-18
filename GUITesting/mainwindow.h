@@ -26,6 +26,7 @@ private:
     void viewROMImages();
     void loadROMImages();
     void loadROMPaths();
+    void OpenFCEUX();
     void displayCurROM();
     std::vector<QImage> roms;
     int curRom;
