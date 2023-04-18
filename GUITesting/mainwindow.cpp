@@ -8,7 +8,15 @@
 #include <string>
 #include <QProcess>
 //#include <QTest>
+//Named Pipe includes
+//#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <string.h>
 
+#define FIFO_FILE "MYFIFO"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -19,11 +27,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     curRom = 0;
     draggedRom = 0;
-    OpenFCEUX();
+    //OpenFCEUX();
     loadROMImages();
     loadROMPaths();
     //viewROMImages();
     displayCurROM();
+
     
 }
 
@@ -34,8 +43,8 @@ MainWindow::~MainWindow()
 void MainWindow::OpenFCEUX(){
     
     QString program = "./fceux";
-        QStringList arguments;
-        QProcess::startDetached(program, arguments);
+    QStringList arguments;
+    QProcess::startDetached(program, arguments);
     
 };
 void MainWindow::loadROMPaths()
@@ -214,7 +223,23 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         //Qt::DropAction dropAction = drag->exec();
         if(ui->famicom->geometry().contains(x,y))
         {
-            qDebug() << "ROM Path: " << romPaths.at(curRom).data();
+            fd = open(FIFO_FILE, O_CREAT|O_WRONLY);
+            qDebug() << "FD: " << fd << " number!";
+            //qDebug() << "ROM Path: " << romPaths.at(curRom).data();
+            for (int x = 0; x < romPaths.at(curRom).length(); x++) {
+                readbuf[x] = romPaths.at(curRom).data()[x];
+                //qDebug()<<"Length of readBuf readbuf"<<romPaths.at(curRom).data()[x];
+            }
+            //qDebug()<<"Length of readBuf readbuf"<<romPaths.at(curRom).data()[x];
+            stringLen = strlen(readbuf);
+            qDebug()<<"Length of readBuf readbuf"<<stringLen;
+            readbuf[stringLen] = '\0';
+            qDebug()<<"Before writing readbuf"<<readbuf;
+
+            write(fd, readbuf, strlen(readbuf));
+            qDebug()<<"Before writing endstr and after writing readBuf";
+            ::close(fd);
+
             //ui->label->raise();
             //ui->label->setPixmap(QPixmap::fromImage(roms.at(draggedRom+1)));
         }

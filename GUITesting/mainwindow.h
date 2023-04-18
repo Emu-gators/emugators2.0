@@ -32,6 +32,12 @@ private:
     int curRom;
     int draggedRom;
     std::vector<std::string> romPaths;
+    //Named Pipe communication
+    int fd;
+    int end_process;
+    int stringLen;
+    char readbuf[80];
+    char endStr[5];
 
 };
 #endif // MAINWINDOW_H
