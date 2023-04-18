@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=GUITesting
+Comment=Testing GUI from desktop
+Exec=/home/emugators/Documents/other/emugators2.0old/GUITesting/GUITesting
+Icon=/home/emugators/Documents/other/emugators2.0old/GUITesting/GUITesting.png
+Terminal=false
+Type=Application
+Categories=Utility
