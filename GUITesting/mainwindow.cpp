@@ -10,10 +10,12 @@
 //#include <QTest>
 //Named Pipe includes
 //#include <stdio.h>
+#include <QMainWindow>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <QThread>
 #include <string.h>
 
 #define FIFO_FILE "MYFIFO"
@@ -27,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     curRom = 0;
     draggedRom = 0;
-    //OpenFCEUX();
+    
     loadROMImages();
     loadROMPaths();
     //viewROMImages();
@@ -42,10 +44,11 @@ MainWindow::~MainWindow()
 }
 void MainWindow::OpenFCEUX(){
     
-    QString program = "./fceux";
-    QStringList arguments;
-    QProcess::startDetached(program, arguments);
-    
+    QString fceux_path = QCoreApplication::applicationDirPath() + "/fceux";
+ QStringList argument;
+ argument << "superMarioBros.nes";
+    QProcess::startDetached(fceux_path, argument);
+     QThread::msleep(1000);
 };
 void MainWindow::loadROMPaths()
 {
@@ -80,71 +83,71 @@ void MainWindow::loadROMPaths()
 
 void MainWindow::loadROMImages()
 {
-    QImage img0("/home/emugators/Documents/ROMS/emugator/ROM_Carts/BalloonFight(Japan).jpg");
+    QImage img0("/home/rudy/Downloads/ROMS/emugator/ROM_Carts/BalloonFight(Japan).jpg");
     QImage scale0 = img0.scaled(100,100,Qt::KeepAspectRatio);
     roms.push_back(scale0);
-    QImage img1("/home/emugators/Documents/ROMS/emugator/ROM_Carts/B-Wings(Japan).jpg");
+    QImage img1("/home/rudy/Downloads/ROMS/emugator/ROM_Carts/B-Wings(Japan).jpg");
     QImage scale1 = img1.scaled(100,100,Qt::KeepAspectRatio);
     roms.push_back(scale1);
-    QImage img2("/home/emugators/Documents/ROMS/emugator/ROM_Carts/CrisisForce(Japan).jpg");
+    QImage img2("/home/rudy/Downloads/ROMS/emugator/ROM_Carts/CrisisForce(Japan).jpg");
     QImage scale2 = img2.scaled(100,100,Qt::KeepAspectRatio);
     roms.push_back(scale2);
-    QImage img3("/home/emugators/Documents/ROMS/emugator/ROM_Carts/DigDug(Japan).jpg");
+    QImage img3("/home/rudy/Downloads/ROMS/emugator/ROM_Carts/DigDug(Japan).jpg");
     QImage scale3 = img3.scaled(100,100,Qt::KeepAspectRatio);
     roms.push_back(scale3);
-    QImage img4("/home/emugators/Documents/ROMS/emugator/ROM_Carts/DrMario(Japan,USA).jpg");
+    QImage img4("/home/rudy/Downloads/ROMS/emugator/ROM_Carts/DrMario(Japan,USA).jpg");
     QImage scale4 = img4.scaled(100,100,Qt::KeepAspectRatio);
     roms.push_back(scale4);
-    QImage img5("/home/emugators/Documents/ROMS/emugator/ROM_Carts/Final Fantasy III (Japan).jpg");
+    QImage img5("/home/rudy/Downloads/ROMS/emugator/ROM_Carts/Final Fantasy III (Japan).jpg");
     QImage scale5 = img5.scaled(100,100,Qt::KeepAspectRatio);
     roms.push_back(scale5);
-    QImage img6("/home/emugators/Documents/ROMS/emugator/ROM_Carts/Gradius (Japan).jpg");
+    QImage img6("/home/rudy/Downloads/ROMS/emugator/ROM_Carts/Gradius (Japan).jpg");
     QImage scale6 = img6.scaled(100,100,Qt::KeepAspectRatio);
     roms.push_back(scale6);
-    QImage img7("/home/emugators/Documents/ROMS/emugator/ROM_Carts/Gradius II (Japan).jpg");
+    QImage img7("/home/rudy/Downloads/ROMS/emugator/ROM_Carts/Gradius II (Japan).jpg");
     QImage scale7 = img7.scaled(100,100,Qt::KeepAspectRatio);
     roms.push_back(scale7);
-    QImage img8("/home/emugators/Documents/ROMS/emugator/ROM_Carts/Ice Climber (Japan).jpg");
+    QImage img8("/home/rudy/Downloads/ROMS/emugator/ROM_Carts/Ice Climber (Japan).jpg");
     QImage scale8 = img8.scaled(100,100,Qt::KeepAspectRatio);
     roms.push_back(scale8);
-    QImage img9("/home/emugators/Documents/ROMS/emugator/ROM_Carts/LegendOfZelda2_JP.jpg");
+    QImage img9("/home/rudy/Downloads/ROMS/emugator/ROM_Carts/LegendOfZelda2_JP.jpg");
     QImage scale9 = img9.scaled(100,100,Qt::KeepAspectRatio);
     roms.push_back(scale9);
-    QImage img10("/home/emugators/Documents/ROMS/emugator/ROM_Carts/Pac-Man (Japan).jpg");
+    QImage img10("/home/rudy/Downloads/ROMS/emugator/ROM_Carts/Pac-Man (Japan).jpg");
     QImage scale10 = img10.scaled(100,100,Qt::KeepAspectRatio);
     roms.push_back(scale10);
-    QImage img11("/home/emugators/Documents/ROMS/emugator/ROM_Carts/Super Mario Bros. 3 (Japan).jpg");
+    QImage img11("/home/rudy/Downloads/ROMS/emugator/ROM_Carts/Super Mario Bros. 3 (Japan).jpg");
     QImage scale11 = img11.scaled(100,100,Qt::KeepAspectRatio);
     roms.push_back(scale11);
-    QImage img12("/home/emugators/Documents/ROMS/emugator/ROM_Carts/superMarioBros.jpg");
+    QImage img12("/home/rudy/Downloads/ROMS/emugator/ROM_Carts/superMarioBros.jpg");
     QImage scale12 = img12.scaled(100,100,Qt::KeepAspectRatio);
     roms.push_back(scale12);
 
-    QImage background("/home/emugators/Documents/ROMS/background.jpg");
+    QImage background("/home/rudy/Downloads/ROMS/background.jpg");
     QImage scaleBack = background.scaled(500,750,Qt::KeepAspectRatio);
     ui->background->setPixmap(QPixmap::fromImage(scaleBack));
 
-    QImage games("/home/emugators/Documents/ROMS/lowresbookshelfedit.png");
+    QImage games("/home/rudy/Downloads/ROMS/lowresbookshelfedit.png");
     QImage scaleGame = games.scaled(400,125,Qt::KeepAspectRatio);
     ui->games->setPixmap(QPixmap::fromImage(scaleGame));
 
-    QImage famicom("/home/emugators/Documents/ROMS/Nintendo-Famicom-Disk-System.png");
+    QImage famicom("/home/rudy/Downloads/ROMS/Nintendo-Famicom-Disk-System.png");
     QImage scaleFam = famicom.scaled(360,300,Qt::KeepAspectRatio);
     ui->famicom->setPixmap(QPixmap::fromImage(scaleFam));
 
-    QImage shelf("/home/emugators/Documents/ROMS/shelfedit.jpg");
+    QImage shelf("/home/rudy/Downloads/ROMS/shelfedit.jpg");
     QImage scaleShelf = shelf.scaled(450,65,Qt::KeepAspectRatio);
     ui->shelf->setPixmap(QPixmap::fromImage(scaleShelf));
     ui->shelf->lower();
     ui->background->lower();
 
-    QImage left("/home/emugators/Documents/ROMS/leftArrow.png");
+    QImage left("/home/rudy/Downloads/ROMS/leftArrow.png");
     QIcon leftButton(QPixmap::fromImage(left));
     ui->previousButton->setIcon(leftButton);
     //ui->previousButton->setIconSize(QPixmap::fromImage(left).rect().size());
 
 
-    QImage right("/home/emugators/Documents/ROMS/rightArrow.png");
+    QImage right("/home/rudy/Downloads/ROMS/rightArrow.png");
     QIcon rightButton(QPixmap::fromImage(right));
     ui->nextButton->setIcon(rightButton);
 }
@@ -172,6 +175,7 @@ void MainWindow::displayCurROM()
 {
     ui->nextButton->raise();
     ui->previousButton->raise();
+  
     ui->label->raise();
     ui->label->setPixmap(QPixmap::fromImage(roms.at(curRom)));
 }
@@ -193,6 +197,7 @@ void MainWindow::on_previousButton_clicked()
         curRom = roms.size()-1;
     }
     displayCurROM();
+      
 }
 
 void MainWindow::mousePressEvent(QMouseEvent *event)
@@ -216,7 +221,9 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         drag->setMimeData(mimeData);
 
         drag->setPixmap(QPixmap::fromImage(roms.at(curRom)));
+        
         drag->exec();
+        OpenFCEUX();
         globalCursorPos = QCursor::pos();
         x = globalCursorPos.x();
         y = globalCursorPos.y();
@@ -224,7 +231,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         if(ui->famicom->geometry().contains(x,y))
         {
             fd = open(FIFO_FILE, O_CREAT|O_WRONLY);
-            qDebug() << "FD: " << fd << " number!";
+           // qDebug() << "FD: " << fd << " number!";
             //qDebug() << "ROM Path: " << romPaths.at(curRom).data();
             for (int x = 0; x < romPaths.at(curRom).length(); x++) {
                 readbuf[x] = romPaths.at(curRom).data()[x];
@@ -232,12 +239,12 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
             }
             //qDebug()<<"Length of readBuf readbuf"<<romPaths.at(curRom).data()[x];
             stringLen = strlen(readbuf);
-            qDebug()<<"Length of readBuf readbuf"<<stringLen;
+           // qDebug()<<"Length of readBuf readbuf"<<stringLen;
             readbuf[stringLen] = '\0';
-            qDebug()<<"Before writing readbuf"<<readbuf;
+           // qDebug()<<"Before writing readbuf"<<readbuf;
 
             write(fd, readbuf, strlen(readbuf));
-            qDebug()<<"Before writing endstr and after writing readBuf";
+            //qDebug()<<"Before writing endstr and after writing readBuf";
             ::close(fd);
 
             //ui->label->raise();
