@@ -9,16 +9,17 @@
 #include <QProcess>
 //#include <QTest>
 //Named Pipe includes
-//#include <stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include <QMainWindow>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <fcntl.h>
-#include <unistd.h>
+//#include <sys/stat.h>
+//#include <sys/types.h>
+//#include <fcntl.h>
+//#include <unistd.h>
 #include <QThread>
 #include <string.h>
 
-#define FIFO_FILE "MYFIFO"
+//#define FIFO_FILE "MYFIFO"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -52,29 +53,29 @@ void MainWindow::OpenFCEUX(){
 };
 void MainWindow::loadROMPaths()
 {
-    std::string str0 = "/home/emugators/Documents/ROMS/emugator/ROMs/BalloonFight(Japan).nes";
+    std::string str0 = "/home/emugators/Documents/ROMS/emugator/ROMs/BalloonFightJapan.nes";
     romPaths.push_back(str0);
-    std::string str1 = "/home/emugators/Documents/ROMS/emugator/ROMs/B-Wings (Japan).nes";
+    std::string str1 = "/home/emugators/Documents/ROMS/emugator/ROMs/B-WingsJapan.nes";
     romPaths.push_back(str1);
-    std::string str2 = "/home/emugators/Documents/ROMS/emugator/ROMs/Crisis Force (Japan).nes";
+    std::string str2 = "/home/emugators/Documents/ROMS/emugator/ROMs/CrisisForceJapan.nes";
     romPaths.push_back(str2);
-    std::string str3 = "/home/emugators/Documents/ROMS/emugator/ROMs/Dig Dug (Japan).nes";
+    std::string str3 = "/home/emugators/Documents/ROMS/emugator/ROMs/DigDugJapan.nes";
     romPaths.push_back(str3);
-    std::string str4 = "/home/emugators/Documents/ROMS/emugator/ROMs/Dr. Mario (Japan, USA).nes";
+    std::string str4 = "/home/emugators/Documents/ROMS/emugator/ROMs/Dr.MarioJapan,USA.nes";
     romPaths.push_back(str4);
-    std::string str5 = "/home/emugators/Documents/ROMS/emugator/ROMs/Final Fantasy III (Japan).nes";
+    std::string str5 = "/home/emugators/Documents/ROMS/emugator/ROMs/FinalFantasyIIIJapan.nes";
     romPaths.push_back(str5);
-    std::string str6 = "/home/emugators/Documents/ROMS/emugator/ROMs/Gradius (Japan).nes";
+    std::string str6 = "/home/emugators/Documents/ROMS/emugator/ROMs/GradiusJapan.nes";
     romPaths.push_back(str6);
-    std::string str7 = "/home/emugators/Documents/ROMS/emugator/ROMs/Gradius II (Japan).nes";
+    std::string str7 = "/home/emugators/Documents/ROMS/emugator/ROMs/GradiusIIJapan.nes";
     romPaths.push_back(str7);
-    std::string str8 = "/home/emugators/Documents/ROMS/emugator/ROMs/Ice Climber (Japan).nes";
+    std::string str8 = "/home/emugators/Documents/ROMS/emugator/ROMs/IceClimberJapan.nes";
     romPaths.push_back(str8);
     std::string str9 = "/home/emugators/Documents/ROMS/emugator/ROMs/LegendOfZelda2_JP.nes";
     romPaths.push_back(str9);
-    std::string str10 = "/home/emugators/Documents/ROMS/emugator/ROMs/Pac-Man (Japan).nes";
+    std::string str10 = "/home/emugators/Documents/ROMS/emugator/ROMs/Pac-ManJapan.nes";
     romPaths.push_back(str10);
-    std::string str11 = "/home/emugators/Documents/ROMS/emugator/ROMs/Super Mario Bros. 3 (Japan).nes";
+    std::string str11 = "/home/emugators/Documents/ROMS/emugator/ROMs/SuperMarioBros.3Japan.nes";
     romPaths.push_back(str11);
     std::string str12 = "/home/emugators/Documents/ROMS/emugator/ROMs/superMarioBros.nes";
     romPaths.push_back(str12);
@@ -223,32 +224,42 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         drag->setPixmap(QPixmap::fromImage(roms.at(curRom)));
         
         drag->exec();
-        OpenFCEUX();
+        //OpenFCEUX();
         globalCursorPos = QCursor::pos();
         x = globalCursorPos.x();
         y = globalCursorPos.y();
         //Qt::DropAction dropAction = drag->exec();
         if(ui->famicom->geometry().contains(x,y))
         {
-            fd = open(FIFO_FILE, O_CREAT|O_WRONLY);
+            //fd = open(FIFO_FILE, O_CREAT|O_WRONLY);
            // qDebug() << "FD: " << fd << " number!";
             //qDebug() << "ROM Path: " << romPaths.at(curRom).data();
-            for (int x = 0; x < romPaths.at(curRom).length(); x++) {
-                readbuf[x] = romPaths.at(curRom).data()[x];
+            //for (int x = 0; x < romPaths.at(curRom).length(); x++) {
+            //    readbuf[x] = romPaths.at(curRom).data()[x];
                 //qDebug()<<"Length of readBuf readbuf"<<romPaths.at(curRom).data()[x];
-            }
+            //}
             //qDebug()<<"Length of readBuf readbuf"<<romPaths.at(curRom).data()[x];
-            stringLen = strlen(readbuf);
+            //stringLen = strlen(readbuf);
            // qDebug()<<"Length of readBuf readbuf"<<stringLen;
-            readbuf[stringLen] = '\0';
+            //readbuf[stringLen] = '\0';
            // qDebug()<<"Before writing readbuf"<<readbuf;
 
-            write(fd, readbuf, strlen(readbuf));
+            //write(fd, readbuf, strlen(readbuf));
             //qDebug()<<"Before writing endstr and after writing readBuf";
-            ::close(fd);
+            //::close(fd);
 
-            //ui->label->raise();
-            //ui->label->setPixmap(QPixmap::fromImage(roms.at(draggedRom+1)));
+            
+			std::string command = "gtk-launch fceux ";
+			command = command + romPaths.at(draggedRom)+ "\n";
+			char* c = const_cast<char*>(command.c_str());
+			system(c);
+			ui->label->raise();
+			draggedRom += 1;
+			if(draggedRom >= roms.size())
+			{
+				draggedRom = 0;
+			}
+            ui->label->setPixmap(QPixmap::fromImage(roms.at(draggedRom+1)));
         }
         /*qDebug( "After Drop Action" );
         qDebug() << "X: " << x << "position!";
