@@ -4,7 +4,11 @@ Continuation of work done by original EmuGators, building on their use of FCEUX 
 ## Work Completed
 ### Design Prototype
 
-Rudolph Civil - 
+Rudolph Civil -In my role, I was responsible for developing the connection between the GUI and FCEUX, and I was able to achieve this by leveraging the QT command line interface. Through extensive research, I delved deeply into the nuances of various operating systems and how using the terminal could impact the GUI when loading ROMs through command lines.
+
+I discovered that different operating systems require different commands for executing tasks such as loading ROMs, with the "open" command being used specifically for MAC OS and different commands used for Linux. I took charge of this task and worked tirelessly to ensure that the ROMs were properly loaded into FCEUX, which required me to use an argument in the command line. I was able to find this crucial information in the FCEUX documentation and the team effectively incorporate it into our system.
+
+Overall, my efforts helped to ensure a seamless integration between the GUI and FCEUX, resulting in a streamlined user experience for our users.
 
 Fatima Elfasi - 
 
