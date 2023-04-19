@@ -2,6 +2,22 @@
 Continuation of work done by original EmuGators, building on their use of FCEUX to emulate the Famicom system.
 
 ## Work Completed
+### Design Prototype
+
+Rudolph Civil - 
+
+Fatima Elfasi - 
+
+Zachary Thrasher - Extenuating circumstances.
+
+Christian Walk - 
+
+### Known Bugs/Issues
+1) The drag and drop feature is currently configured to work when the GUI window is aligned at the top left corner of the screen. This is related to the pixel mapping being global and should be fixed to being mapped relative to the GUI window instead.
+
+2) When a game is dragged and dropped into the system, the next ROM cart image is loaded, however the previous ROM's address is still associated with it until you press the next or previous buttons. This can be rectified through a check loop in the code. We can also implement a class object that associates the ROM cartridge images with their respective ROM files.
+
+##
 ### Pre-Alpha Build
 Rudolph Civil - I tried to run the on MAC M1 chip, I ran into some issues, so i will be putting this set up on pause until further notice. I joined the Team's task to get it up and running on Linux to help result some issues. I Downloaded Virtual box and used Debian Linux OS and attempted to set up the emulator. I Cloned and tried to build previous teams's repo on my linux system. Ran into same QT GUI issues that Chritian is working on solving. 
 
