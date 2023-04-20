@@ -10,7 +10,7 @@ I discovered that different operating systems require different commands for exe
 
 Overall, my efforts helped to ensure a seamless integration between the GUI and FCEUX, resulting in a streamlined user experience for our users.
 
-Fatima Elfasi - 
+Fatima Elfasi - My efforts during this milestone were primarily focused on research and experimenting with getting the GUI to seamlessly load on boot, which I successfully configured. I also helped in the discovery part of getting the ROMs to load when a cartridge is dropped. My contribution to this task was specifically by using debugging to try and find the point in the the FCEUX codebase between when a ROM is selected and the ROM is loaded. The intention was to try and intercept this function to use for our drag and drop feature to properly load up a ROM upon cartridge drop. Additionally, I worked on getting a Trello board started for project management and organization and establishing weekly scrums to go over the tasks on the board. I have continued with the efforts of notetaking during our meetings with the instructors.  
 
 Zachary Thrasher - Extenuating circumstances.
 
