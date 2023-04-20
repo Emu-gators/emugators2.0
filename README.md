@@ -14,7 +14,7 @@ Fatima Elfasi -
 
 Zachary Thrasher - Extenuating circumstances.
 
-Christian Walk - 
+Christian Walk - I primarily worked on development of the GUI, finished drag and drop functionality as well as how to run the GUI on the board from the command line. I also loaded the ROM paths and set the appropriate drop action to start FCEUX with the respective ROM file on the board using system and gtk-launch. In addition I worked on some research for setting up socket or pipe communication between the GUI and FCEUX although little progress was made for loading a ROM via that connection. 
 
 ### Known Bugs/Issues
 1) The drag and drop feature is currently configured to work when the GUI window is aligned at the top left corner of the screen. This is related to the pixel mapping being global and should be fixed to being mapped relative to the GUI window instead.
@@ -38,4 +38,4 @@ Fatima Elfasi - Research methods for implementing SNES emulation using either Sn
 
 Zachary Thrasher - Zapper/Building on Renegade board other modular sections/alternative work to be determined.
 
-Christian Walk - Running the stand alone GUI on the board/finishing design to look like mock up. Determining/implementing communication method to connect with FCEUX emulator.
+Christian Walk - Determining/implementing communication method to connect with FCEUX emulator in a more persistent manner for loading and unloading ROMs, also further development of GUI such as adding sounds, power button, and other interface features to improve authenticity. Also work on using up more of the screen for the GUI and FCEUX as well as fix the global position bug.
