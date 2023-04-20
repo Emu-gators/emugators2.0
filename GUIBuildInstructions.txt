@@ -26,4 +26,23 @@ corresponding to your GUI directory name.
 
 ./GUITesting
 
-More instructions for getting this program to run on boot of the board will be specified here.
+To get the GUI to run on boot, first create a .desktop file with:
+
+nano ~/.config/autostart/GUITest.desktop
+
+If the "autostart" directory doesn't exist, make one with: 
+
+mkdir ~/.config/autostart
+
+Inside the GUITest.desktop file, paste the following:
+
+[Desktop Entry]
+Type=Application
+Name=GUITest
+Exec=/home/emugators/Documents/other/emugators2.0old/GUITesting/GUITesting
+
+After saving the .desktop file in the ~/.config/autostart directory, run this command:
+
+sudo reboot
+
+This should reboot the system and you should successfully see the program as soon as the boot is complete.
