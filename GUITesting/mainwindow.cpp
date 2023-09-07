@@ -33,7 +33,7 @@
 #define PORT 8080
 
 //#define FIFO_FILE "MYFIFO"
-
+char* hello = "Hello from server";
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -48,13 +48,15 @@ MainWindow::MainWindow(QWidget *parent)
     loadROMPaths();
     //viewROMImages();
     displayCurROM();
+    //Socket server code specified below was adapted from an example at
+    //www.geeksforgeeks.org/socket-programming-cc/
     //Socket Server code sample
-    int server_fd, new_socket, valread;
+    int valread;
     struct sockaddr_in address;
     int opt = 1;
     int addrlen = sizeof(address);
     char buffer[1024] = { 0 };
-    char* hello = "Hello from server";
+    
 
     // Creating socket file descriptor
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
@@ -95,15 +97,15 @@ MainWindow::MainWindow(QWidget *parent)
 		exit(EXIT_FAILURE);
 	}
     printf("Accepted on socket \n");
-	valread = read(new_socket, buffer, 1024);
-	printf("%s\n", buffer);
-	send(new_socket, hello, strlen(hello), 0);
-	printf("Hello message sent\n");
+    valread = read(new_socket, buffer, 1024);
+    printf("%s\n", buffer);
+    send(new_socket, hello, strlen(hello), 0);
+    printf("Hello message sent\n");
 
-	// closing the connected socket
-	// close(new_socket);
-	// closing the listening socket
-	shutdown(server_fd, SHUT_RDWR);
+    // closing the connected socket
+    // close(new_socket);
+    // closing the listening socket
+    shutdown(server_fd, SHUT_RDWR);
     
 }
 
@@ -275,7 +277,6 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
     //TODO subtract rect->top.left()
     if (ui->label->geometry().contains(x,y)) {
         draggedRom = curRom;
-
         /*qDebug( "Mouse Press event" );
         qDebug() << "X: " << x << "position!";
         qDebug() << "Y: " << y << "position!";
@@ -314,17 +315,18 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
             //write(fd, readbuf, strlen(readbuf));
             //qDebug()<<"Before writing endstr and after writing readBuf";
             //::close(fd);
-
-	    std::string command = "gtk-launch fceux ";
-			command = command + romPaths.at(draggedRom)+ "\n";
-			char* c = const_cast<char*>(command.c_str());
-			system(c);
-			ui->label->raise();
-			draggedRom += 1;
-			if(draggedRom >= roms.size())
-			{
-				draggedRom = 0;
-			}
+	    //Send rom path of game to be loaded based on what user drags and drops
+	    send(new_socket, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), 0);
+	    /*std::string command = "gtk-launch fceux ";
+	    command = command + romPaths.at(draggedRom)+ "\n";
+	    char* c = const_cast<char*>(command.c_str());
+	    system(c);*/
+	    ui->label->raise();
+	    draggedRom += 1;
+	    if(draggedRom >= roms.size())
+	    {
+		    draggedRom = 0;
+	    }
             ui->label->setPixmap(QPixmap::fromImage(roms.at(draggedRom+1)));
         }
         /*qDebug( "After Drop Action" );
