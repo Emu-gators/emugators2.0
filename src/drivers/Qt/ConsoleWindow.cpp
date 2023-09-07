@@ -17,6 +17,19 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
+//Socket code includes
+//This client file utilizes code from https://www.geeksforgeeks.org/socket-programming-cc/
+
+// Client side C/C++ program to demonstrate Socket
+// programming
+#include <arpa/inet.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <unistd.h>
+#define PORT 8080 
+ 
+ 
 // ConsoleWindow.cpp
 //
 #if defined(__linux__) || defined(__unix__)
@@ -4704,11 +4717,47 @@ int emulatorThread_t::setSchedParam( int policy, int priority )
 
 void emulatorThread_t::run(void)
 {
+	printf("Test print statement \n");
 	printf("Emulator Start\n");
 	nes_shm->runEmulator = 1;
 
 	init();
+	printf("Beginning of Client Socket code\n");
+	//Socket Client Code
+	int status, valread, client_fd;
+	struct sockaddr_in serv_addr;
+	char* hello = "Hello from client";
+	char buffer[1024] = { 0 };
+	if ((client_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
+		printf("\n Socket creation error \n");
+	}
 
+	serv_addr.sin_family = AF_INET;
+	serv_addr.sin_port = htons(PORT);
+
+	// Convert IPv4 and IPv6 addresses from text to binary
+	// form
+	if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr)
+		<= 0) {
+		printf(
+			"\nInvalid address/ Address not supported \n");
+	}
+
+	if ((status
+		= ::connect(client_fd, (struct sockaddr*)&serv_addr,
+				sizeof(serv_addr)))
+		< 0) {
+		printf("\nConnection Failed \n");
+	}
+	send(client_fd, hello, strlen(hello), 0);
+	printf("Hello message sent\n");
+	valread = read(client_fd, buffer, 1024);
+	printf("%s\n", buffer);
+
+	// closing the connected socket
+	close(client_fd);
+    //End of client code
+    printf("End of Client Socket code\n");
 	while ( nes_shm->runEmulator )
 	{
 		fceuWrapperUpdate();

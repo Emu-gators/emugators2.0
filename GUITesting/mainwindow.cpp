@@ -50,28 +50,28 @@ MainWindow::MainWindow(QWidget *parent)
     displayCurROM();
     //Socket Server code sample
     int server_fd, new_socket, valread;
-	struct sockaddr_in address;
-	int opt = 1;
-	int addrlen = sizeof(address);
-	char buffer[1024] = { 0 };
-	char* hello = "Hello from server";
+    struct sockaddr_in address;
+    int opt = 1;
+    int addrlen = sizeof(address);
+    char buffer[1024] = { 0 };
+    char* hello = "Hello from server";
 
-	// Creating socket file descriptor
-	if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
-		perror("socket failed");
-		exit(EXIT_FAILURE);
-	}
+    // Creating socket file descriptor
+    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
+	    perror("socket failed");
+	    exit(EXIT_FAILURE);
+    }
 
-	// Forcefully attaching socket to the port 8080
-	if (setsockopt(server_fd, SOL_SOCKET,
-				SO_REUSEADDR | SO_REUSEPORT, &opt,
-				sizeof(opt))) {
-		perror("setsockopt");
-		exit(EXIT_FAILURE);
-	}
-	address.sin_family = AF_INET;
-	address.sin_addr.s_addr = INADDR_ANY;
-	address.sin_port = htons(PORT);
+    // Forcefully attaching socket to the port 8080
+    if (setsockopt(server_fd, SOL_SOCKET,
+			    SO_REUSEADDR | SO_REUSEPORT, &opt,
+			    sizeof(opt))) {
+	    perror("setsockopt");
+	    exit(EXIT_FAILURE);
+    }
+    address.sin_family = AF_INET;
+    address.sin_addr.s_addr = INADDR_ANY;
+    address.sin_port = htons(PORT);
     printf("attached socket \n");
 	// Forcefully attaching socket to the port 8080
 	if (bind(server_fd, (struct sockaddr*)&address,
@@ -85,6 +85,7 @@ MainWindow::MainWindow(QWidget *parent)
 		perror("listen");
 		exit(EXIT_FAILURE);
 	}
+    OpenFCEUX();
     printf("Listening on socket \n");
 	if ((new_socket
 		= accept(server_fd, (struct sockaddr*)&address,
@@ -100,7 +101,7 @@ MainWindow::MainWindow(QWidget *parent)
 	printf("Hello message sent\n");
 
 	// closing the connected socket
-	close(new_socket);
+	// close(new_socket);
 	// closing the listening socket
 	shutdown(server_fd, SHUT_RDWR);
     
@@ -111,8 +112,10 @@ MainWindow::~MainWindow()
     delete ui;
 }
 void MainWindow::OpenFCEUX(){
-    
-
+    printf("Opening FCEUX\n");
+    std::string command = "gtk-launch fceux\n";
+    char* c = const_cast<char*>(command.c_str());
+    system(c);
 };
 void MainWindow::loadROMPaths()
 {
@@ -269,6 +272,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
     QPoint globalCursorPos = QCursor::pos();
     int x = globalCursorPos.x();
     int y = globalCursorPos.y();
+    //TODO subtract rect->top.left()
     if (ui->label->geometry().contains(x,y)) {
         draggedRom = curRom;
 
