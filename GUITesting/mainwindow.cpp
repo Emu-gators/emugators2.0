@@ -118,7 +118,7 @@ MainWindow::MainWindow(QWidget *parent)
     // closing the connected socket
     // close(new_socket);
     // closing the listening socket
-    shutdown(server_fd, SHUT_RDWR);
+    //shutdown(server_fd, SHUT_RDWR);
     
 }
 
@@ -346,7 +346,9 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
             //qDebug()<<"Before writing endstr and after writing readBuf";
             //::close(fd);
 	    //Send rom path of game to be loaded based on what user drags and drops
+        printf("Before send\n");
 	    send(new_socket, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), 0);
+        printf("After send\n");
 	    /*std::string command = "gtk-launch fceux ";
 	    command = command + romPaths.at(draggedRom)+ "\n";
 	    char* c = const_cast<char*>(command.c_str());
@@ -357,7 +359,11 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 	    {
 		    draggedRom = 0;
 	    }
-            ui->label->setPixmap(QPixmap::fromImage(roms.at(draggedRom+1)));
+            if(draggedRom + 1 >= roms.size()){
+                ui->label->setPixmap(QPixmap::fromImage(roms.at(0)));
+            }else{
+                ui->label->setPixmap(QPixmap::fromImage(roms.at(draggedRom+1)));
+            }
         }
         /*qDebug( "After Drop Action" );
         qDebug() << "X: " << x << "position!";
