@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "newwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,14 +15,17 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void openNewWindow();
 
 private slots:
     void on_nextButton_clicked();
     void on_previousButton_clicked();
+    void on_debugButton_clicked();
     void mousePressEvent(QMouseEvent *event);
 
 private:
     Ui::MainWindow *ui;
+    NewWindow *mMyNewWindow;
     void viewROMImages();
     void loadROMImages();
     void loadROMPaths();

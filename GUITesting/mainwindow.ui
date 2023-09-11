@@ -53,6 +53,19 @@
      <string>Previous</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="debugButton">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>360</y>
+      <width>80</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Debug</string>
+    </property>
+   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>

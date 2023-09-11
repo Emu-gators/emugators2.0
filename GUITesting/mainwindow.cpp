@@ -32,6 +32,11 @@
 #include <unistd.h>
 #define PORT 8080
 
+#include <QtCore>
+#include <QtGui>
+#include <QPushButton>
+#include <QGridLayout>
+
 //#define FIFO_FILE "MYFIFO"
 char* hello = "Hello from server";
 
@@ -43,6 +48,14 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     curRom = 0;
     draggedRom = 0;
+
+    connect(ui->debugButton, SIGNAL(click()), this, SLOT(openNewWindow()));
+    QGridLayout *gridLayout = new QGridLayout;
+    // addWidget(*Widget, row, column, rowspan, colspan)
+    gridLayout->addWidget(ui->nextButton,3,10,1,1);
+    gridLayout->addWidget(ui->previousButton,3,0,1,1);
+    gridLayout->addWidget(ui->debugButton,0,2,1,1);
+    this->centralWidget()->setLayout(gridLayout);
     
     loadROMImages();
     loadROMPaths();
@@ -113,6 +126,15 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::openNewWindow()
+{
+    mMyNewWindow = new NewWindow();
+
+    mMyNewWindow->show();
+
+}
+
 void MainWindow::OpenFCEUX(){
     printf("Opening FCEUX\n");
     std::string command = "gtk-launch fceux\n";
@@ -267,6 +289,11 @@ void MainWindow::on_previousButton_clicked()
     }
     displayCurROM();
       
+}
+
+void MainWindow::on_debugButton_clicked()
+{
+    openNewWindow();
 }
 
 void MainWindow::mousePressEvent(QMouseEvent *event)
