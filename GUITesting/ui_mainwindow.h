@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.3
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -53,7 +53,7 @@ public:
         previousButton->setGeometry(QRect(80, 240, 80, 21));
         debugButton = new QPushButton(centralWidget);
         debugButton->setObjectName(QString::fromUtf8("debugButton"));
-        debugButton->setGeometry(QRect(480, 360, 80, 21));
+        debugButton->setGeometry(QRect(200, 90, 80, 21));
         label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(210, 200, 100, 100));
@@ -69,7 +69,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1200, 19));
+        menubar->setGeometry(QRect(0, 0, 1200, 27));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

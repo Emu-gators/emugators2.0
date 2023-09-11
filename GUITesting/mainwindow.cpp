@@ -50,12 +50,12 @@ MainWindow::MainWindow(QWidget *parent)
     draggedRom = 0;
 
     connect(ui->debugButton, SIGNAL(click()), this, SLOT(openNewWindow()));
-    QGridLayout *gridLayout = new QGridLayout;
+    //QGridLayout *gridLayout = new QGridLayout;
     // addWidget(*Widget, row, column, rowspan, colspan)
-    gridLayout->addWidget(ui->nextButton,3,10,1,1);
-    gridLayout->addWidget(ui->previousButton,3,0,1,1);
-    gridLayout->addWidget(ui->debugButton,0,2,1,1);
-    this->centralWidget()->setLayout(gridLayout);
+    //gridLayout->addWidget(ui->nextButton,0,10,0.25,0.25);
+    //gridLayout->addWidget(ui->previousButton,0,0,0.25,0.25);
+    //gridLayout->addWidget(ui->debugButton,0,2,1,1);
+    //this->centralWidget()->setLayout(gridLayout);
     
     loadROMImages();
     loadROMPaths();
@@ -302,7 +302,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
     int x = globalCursorPos.x();
     int y = globalCursorPos.y();
     //TODO subtract rect->top.left()
-    if (ui->label->geometry().contains(x,y)) {
+    if (ui->label->geometry().contains(event->pos())) {
         draggedRom = curRom;
         /*qDebug( "Mouse Press event" );
         qDebug() << "X: " << x << "position!";
@@ -323,6 +323,9 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         globalCursorPos = QCursor::pos();
         x = globalCursorPos.x();
         y = globalCursorPos.y();
+	QPoint topLeft = this->pos();
+	x = x - topLeft.x();
+	y = y - topLeft.y();
         //Qt::DropAction dropAction = drag->exec();
         if(ui->famicom->geometry().contains(x,y))
         {
