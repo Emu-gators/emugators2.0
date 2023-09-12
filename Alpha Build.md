@@ -2,8 +2,6 @@
 
 Github Repository Link: https://github.com/Emu-gators/emugators2.0
 
-======================================================================
-
 ## Usability
 
 GUI is implemented and functional, with the ability to navigate through the various ROMs, the ability to drag and drop to load a chosen rom, and the ability to open a new window (that will later be filled with various functions for debugging and configuring). The buttons for choosing a ROM are clearly labeled (previous/next) and the drag and drop feature intuitively emulates the real world insertion of a cartridge. No major bugs or issues are currently known that inhibit usability in the standard use case (booting up the board, choosing a game, and playing it).
