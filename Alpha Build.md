@@ -1,6 +1,7 @@
 # Alpha Build
 
-Github Repository Link: https://github.com/Emu-gators/emugators2.0
+Contributors: Fatima Elfasi, Zachary Thrasher, Jeya Iyadurai, and Christian Walk
+- Github Repository Link: https://github.com/Emu-gators/emugators2.0
 
 ## Usability
 
