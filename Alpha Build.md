@@ -7,7 +7,7 @@ Contributors: Fatima Elfasi, Zachary Thrasher, Jeya Iyadurai, and Christian Walk
 
 GUI is implemented and functional, with the ability to navigate through the various ROMs, the ability to drag and drop to load a chosen rom, and the ability to open a new window (that will later be filled with various functions for debugging and configuring). The buttons for choosing a ROM are clearly labeled (previous/next) and the drag and drop feature intuitively emulates the real world insertion of a cartridge. No major bugs or issues are currently known that inhibit usability in the standard use case (booting up the board, choosing a game, and playing it).
 
-##Build Quality
+## Build Quality
 The GUI correctly loads the ROMs and allows the accurate emulation of the current game library. The GUI has a couple of different elements (previous, next, debug) and images (ROM images and the Famicom console) that all function appropriately, with no known crashes or glitches.  A game can be successfully loaded when a user drags and drops the ROM image from the shelf to the image representing the console.
 
 Currently the GUI launches in a maximized window state to allow ease of testing, but with one line changed in the code it can be reconfigured to launch in full screen to better suit the museum aesthetic. 
