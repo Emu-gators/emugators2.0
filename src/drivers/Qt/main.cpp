@@ -18,6 +18,17 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
+//Socket code includes
+//This client file utilizes code from https://www.geeksforgeeks.org/socket-programming-cc/
+
+// Client side C/C++ program to demonstrate Socket
+// programming
+#include <arpa/inet.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <unistd.h>
+#define PORT 8080 
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,7 +45,26 @@
 #include <QtPlatformHeaders/QWindowsWindowFunctions>
 #endif
 
+#include <thread>
+#include <cstring>
+
 consoleWin_t *consoleWindow = NULL;
+int client_fd;
+char buffer[1024] = { 0 };
+
+void set_rom(){
+	int valread = 1;
+	while(valread != 0){
+		valread = read(client_fd, buffer, 1024);
+		//Load game using input ROM path from GUI
+		QString rom_path = buffer;
+		
+		consoleWindow->emulatorThread->signalRomLoad(buffer);
+		std::memset(buffer, 0, 1024);
+	}
+	// closing the connected socket
+	::close(client_fd);
+}
 
 static void MessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 {
@@ -153,6 +183,45 @@ int main( int argc, char *argv[] )
 	consoleWindow = new consoleWin_t();
 
 	consoleWindow->show();
+
+	//Socket code specifed below was based on an example from "www.geeksforgekks.org/socket-programming-cc/"
+	printf("Beginning of Client Socket code\n");
+	//Socket Client Code
+	int status, valread;
+	struct sockaddr_in serv_addr;
+	char* hello = "Hello from client";
+
+	if ((client_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
+		printf("\n Socket creation error \n");
+	}
+
+	serv_addr.sin_family = AF_INET;
+	serv_addr.sin_port = htons(PORT);
+
+	// Convert IPv4 and IPv6 addresses from text to binary
+	// form
+	if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr)
+		<= 0) {
+		printf(
+			"\nInvalid address/ Address not supported \n");
+	}
+
+	if ((status
+		= ::connect(client_fd, (struct sockaddr*)&serv_addr,
+				sizeof(serv_addr)))
+		< 0) {
+		printf("\nConnection Failed \n");
+	}
+	send(client_fd, hello, strlen(hello), 0);
+	printf("Hello message sent\n");
+	valread = read(client_fd, buffer, 1024);
+	printf("%s\n", buffer);
+	//TODO: Clear buffer between each loaded game/message
+	//read in ROM path of loaded game
+    //End of client code
+
+	std::thread socket_thread(set_rom);
+    printf("End of Client Socket code\n");
 
 	// Need to wait for window to initialize before video init can be called.
 	//consoleWindow->videoInit();
