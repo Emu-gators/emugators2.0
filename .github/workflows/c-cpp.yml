@@ -31,7 +31,7 @@ jobs:
     - name: initial qmake command
       run: qmake -project
     - name: append QT += gui widgets to GUITesting.pro
-      uses: actions/write@v1
+      uses: DamianReeves/write-file-action@master
       with:
         path: GUITesting.pro
         contents: |
