@@ -1,0 +1,43 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  SOURCE_DIR:   ${{ github.workspace }}/GUITesting
+  QT_VERSION:   5.15.3
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: SOURCE_DIR
+    steps:
+    - uses: actions/checkout@v3
+    - name: (3) Install Qt
+      uses: jurplel/install-qt-action@v2
+      with:
+        version:      ${{ QT_VERSION }}
+        host:         linux
+        target:       desktop
+        arch:         gcc_64
+        dir:          ${{ runner.temp }}
+        setup-python: false
+    - name: initial qmake command
+      run: qmake -project
+    - name: append QT += gui widgets to GUITesting.pro
+      uses: actions/write@v1
+      with:
+        path: GUITesting.pro
+        contents: |
+          QT += gui widgets
+        write-mode: append
+    - name: 2nd qmake step
+      run: qmake GUITesting.pro
+    - name: make
+      run: make
