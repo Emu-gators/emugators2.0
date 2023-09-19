@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: env.SOURCE_DIR
+        working-directory: ${{ env.SOURCE_DIR }}
     steps:
     - uses: actions/checkout@v3
     - run: sudo apt update
