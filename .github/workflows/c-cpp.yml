@@ -19,8 +19,8 @@ jobs:
         working-directory: env.SOURCE_DIR
     steps:
     - uses: actions/checkout@v3
-    - name: get correct python version
-      uses: actions/setup-python@v4
+    - name: fix python cffi
+      run: sudo apt-get install python-cffi
     - name: (3) Install Qt
       uses: jurplel/install-qt-action@v2
       with:
