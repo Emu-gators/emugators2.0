@@ -16,13 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: SOURCE_DIR
+        working-directory: env.SOURCE_DIR
     steps:
     - uses: actions/checkout@v3
     - name: (3) Install Qt
       uses: jurplel/install-qt-action@v2
       with:
-        version:      ${{ QT_VERSION }}
+        version:      ${{ env.QT_VERSION }}
         host:         linux
         target:       desktop
         arch:         gcc_64
