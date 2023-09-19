@@ -35,7 +35,7 @@ jobs:
           QT += gui widgets
         write-mode: append
     - name: 2nd qmake step
-      run: }
+      run: |
         cd GUITesting
         qmake GUITesting.pro
     - name: make
