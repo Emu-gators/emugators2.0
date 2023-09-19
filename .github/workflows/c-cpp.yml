@@ -8,7 +8,7 @@ on:
 
 env:
   SOURCE_DIR:   ${{ github.workspace }}/GUITesting
-  QT_VERSION:   5.15.3
+  QT_VERSION:   5.15.2
 
 jobs:
   build:
