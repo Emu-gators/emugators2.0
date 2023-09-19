@@ -25,6 +25,7 @@ jobs:
         setup-python: false
     - name: initial qmake command
       run: |
+        ls ${{ github.workspace }}
         cd ${{ env.SOURCE_DIR }}
         qmake -project
     - name: append QT += gui widgets to GUITesting.pro
