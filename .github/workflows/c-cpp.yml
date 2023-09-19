@@ -19,7 +19,7 @@ jobs:
         working-directory: ${{ env.SOURCE_DIR }}
     steps:
     - name: Install Qt
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v3
       with:
         version:      ${{ env.QT_VERSION }}
         host:         linux
