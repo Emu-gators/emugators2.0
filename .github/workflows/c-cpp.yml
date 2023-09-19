@@ -19,6 +19,7 @@ jobs:
         working-directory: env.SOURCE_DIR
     steps:
     - uses: actions/checkout@v3
+    - run: sudo apt update
     - name: fix python cffi
       run: sudo apt-get install python-cffi
       working-directory: /
