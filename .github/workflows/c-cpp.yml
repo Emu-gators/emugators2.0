@@ -18,12 +18,7 @@ jobs:
       run:
         working-directory: ${{ env.SOURCE_DIR }}
     steps:
-    - uses: actions/checkout@v3
-    - run: sudo apt update
-    - name: fix python cffi
-      run: sudo apt install python-cffi
-      working-directory: /
-    - name: (3) Install Qt
+    - name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
         version:      ${{ env.QT_VERSION }}
