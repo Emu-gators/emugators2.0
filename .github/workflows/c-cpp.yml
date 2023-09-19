@@ -25,20 +25,20 @@ jobs:
         setup-python: false
     - name: initial qmake command
       run: |
-        cd ${{ SOURCE_DIR }}
+        cd ${{ env.SOURCE_DIR }}
         qmake -project
     - name: append QT += gui widgets to GUITesting.pro
       uses: DamianReeves/write-file-action@master
       with:
-        path: ${{ SOURCE_DIR }}/GUITesting.pro
+        path: ${{ env.SOURCE_DIR }}/GUITesting.pro
         contents: |
           QT += gui widgets
         write-mode: append
     - name: 2nd qmake step
       run: |
-        cd ${{ SOURCE_DIR }}
+        cd ${{ env.SOURCE_DIR }}
         qmake GUITesting.pro
     - name: make
       run: |
-        cd ${{ SOURCE_DIR }}
+        cd ${{ env.SOURCE_DIR }}
         make
