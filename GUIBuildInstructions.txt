@@ -6,6 +6,10 @@ sudo apt-get install build-essential
 sudo apt-get install qtcreator
 sudo apt install qt5-default
 
+sudo apt-get build-dep qtmultimedia5-dev
+sudo apt-get install qtmultimedia5-dev
+sudo apt-get install libqt5multimedia5-plugins
+
 One important thing to check in our project specifically is that the images, ROMs, and ROM images are located at the path specified locations in the code. Also should any new ROM
 or ROM images be added, there should be no spaces or other special characters in the names besides '.'.
 Once those commands have been run and you are in the GUI project directory(on our board emugators2.0/GUITesting) you will then run these commands:
@@ -13,7 +17,7 @@ Once those commands have been run and you are in the GUI project directory(on ou
 qmake -project
 
 Opening up the .pro file that is created from the previous line you will insert this line
-without quotes: "QT += gui widgets"
+without quotes: "QT += gui widgets multimedia"
 
 Then run with the name of the .pro file corresponding to the GUI project directory.
 
