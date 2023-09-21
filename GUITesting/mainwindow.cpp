@@ -57,7 +57,8 @@ MainWindow::MainWindow(QWidget *parent)
     //gridLayout->addWidget(ui->debugButton,0,2,1,1);
     //this->centralWidget()->setLayout(gridLayout);
     
-    loadROMImages();
+    //loadROMImages();
+    loadGUIImages();
     loadROMPaths();
     //viewROMImages();
     displayCurROM();
@@ -143,77 +144,38 @@ void MainWindow::OpenFCEUX(){
 };
 void MainWindow::loadROMPaths()
 {
-    std::string str0 = "/home/emugators/Documents/ROMS/emugator/ROMs/BalloonFightJapan.nes";
-    romPaths.push_back(str0);
-    std::string str1 = "/home/emugators/Documents/ROMS/emugator/ROMs/B-WingsJapan.nes";
-    romPaths.push_back(str1);
-    std::string str2 = "/home/emugators/Documents/ROMS/emugator/ROMs/CrisisForceJapan.nes";
-    romPaths.push_back(str2);
-    std::string str3 = "/home/emugators/Documents/ROMS/emugator/ROMs/DigDugJapan.nes";
-    romPaths.push_back(str3);
-    std::string str4 = "/home/emugators/Documents/ROMS/emugator/ROMs/Dr.MarioJapan,USA.nes";
-    romPaths.push_back(str4);
-    std::string str5 = "/home/emugators/Documents/ROMS/emugator/ROMs/FinalFantasyIIIJapan.nes";
-    romPaths.push_back(str5);
-    std::string str6 = "/home/emugators/Documents/ROMS/emugator/ROMs/GradiusJapan.nes";
-    romPaths.push_back(str6);
-    std::string str7 = "/home/emugators/Documents/ROMS/emugator/ROMs/GradiusIIJapan.nes";
-    romPaths.push_back(str7);
-    std::string str8 = "/home/emugators/Documents/ROMS/emugator/ROMs/IceClimberJapan.nes";
-    romPaths.push_back(str8);
-    std::string str9 = "/home/emugators/Documents/ROMS/emugator/ROMs/LegendOfZelda2_JP.nes";
-    romPaths.push_back(str9);
-    std::string str10 = "/home/emugators/Documents/ROMS/emugator/ROMs/Pac-ManJapan.nes";
-    romPaths.push_back(str10);
-    std::string str11 = "/home/emugators/Documents/ROMS/emugator/ROMs/SuperMarioBros.3Japan.nes";
-    romPaths.push_back(str11);
-    std::string str12 = "/home/emugators/Documents/ROMS/emugator/ROMs/superMarioBros.nes";
-    romPaths.push_back(str12);
-
+    QDirIterator iter("/home/emugators/Documents/ROMS/emugator/ROMs", QDirIterator::Subdirectories);
+    iter.next();
+    iter.next();
+    while(iter.hasNext())
+    {
+	QString currentRom = iter.next();
+	romPaths.push_back(currentRom.toStdString());
+	std::string currentRomImagePath = convertExtension("/home/emugators/Documents/ROMS/emugator/ROM_Carts/",currentRom.toStdString());
+	QImage currentRomImage(QString::fromStdString(currentRomImagePath));
+	currentRomImage = processImage(currentRomImage);
+	roms.push_back(currentRomImage);
+    }
+}
+std::string MainWindow::convertExtension(std::string romImageDir, std::string path)
+{
+    
+    int nameIndex = path.find_last_of('/');
+    path = path.substr(nameIndex + 1);
+    path = romImageDir + path.substr(0, path.size()-4)+ ".jpg";
+    qDebug() << QString::fromStdString(path);
+    return path;
 }
 
-void MainWindow::loadROMImages()
+QImage MainWindow::processImage(QImage unprocessedImage)
 {
-    QImage img0("/home/emugators/Documents/ROMS/emugator/ROM_Carts/BalloonFight(Japan).jpg");
-    QImage scale0 = img0.scaled(100,100,Qt::KeepAspectRatio);
-    roms.push_back(scale0);
-    QImage img1("/home/emugators/Documents/ROMS/emugator/ROM_Carts/B-Wings(Japan).jpg");
-    QImage scale1 = img1.scaled(100,100,Qt::KeepAspectRatio);
-    roms.push_back(scale1);
-    QImage img2("/home/emugators/Documents/ROMS/emugator/ROM_Carts/CrisisForce(Japan).jpg");
-    QImage scale2 = img2.scaled(100,100,Qt::KeepAspectRatio);
-    roms.push_back(scale2);
-    QImage img3("/home/emugators/Documents/ROMS/emugator/ROM_Carts/DigDug(Japan).jpg");
-    QImage scale3 = img3.scaled(100,100,Qt::KeepAspectRatio);
-    roms.push_back(scale3);
-    QImage img4("/home/emugators/Documents/ROMS/emugator/ROM_Carts/DrMario(Japan,USA).jpg");
-    QImage scale4 = img4.scaled(100,100,Qt::KeepAspectRatio);
-    roms.push_back(scale4);
-    QImage img5("/home/emugators/Documents/ROMS/emugator/ROM_Carts/Final Fantasy III (Japan).jpg");
-    QImage scale5 = img5.scaled(100,100,Qt::KeepAspectRatio);
-    roms.push_back(scale5);
-    QImage img6("/home/emugators/Documents/ROMS/emugator/ROM_Carts/Gradius (Japan).jpg");
-    QImage scale6 = img6.scaled(100,100,Qt::KeepAspectRatio);
-    roms.push_back(scale6);
-    QImage img7("/home/emugators/Documents/ROMS/emugator/ROM_Carts/Gradius II (Japan).jpg");
-    QImage scale7 = img7.scaled(100,100,Qt::KeepAspectRatio);
-    roms.push_back(scale7);
-    QImage img8("/home/emugators/Documents/ROMS/emugator/ROM_Carts/Ice Climber (Japan).jpg");
-    QImage scale8 = img8.scaled(100,100,Qt::KeepAspectRatio);
-    roms.push_back(scale8);
-    QImage img9("/home/emugators/Documents/ROMS/emugator/ROM_Carts/LegendOfZelda2_JP.jpg");
-    QImage scale9 = img9.scaled(100,100,Qt::KeepAspectRatio);
-    roms.push_back(scale9);
-    QImage img10("/home/emugators/Documents/ROMS/emugator/ROM_Carts/Pac-Man (Japan).jpg");
-    QImage scale10 = img10.scaled(100,100,Qt::KeepAspectRatio);
-    roms.push_back(scale10);
-    QImage img11("/home/emugators/Documents/ROMS/emugator/ROM_Carts/Super Mario Bros. 3 (Japan).jpg");
-    QImage scale11 = img11.scaled(100,100,Qt::KeepAspectRatio);
-    roms.push_back(scale11);
-    QImage img12("/home/emugators/Documents/ROMS/emugator/ROM_Carts/superMarioBros.jpg");
-    QImage scale12 = img12.scaled(100,100,Qt::KeepAspectRatio);
-    roms.push_back(scale12);
+    QImage scaled = unprocessedImage.scaled(100,100,Qt::KeepAspectRatio);
+    return scaled;
+}
 
+
+void MainWindow::loadGUIImages()
+{
     QImage background("/home/emugators/Documents/ROMS/background.jpg");
     QImage scaleBack = background.scaled(500,750,Qt::KeepAspectRatio);
     ui->background->setPixmap(QPixmap::fromImage(scaleBack));
@@ -241,25 +203,6 @@ void MainWindow::loadROMImages()
     QImage right("/home/emugators/Documents/ROMS/rightArrow.png");
     QIcon rightButton(QPixmap::fromImage(right));
     ui->nextButton->setIcon(rightButton);
-}
-
-void MainWindow::viewROMImages()
-{
-
-    //ui->label0->setPixmap(QPixmap::fromImage(roms.at(0)));
-    //ui->label1->setPixmap(QPixmap::fromImage(roms.at(1)));
-    //ui->label2->setPixmap(QPixmap::fromImage(roms.at(2)));
-    //ui->label3->setPixmap(QPixmap::fromImage(roms.at(3)));
-    //ui->label4->setPixmap(QPixmap::fromImage(roms.at(4)));
-    //ui->label5->setPixmap(QPixmap::fromImage(roms.at(5)));
-    //ui->label6->setPixmap(QPixmap::fromImage(roms.at(6)));
-    //ui->label7->setPixmap(QPixmap::fromImage(roms.at(7)));
-    //ui->label8->setPixmap(QPixmap::fromImage(roms.at(8)));
-    //ui->label9->setPixmap(QPixmap::fromImage(roms.at(9)));
-    //ui->label10->setPixmap(QPixmap::fromImage(roms.at(10)));
-    //ui->label11->setPixmap(QPixmap::fromImage(roms.at(11)));
-    //ui->label12->setPixmap(QPixmap::fromImage(roms.at(12)));
-
 }
 
 void MainWindow::displayCurROM()

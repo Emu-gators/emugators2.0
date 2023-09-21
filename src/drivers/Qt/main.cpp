@@ -35,6 +35,7 @@
 #include <QApplication>
 #include <QSplashScreen>
 #include <QSettings>
+#include <QDirIterator>
 //#include <QProxyStyle>
 
 #include "Qt/ConsoleWindow.h"

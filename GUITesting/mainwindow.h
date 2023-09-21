@@ -26,11 +26,14 @@ private slots:
 private:
     Ui::MainWindow *ui;
     NewWindow *mMyNewWindow;
-    void viewROMImages();
+    void loadGUIImages();
     void loadROMImages();
     void loadROMPaths();
     void OpenFCEUX();
     void displayCurROM();
+    void changeRomPath();
+    QImage processImage(QImage unprocessedImage);
+    std::string convertExtension(std::string romImageDir, std::string path);
     std::vector<QImage> roms;
     int curRom;
     int draggedRom;
