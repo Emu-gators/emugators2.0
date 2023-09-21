@@ -36,6 +36,7 @@
 #include <QtGui>
 #include <QPushButton>
 #include <QGridLayout>
+#include <QMediaPlayer>
 
 //#define FIFO_FILE "MYFIFO"
 char* hello = "Hello from server";
@@ -119,6 +120,8 @@ MainWindow::MainWindow(QWidget *parent)
     // close(new_socket);
     // closing the listening socket
     //shutdown(server_fd, SHUT_RDWR);
+    
+    
     
 }
 
@@ -348,6 +351,12 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 	    //Send rom path of game to be loaded based on what user drags and drops
         printf("Before send\n");
 	    send(new_socket, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), 0);
+        
+        QMediaPlayer* gamedrop = new QMediaPlayer();
+        gamedrop->setMedia(QUrl("file:///home/emugators/Documents/ROMS/emugator/gamedrop.mp3"));
+        gamedrop->setVolume(50);
+        gamedrop->play();
+        
         printf("After send\n");
 	    /*std::string command = "gtk-launch fceux ";
 	    command = command + romPaths.at(draggedRom)+ "\n";
