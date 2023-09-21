@@ -34,7 +34,7 @@ jobs:
       with:
         path: ${{ env.SOURCE_DIR }}/GUITesting.pro
         contents: |
-          QT += gui widgets
+          QT += gui widgets multimedia
         write-mode: append
     - name: 2nd qmake step
       run: |
