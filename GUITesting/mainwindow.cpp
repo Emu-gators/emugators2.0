@@ -38,6 +38,11 @@
 #include <QGridLayout>
 #include <QMediaPlayer>
 
+
+#include <QFileDialog>
+#include <iostream>
+#include <fstream>
+
 //#define FIFO_FILE "MYFIFO"
 char* hello = "Hello from server";
 
@@ -63,6 +68,7 @@ MainWindow::MainWindow(QWidget *parent)
     loadROMPaths();
     //viewROMImages();
     displayCurROM();
+    /*
     //Socket server code specified below was adapted from an example at
     //www.geeksforgeeks.org/socket-programming-cc/
     //Socket Server code sample
@@ -122,7 +128,7 @@ MainWindow::MainWindow(QWidget *parent)
     // closing the listening socket
     //shutdown(server_fd, SHUT_RDWR);
     
-    
+    */
     
 }
 
@@ -147,19 +153,100 @@ void MainWindow::OpenFCEUX(){
 };
 void MainWindow::loadROMPaths()
 {
-    QDirIterator iter("/home/emugators/Documents/ROMS/emugator/ROMs", QDirIterator::Subdirectories);
-    iter.next();
-    iter.next();
-    while(iter.hasNext())
+    // check if a file called roms.txt exists in the same directory as the executable
+    // if it does, read the file and load the roms from the paths specified in the file
+    // if it doesn't, prompt the user to select a folder containing roms
+    // then, write the paths of the roms to a file called roms.txt
+    // this way, the user only has to select a folder once, and the program will remember the folder
+    // then it needs to check if roms were added or removed from the folder since the last time the program was run
+
+    // check if a file called roms.txt exists in the same directory as the executable
+    std::ifstream romsFile("roms.txt");
+
+
+    if (romsFile.is_open())
     {
-	QString currentRom = iter.next();
-	romPaths.push_back(currentRom.toStdString());
-	std::string currentRomImagePath = convertExtension("/home/emugators/Documents/ROMS/emugator/ROM_Carts/",currentRom.toStdString());
-	QImage currentRomImage(QString::fromStdString(currentRomImagePath));
-	currentRomImage = processImage(currentRomImage);
-	roms.push_back(currentRomImage);
+        // if it does, read the file and load the roms from the paths specified in the file
+        std::string line;
+        while (getline(romsFile, line))
+        {
+            romPaths.push_back(line);
+        }
+        romsFile.close();
+    } else {
+        // if it doesn't, prompt the user to select a folder containing roms
+        QString romImageDir = QFileDialog::getExistingDirectory(this, tr("Select ROM Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+        QDirIterator it(romImageDir, QDirIterator::Subdirectories);
+        while (it.hasNext())
+        {
+            QString path = it.next();
+            if (path.endsWith(".nes"))
+            {
+                romPaths.push_back(path.toStdString());
+            }
+        }
+
+        // then, write the paths of the roms to a file called roms.txt
+
+        std::ofstream romsFile("roms.txt");
+        for (int i = 0; i < romPaths.size(); i++)
+        {
+            romsFile << romPaths.at(i) << std::endl;
+        }
+        romsFile.close();
+    }
+
+    //create romImages vector
+    std::vector<std::string> romImages;
+
+    // now do the same thing again for the rom images
+
+    // check if a file called romImages.txt exists in the same directory as the executable
+    std::ifstream romImagesFile("romImages.txt");
+
+    if (romImagesFile.is_open())
+    {
+        // if it does, read the file and load the roms from the paths specified in the file
+        std::string line;
+        while (getline(romImagesFile, line))
+        {
+            romImages.push_back(line);
+        }
+        romImagesFile.close();
+    } else {
+        // if it doesn't, prompt the user to select a folder containing roms
+        QString romImageDir = QFileDialog::getExistingDirectory(this, tr("Select ROM Image Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+        QDirIterator it(romImageDir, QDirIterator::Subdirectories);
+        while (it.hasNext())
+        {
+            QString path = it.next();
+            if (path.endsWith(".jpg"))
+            {
+                romImages.push_back(path.toStdString());
+            }
+        }
+
+        // then, write the paths of the roms to a file called roms.txt
+
+        std::ofstream romImagesFile("romImages.txt");
+        for (int i = 0; i < romImages.size(); i++)
+        {
+            romImagesFile << romImages.at(i) << std::endl;
+        }
+        romImagesFile.close();
+    }
+
+    // now that we have the paths of the roms and the rom images, we can load them into the program
+
+    for (int i = 0; i < romPaths.size(); i++)
+    {
+        QImage unprocessedImage(QString::fromStdString(romImages.at(i)));
+        QImage processedImage = processImage(unprocessedImage);
+        roms.push_back(processedImage);
     }
 }
+
+/*
 std::string MainWindow::convertExtension(std::string romImageDir, std::string path)
 {
     
@@ -169,6 +256,7 @@ std::string MainWindow::convertExtension(std::string romImageDir, std::string pa
     qDebug() << QString::fromStdString(path);
     return path;
 }
+*/
 
 QImage MainWindow::processImage(QImage unprocessedImage)
 {
