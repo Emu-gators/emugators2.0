@@ -1,0 +1,12 @@
+/home/jeya/ROMS/emugator/ROMs/DigDugJapan.nes
+/home/jeya/ROMS/emugator/ROMs/IceClimberJapan.nes
+/home/jeya/ROMS/emugator/ROMs/Pac-ManJapan.nes
+/home/jeya/ROMS/emugator/ROMs/Dr.MarioJapan,USA.nes
+/home/jeya/ROMS/emugator/ROMs/BalloonFightJapan.nes
+/home/jeya/ROMS/emugator/ROMs/FinalFantasyIIIJapan.nes
+/home/jeya/ROMS/emugator/ROMs/GradiusIIJapan.nes
+/home/jeya/ROMS/emugator/ROMs/B-WingsJapan.nes
+/home/jeya/ROMS/emugator/ROMs/GradiusJapan.nes
+/home/jeya/ROMS/emugator/ROMs/CrisisForceJapan.nes
+/home/jeya/ROMS/emugator/ROMs/SuperMarioBros.3Japan.nes
+/home/jeya/ROMS/emugator/ROMs/superMarioBros.nes
