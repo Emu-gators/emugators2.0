@@ -9,15 +9,15 @@ QMAKE_CXX.COMPILER_MACROS = \
     QMAKE_GCC_PATCH_VERSION
 QMAKE_CXX.INCDIRS = \
     /usr/include/c++/10 \
-    /usr/include/aarch64-linux-gnu/c++/10 \
+    /usr/include/x86_64-linux-gnu/c++/10 \
     /usr/include/c++/10/backward \
-    /usr/lib/gcc/aarch64-linux-gnu/10/include \
+    /usr/lib/gcc/x86_64-linux-gnu/10/include \
     /usr/local/include \
-    /usr/include/aarch64-linux-gnu \
+    /usr/include/x86_64-linux-gnu \
     /usr/include
 QMAKE_CXX.LIBDIRS = \
-    /usr/lib/gcc/aarch64-linux-gnu/10 \
-    /usr/lib/aarch64-linux-gnu \
+    /usr/lib/gcc/x86_64-linux-gnu/10 \
+    /usr/lib/x86_64-linux-gnu \
     /usr/lib \
-    /lib/aarch64-linux-gnu \
+    /lib/x86_64-linux-gnu \
     /lib

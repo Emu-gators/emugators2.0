@@ -1,0 +1,2 @@
+/home/jeya/ROMS/emugator/ROMs
+/home/jeya/ROMS/emugator/ROM_Carts

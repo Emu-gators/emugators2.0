@@ -39,6 +39,11 @@
 #include <QMediaPlayer>
 
 
+
+#include <QFileDialog>
+#include <iostream>
+#include <fstream>
+
 char* hello = "Hello from server";
 
 
@@ -72,7 +77,7 @@ MainWindow::MainWindow(QWidget *parent)
     loadGUIImages();
     loadROMPaths();
     displayCurROM();
-    
+
     //Socket server code specified below was adapted from an example at
     //www.geeksforgeeks.org/socket-programming-cc/
     //Socket Server code sample
@@ -127,6 +132,7 @@ MainWindow::MainWindow(QWidget *parent)
     printf("%s\n", buffer);
     send(new_socket, hello, strlen(hello), 0);
     printf("Hello message sent\n");
+
     
 }
 
@@ -173,49 +179,81 @@ void MainWindow::OpenFCEUX(){
  //TODO: update this function to take in a path so that it can 
 void MainWindow::loadROMPaths()
 {
-    //Declare/define iterator
-    QDirIterator iter("/home/emugators/Documents/ROMS/emugator/ROMs", QDirIterator::Subdirectories);
-    //Call the iterator twice to get through directories "." and ".."
-    iter.next();
-    iter.next();
-    //Go through entire directory
-    while(iter.hasNext())
+
+    // check if a file called roms.txt exists in the same directory as the executable
+    // if it does, read the file and load the roms from the paths specified in the file
+    // if it doesn't, prompt the user to select a folder containing roms
+    // then, write the paths of the roms to a file called roms.txt
+    // this way, the user only has to select a folder once, and the program will remember the folder
+    // then it needs to check if roms were added or removed from the folder since the last time the program was run
+
+    // check if a file called roms.txt exists in the same directory as the executable
+    std::ifstream configFile("config.txt");
+
+    std::string romPath;
+    std::string romImagePath;
+
+    if (configFile.is_open())
     {
-	//Get current directory entry
-	QString currentRom = iter.next();
-	//Load current directory entry into romPaths vector
-	romPaths.push_back(currentRom.toStdString());
-	//Find corresponding rom image in the default rom image directory
-	std::string currentRomImagePath = convertExtension("/home/emugators/Documents/ROMS/emugator/ROM_Carts/",currentRom.toStdString());
-	//Define rom image
-	QImage currentRomImage(QString::fromStdString(currentRomImagePath));
-	//Resize the rom image
-	currentRomImage = processImage(currentRomImage);
-	//Add processed rom image to the vector of rom images
-	roms.push_back(currentRomImage);
+        // if it does, read the file and load the roms from the paths specified in the file
+
+        getline(configFile, romPath);
+        getline(configFile, romImagePath);
+
+        configFile.close();
+
+    } else {
+        // if it doesn't, prompt the user to select a folder containing roms
+        std::ofstream newConfigFile("config.txt");
+        
+        QString QromPath = QFileDialog::getExistingDirectory(this, tr("Select ROM Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+        romPath = QromPath.toStdString();
+
+        QString QromImagePath = QFileDialog::getExistingDirectory(this, tr("Select ROM Image Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+        romImagePath = QromImagePath.toStdString();
+
+        newConfigFile << romPath << "\n";
+        newConfigFile << romImagePath << "\n";
+
+        newConfigFile.close();
+    }
+
+    //create romImages vector
+    std::vector<std::string> romImages;
+
+    QDirIterator it(QString::fromStdString(romPath), QDirIterator::Subdirectories);
+        
+    while(it.hasNext()){
+        QString path = it.next();
+        if (path.endsWith(".nes"))
+        {
+            romPaths.push_back(path.toStdString());
+
+            std::string correspondingRomPath = convertExtension(romImagePath, path.toStdString());
+
+            romImages.push_back(correspondingRomPath);
+        }
+    }
+
+    // now that we have the paths of the roms and the rom images, we can load them into the program
+
+    for (int i = 0; i < romImages.size(); i++)
+    {
+        QImage unprocessedImage(QString::fromStdString(romImages.at(i)));
+        qDebug() << QString::fromStdString(romImages.at(i));
+        QImage processedImage = processImage(unprocessedImage);
+        roms.push_back(processedImage);
     }
 }
 
-/*
- * 
- * Converts the .nes extension of a rom file to .jpg to have the name of the corresponding rom image
- * file.
- * @param
- * romImageDir- Root directory of where the rom images are stored
- * path - full file path of the rom file
- * @return string of rom image path for the inputted rom file.
- * 
- */ 
+
 std::string MainWindow::convertExtension(std::string romImageDir, std::string path)
 {
-    //Find the last '/' to be able to isolate the rom file name
     int nameIndex = path.find_last_of('/');
     //Get the substring of the path that just has the rom file name
     path = path.substr(nameIndex + 1);
-    //Replace the .nes extension of the rom file path with .jpg
-    path = romImageDir + path.substr(0, path.size()-4)+ ".jpg";
-    //Print out the path for debugging purposes
-    qDebug() << QString::fromStdString(path);
+    path = romImageDir + "/" +  path.substr(0, path.size()-4)+ ".jpg";
+    //qDebug() << QString::fromStdString(path);
     //Return the path of the rom file image
     return path;
 }
