@@ -59,7 +59,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     curRom = 0;
     draggedRom = 0;
-
+    //Connect some ui elements and layout based on location.
     connect(ui->debugButton, SIGNAL(click()), this, SLOT(openNewWindow()));
     //QGridLayout *gridLayout = new QGridLayout;
     // addWidget(*Widget, row, column, rowspan, colspan)
