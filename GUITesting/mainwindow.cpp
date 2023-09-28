@@ -44,9 +44,6 @@
 #include <iostream>
 #include <fstream>
 
-char* hello = "Hello from server";
-
-
 /*
  * This is the constructor for the MainWindow of the GUI application
  * It sets up the UI elements of the program as well as loading the
@@ -81,7 +78,6 @@ MainWindow::MainWindow(QWidget *parent)
     //Socket server code specified below was adapted from an example at
     //www.geeksforgeeks.org/socket-programming-cc/
     //Socket Server code sample
-    int valread;
     struct sockaddr_in address;
     int opt = 1;
     int addrlen = sizeof(address);
@@ -128,8 +124,13 @@ MainWindow::MainWindow(QWidget *parent)
 		exit(EXIT_FAILURE);
 	}
     printf("Accepted on socket \n");
-    valread = read(new_socket, buffer, 1024);
+    int valread = read(new_socket, buffer, 1024);
+    if(valread == 0){
+        std::cout << "ERROR: Connection closed on other end.\n";
+    }
     printf("%s\n", buffer);
+    std::string std_hello = "hello";
+    const char* hello = std_hello.c_str();
     send(new_socket, hello, strlen(hello), 0);
     printf("Hello message sent\n");
 
@@ -165,7 +166,10 @@ void MainWindow::OpenFCEUX(){
     printf("Opening FCEUX\n");
     std::string command = "gtk-launch fceux\n";
     char* c = const_cast<char*>(command.c_str());
-    system(c);
+    int res = system(c);
+    if(res != 0){
+        std::cout << "Error, failure in launching FCEUX.\n";
+    }
 };
 
 /*
@@ -237,7 +241,7 @@ void MainWindow::loadROMPaths()
 
     // now that we have the paths of the roms and the rom images, we can load them into the program
 
-    for (int i = 0; i < romImages.size(); i++)
+    for (unsigned int i = 0; i < romImages.size(); i++)
     {
         QImage unprocessedImage(QString::fromStdString(romImages.at(i)));
         qDebug() << QString::fromStdString(romImages.at(i));
@@ -349,7 +353,7 @@ void MainWindow::on_nextButton_clicked()
     curRom+=1;
     //Checks to see if we were at the last rom in the list and if so then 
     //loops back to the first rom in the list
-    if(curRom >= roms.size())
+    if((unsigned int)curRom >= roms.size())
     {
         curRom = 0;
     }
@@ -447,16 +451,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 	    ui->label->raise();
 	    //Iterate to next rom after game is dropped
 	    //TODO:FIX THIS LOGIC(likely by using next and previous button functions)
-	    draggedRom += 1;
-	    if(draggedRom >= roms.size())
-	    {
-		    draggedRom = 0;
-	    }
-            if(draggedRom + 1 >= roms.size()){
-                ui->label->setPixmap(QPixmap::fromImage(roms.at(0)));
-            }else{
-                ui->label->setPixmap(QPixmap::fromImage(roms.at(draggedRom+1)));
-            }
+	    on_nextButton_clicked();
         }
     }
 }
