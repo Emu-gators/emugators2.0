@@ -1,2 +1,2 @@
-/home/jeya/ROMS/emugator/ROMs
-/home/jeya/ROMS/emugator/ROM_Carts
+/home/emugators/Documents/ROMS/emugator/ROMs
+/home/emugators/Documents/ROMS/emugator/ROM_Carts

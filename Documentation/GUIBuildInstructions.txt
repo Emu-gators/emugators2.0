@@ -1,0 +1,52 @@
+Helpful link:https://vitux.com/compiling-your-first-qt-program-in-ubuntu/
+Instructions for building GUI from the command line
+If running on a new board run these commands first:
+sudo apt-get update
+sudo apt-get install build-essential
+sudo apt-get install qtcreator
+sudo apt install qt5-default
+
+sudo apt-get build-dep qtmultimedia5-dev
+sudo apt-get install qtmultimedia5-dev
+sudo apt-get install libqt5multimedia5-plugins
+
+One important thing to check in our project specifically is that the images, ROMs, and ROM images are located at the path specified locations in the code. Also should any new ROM
+or ROM images be added, there should be no spaces or other special characters in the names besides '.'.
+Once those commands have been run and you are in the GUI project directory(on our board emugators2.0/GUITesting) you will then run these commands:
+
+qmake -project
+
+Opening up the .pro file that is created from the previous line you will insert this line
+without quotes: "QT += gui widgets multimedia"
+
+Then run with the name of the .pro file corresponding to the GUI project directory.
+
+qmake GUITesting.pro
+
+make
+
+Finally you will have your executable to run the GUI using the command with the name again
+corresponding to your GUI directory name.
+
+./GUITesting
+
+To get the GUI to run on boot, first create a .desktop file with:
+
+nano ~/.config/autostart/GUITest.desktop
+
+If the "autostart" directory doesn't exist, make one with: 
+
+mkdir ~/.config/autostart
+
+Inside the GUITest.desktop file, paste the following:
+
+[Desktop Entry]
+Type=Application
+Name=GUITest
+Exec=/home/emugators/Documents/other/emugators2.0old/GUITesting/GUITesting
+
+After saving the .desktop file in the ~/.config/autostart directory, run this command:
+
+sudo reboot
+
+This should reboot the system and you should successfully see the program as soon as the boot is complete.

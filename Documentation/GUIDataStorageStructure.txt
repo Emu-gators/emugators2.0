@@ -1,0 +1,23 @@
+This file contains the default directories for different pieces of data that are required for the 
+GUI program to function properly. It also contains some specific notes with regards to naming conventions
+and locations of files.
+
+Default GUI art image directory from root of the repo: ../ROMS/
+Default ROM directory from root of the repository: ../ROMS/emugator/ROMs/
+Default ROM image directory from root of the repository: ../ROMS/emugator/ROM_Carts/
+Default Sound file directory from root of the repository: ../ROMS/emugator
+
+Specific Notes for each set of data.
+
+GUI Art Images:
+These set of images paths and names are all hardcoded as they are linked to specific elements
+within the GUI so the names of your files should match the names in mainwindow.cpp exactly. If you
+change the name of any of the art name files be sure to update the paths in GUITesting/mainwindow.cpp.
+
+ROM files and ROM Images:
+The GUI program requires a folder which contains the ROM files of the games a user wishes to play
+and another directory witht he ROM images for each rom file. Each pair of rom files and rom images
+must have identical names, excluding the extensions.
+
+Currently the the rom files must have an nes extension or some other 3 letter extension and the 
+corresponding rom image must have a jpg extension.

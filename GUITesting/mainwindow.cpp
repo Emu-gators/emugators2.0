@@ -44,6 +44,9 @@
 #include <iostream>
 #include <fstream>
 
+#include <lgpio.h>
+#include <inttypes.h>
+
 /*
  * This is the constructor for the MainWindow of the GUI application
  * It sets up the UI elements of the program as well as loading the
@@ -454,6 +457,21 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 	    on_nextButton_clicked();
         }
     }
+}
+
+
+void ejectButton(int e, lgGpioAlert_p evt, void *data){
+    printf("Eject was pressed!\n");
+    
+}
+
+void setupGPIO(){
+    int handle;
+    int buttonC4 = 20;
+
+    handle = lgGpiochipOpen(buttonC4);
+    lgGpioSetAlertsFunc(handle,buttonC4,ejectButton,0);
+    lgGpioClaimAlert(handle,LG_SET_PULL_DOWN,LG_BOTH_EDGES,buttonC4,-1);
 }
 
 
