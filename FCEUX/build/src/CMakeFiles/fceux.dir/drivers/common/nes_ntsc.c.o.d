@@ -1,9 +1,9 @@
 src/CMakeFiles/fceux.dir/drivers/common/nes_ntsc.c.o: \
- /home/emugators/Documents/emugators2.0/src/drivers/common/nes_ntsc.c \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/nes_ntsc.c \
  /usr/include/stdc-predef.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/nes_ntsc.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/nes_ntsc_config.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/nes_ntsc_impl.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/nes_ntsc.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/nes_ntsc_config.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/nes_ntsc_impl.h \
  /usr/include/assert.h /usr/include/features.h \
  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
@@ -24,6 +24,7 @@ src/CMakeFiles/fceux.dir/drivers/common/nes_ntsc.c.o: \
  /usr/include/aarch64-linux-gnu/bits/fp-fast.h \
  /usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h \
  /usr/include/aarch64-linux-gnu/bits/mathcalls.h \
+ /usr/include/aarch64-linux-gnu/bits/mathinline.h \
  /usr/lib/gcc/aarch64-linux-gnu/10/include/limits.h \
  /usr/lib/gcc/aarch64-linux-gnu/10/include/syslimits.h \
  /usr/include/limits.h /usr/include/aarch64-linux-gnu/bits/posix1_lim.h \

@@ -1,5 +1,5 @@
 src/CMakeFiles/fceux.dir/file.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/file.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/file.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/10/cstdio \
  /usr/include/aarch64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/10/bits/os_defines.h \
@@ -26,7 +26,7 @@ src/CMakeFiles/fceux.dir/file.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /usr/include/c++/10/climits \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h /usr/include/c++/10/climits \
  /usr/lib/gcc/aarch64-linux-gnu/10/include/limits.h \
  /usr/lib/gcc/aarch64-linux-gnu/10/include/syslimits.h \
  /usr/include/limits.h /usr/include/aarch64-linux-gnu/bits/posix1_lim.h \
@@ -63,7 +63,9 @@ src/CMakeFiles/fceux.dir/file.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
- /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h /usr/include/c++/10/cstring \
  /usr/include/string.h /usr/include/strings.h /usr/include/c++/10/cstdarg \
  /usr/include/aarch64-linux-gnu/sys/stat.h \
@@ -170,18 +172,18 @@ src/CMakeFiles/fceux.dir/file.cpp.o: \
  /usr/include/aarch64-linux-gnu/c++/10/bits/basic_file.h \
  /usr/include/aarch64-linux-gnu/c++/10/bits/c++io.h \
  /usr/include/c++/10/bits/fstream.tcc \
- /home/emugators/Documents/emugators2.0/src/types.h /usr/include/unistd.h \
- /usr/include/aarch64-linux-gnu/bits/posix_opt.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/types.h \
+ /usr/include/unistd.h /usr/include/aarch64-linux-gnu/bits/posix_opt.h \
  /usr/include/aarch64-linux-gnu/bits/environments.h \
  /usr/include/aarch64-linux-gnu/bits/confname.h \
  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h /usr/include/inttypes.h \
- /home/emugators/Documents/emugators2.0/src/utils/endian.h \
- /home/emugators/Documents/emugators2.0/src/utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/utils/../emufile.h \
- /home/emugators/Documents/emugators2.0/src/utils/../emufile_types.h \
- /home/emugators/Documents/emugators2.0/src/utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/endian.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../emufile_types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../types.h \
  /usr/include/c++/10/cassert /usr/include/assert.h \
  /usr/include/c++/10/vector /usr/include/c++/10/bits/stl_uninitialized.h \
  /usr/include/c++/10/bits/stl_vector.h \
@@ -193,22 +195,22 @@ src/CMakeFiles/fceux.dir/file.cpp.o: \
  /usr/include/c++/10/bits/stl_heap.h \
  /usr/include/c++/10/bits/stl_tempbuf.h \
  /usr/include/c++/10/bits/uniform_int_dist.h /usr/include/c++/10/limits \
- /home/emugators/Documents/emugators2.0/src/file.h \
- /home/emugators/Documents/emugators2.0/src/emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/file.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/emufile.h \
  /usr/include/c++/10/iostream \
- /home/emugators/Documents/emugators2.0/src/utils/memory.h \
- /home/emugators/Documents/emugators2.0/src/utils/md5.h \
- /home/emugators/Documents/emugators2.0/src/utils/valuearray.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/memory.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/md5.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/valuearray.h \
  /usr/include/minizip/unzip.h /usr/include/zlib.h /usr/include/zconf.h \
  /usr/include/minizip/ioapi.h /usr/include/c++/10/stdlib.h \
- /home/emugators/Documents/emugators2.0/src/driver.h \
- /home/emugators/Documents/emugators2.0/src/git.h \
- /home/emugators/Documents/emugators2.0/src/fceu.h \
- /home/emugators/Documents/emugators2.0/src/state.h \
- /home/emugators/Documents/emugators2.0/src/movie.h \
- /home/emugators/Documents/emugators2.0/src/input/zapper.h \
- /home/emugators/Documents/emugators2.0/src/input/../types.h \
- /home/emugators/Documents/emugators2.0/src/utils/guid.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/driver.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/git.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/fceu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/state.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/movie.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/zapper.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/guid.h \
  /usr/include/c++/10/map /usr/include/c++/10/bits/stl_tree.h \
  /usr/include/c++/10/ext/aligned_buffer.h \
  /usr/include/c++/10/bits/stl_map.h /usr/include/c++/10/tuple \
@@ -216,4 +218,4 @@ src/CMakeFiles/fceux.dir/file.cpp.o: \
  /usr/include/c++/10/bits/invoke.h \
  /usr/include/c++/10/bits/stl_multimap.h \
  /usr/include/c++/10/bits/erase_if.h \
- /home/emugators/Documents/emugators2.0/src/utils/xstring.h
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/xstring.h

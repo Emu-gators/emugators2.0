@@ -1,6 +1,6 @@
-/home/emugators/Documents/emugators2.0/build/src/fceux_autogen/K5VDSSFJYP/moc_AviRiffViewer.cpp: /home/emugators/Documents/emugators2.0/src/drivers/Qt/AviRiffViewer.h \
-  /home/emugators/Documents/emugators2.0/build/src/fceux_autogen/moc_predefs.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/Qt/avi/gwavi.h \
+/home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/K5VDSSFJYP/moc_AviRiffViewer.cpp: /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/AviRiffViewer.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/avi/gwavi.h \
   /usr/include/aarch64-linux-gnu/bits/byteswap.h \
   /usr/include/aarch64-linux-gnu/bits/cpu-set.h \
   /usr/include/aarch64-linux-gnu/bits/endian.h \

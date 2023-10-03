@@ -1,22 +1,22 @@
-/home/emugators/Documents/emugators2.0/build/src/fceux_autogen/4FXCKEML6F/moc_bookmarks.cpp: /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/bookmarks.h \
-  /home/emugators/Documents/emugators2.0/build/src/fceux_autogen/moc_predefs.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/bookmark.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/inputlog.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/laglog.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/markers.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/selection.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/snapshot.h \
-  /home/emugators/Documents/emugators2.0/src/emufile.h \
-  /home/emugators/Documents/emugators2.0/src/emufile_types.h \
-  /home/emugators/Documents/emugators2.0/src/fceu.h \
-  /home/emugators/Documents/emugators2.0/src/git.h \
-  /home/emugators/Documents/emugators2.0/src/input/zapper.h \
-  /home/emugators/Documents/emugators2.0/src/movie.h \
-  /home/emugators/Documents/emugators2.0/src/types.h \
-  /home/emugators/Documents/emugators2.0/src/utils/endian.h \
-  /home/emugators/Documents/emugators2.0/src/utils/guid.h \
-  /home/emugators/Documents/emugators2.0/src/utils/md5.h \
-  /home/emugators/Documents/emugators2.0/src/utils/valuearray.h \
+/home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/4FXCKEML6F/moc_bookmarks.cpp: /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmarks.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmark.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/inputlog.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/laglog.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/selection.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/snapshot.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/emufile.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/emufile_types.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/fceu.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/git.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/input/zapper.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/movie.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/types.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/utils/endian.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/utils/guid.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/utils/md5.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/utils/valuearray.h \
   /usr/include/aarch64-linux-gnu/bits/byteswap.h \
   /usr/include/aarch64-linux-gnu/bits/confname.h \
   /usr/include/aarch64-linux-gnu/bits/cpu-set.h \

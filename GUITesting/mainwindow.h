@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "newwindow.h"
+#include <lgpio.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -43,4 +44,8 @@ private:
     int new_socket;
 
 };
+
+void setupGPIO();
+void ejectButton(int e, lgGpioAlert_p evt, void *data);
+
 #endif // MAINWINDOW_H

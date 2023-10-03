@@ -44,7 +44,7 @@
 #include <iostream>
 #include <fstream>
 
-#include <lgpio.h>
+
 #include <inttypes.h>
 
 /*
@@ -77,6 +77,7 @@ MainWindow::MainWindow(QWidget *parent)
     loadGUIImages();
     loadROMPaths();
     displayCurROM();
+    setupGPIO();
 
     //Socket server code specified below was adapted from an example at
     //www.geeksforgeeks.org/socket-programming-cc/
@@ -437,7 +438,8 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 	x = x - topLeft.x();
 	y = y - topLeft.y();
         //Check if x and y of mouse is over the famicom image
-        if(ui->famicom->geometry().contains(x,y))
+        
+	if(ui->famicom->geometry().contains(x,y))
         {
 	    //Send rom path of game to be loaded based on what user drags and drops
             printf("Before send\n");
@@ -455,23 +457,25 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 	    //Iterate to next rom after game is dropped
 	    //TODO:FIX THIS LOGIC(likely by using next and previous button functions)
 	    on_nextButton_clicked();
+	    
+	    this->lower();
         }
     }
 }
 
-
+extern MainWindow* mwPointer;
 void ejectButton(int e, lgGpioAlert_p evt, void *data){
     printf("Eject was pressed!\n");
-    
+    mwPointer->raise();
 }
 
 void setupGPIO(){
     int handle;
     int buttonC4 = 20;
 
-    handle = lgGpiochipOpen(buttonC4);
+    handle = lgGpiochipOpen(2);
     lgGpioSetAlertsFunc(handle,buttonC4,ejectButton,0);
-    lgGpioClaimAlert(handle,LG_SET_PULL_DOWN,LG_BOTH_EDGES,buttonC4,-1);
+    lgGpioClaimAlert(handle,LG_SET_PULL_DOWN,LG_RISING_EDGE,buttonC4,-1);
 }
 
 

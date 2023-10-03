@@ -1,5 +1,5 @@
 src/CMakeFiles/fceux.dir/utils/memory.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/utils/memory.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/memory.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/10/stdlib.h \
  /usr/include/c++/10/cstdlib \
  /usr/include/aarch64-linux-gnu/c++/10/bits/c++config.h \
@@ -44,7 +44,9 @@ src/CMakeFiles/fceux.dir/utils/memory.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
- /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h /usr/include/stdio.h \
  /usr/lib/gcc/aarch64-linux-gnu/10/include/stdarg.h \
  /usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h \
@@ -55,9 +57,10 @@ src/CMakeFiles/fceux.dir/utils/memory.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
- /usr/include/aarch64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h /usr/include/string.h \
  /usr/include/strings.h \
- /home/emugators/Documents/emugators2.0/src/utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../types.h \
  /usr/include/aarch64-linux-gnu/sys/stat.h \
  /usr/include/aarch64-linux-gnu/bits/stat.h \
  /usr/include/aarch64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
@@ -80,16 +83,16 @@ src/CMakeFiles/fceux.dir/utils/memory.cpp.o: \
  /usr/lib/gcc/aarch64-linux-gnu/10/include/stdint.h /usr/include/stdint.h \
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
- /home/emugators/Documents/emugators2.0/src/utils/../utils/endian.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../utils/endian.h \
  /usr/include/c++/10/iosfwd /usr/include/c++/10/bits/stringfwd.h \
  /usr/include/c++/10/bits/memoryfwd.h /usr/include/c++/10/bits/postypes.h \
  /usr/include/c++/10/cwchar /usr/include/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/types/wint_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/mbstate_t.h \
- /home/emugators/Documents/emugators2.0/src/utils/../utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/utils/../utils/../emufile.h \
- /home/emugators/Documents/emugators2.0/src/utils/../utils/../emufile_types.h \
- /home/emugators/Documents/emugators2.0/src/utils/../utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../utils/../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../utils/../emufile_types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../utils/../types.h \
  /usr/include/c++/10/cassert /usr/include/assert.h \
  /usr/include/c++/10/cstdio /usr/include/c++/10/cstring \
  /usr/include/c++/10/cstdarg /usr/include/c++/10/vector \
@@ -164,9 +167,9 @@ src/CMakeFiles/fceux.dir/utils/memory.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/10/bits/charconv.h \
  /usr/include/c++/10/bits/basic_string.tcc \
- /home/emugators/Documents/emugators2.0/src/utils/../fceu.h \
- /home/emugators/Documents/emugators2.0/src/utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/utils/../git.h \
- /home/emugators/Documents/emugators2.0/src/utils/../utils/md5.h \
- /home/emugators/Documents/emugators2.0/src/utils/../utils/valuearray.h \
- /home/emugators/Documents/emugators2.0/src/utils/memory.h
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../fceu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../git.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../utils/md5.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../utils/valuearray.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/memory.h

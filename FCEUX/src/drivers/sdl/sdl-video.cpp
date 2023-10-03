@@ -98,7 +98,8 @@ static SDL_Texture  *sdlTexture  = NULL;
 //draw input aids if we are fullscreen
 bool FCEUD_ShouldDrawInputAids()
 {
-	return s_fullscreen!=0;
+	//return s_fullscreen!=0;
+	return false;
 }
  
 int

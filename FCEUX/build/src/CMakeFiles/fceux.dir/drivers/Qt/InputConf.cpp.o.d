@@ -1,5 +1,5 @@
 src/CMakeFiles/fceux.dir/drivers/Qt/InputConf.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/InputConf.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/InputConf.cpp \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/aarch64-linux-gnu/sys/cdefs.h \
@@ -22,7 +22,8 @@ src/CMakeFiles/fceux.dir/drivers/Qt/InputConf.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /usr/include/c++/10/stdlib.h /usr/include/c++/10/cstdlib \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h /usr/include/c++/10/stdlib.h \
+ /usr/include/c++/10/cstdlib \
  /usr/include/aarch64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/10/bits/os_defines.h \
  /usr/include/aarch64-linux-gnu/c++/10/bits/cpu_defines.h \
@@ -53,7 +54,9 @@ src/CMakeFiles/fceux.dir/drivers/Qt/InputConf.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
- /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/10/string \
  /usr/include/c++/10/bits/stringfwd.h \
@@ -143,6 +146,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/InputConf.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/mathcalls.h \
  /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/aarch64-linux-gnu/bits/iscanonical.h \
+ /usr/include/aarch64-linux-gnu/bits/mathinline.h \
  /usr/lib/gcc/aarch64-linux-gnu/10/include/float.h \
  /usr/include/SDL2/SDL_assert.h /usr/include/signal.h \
  /usr/include/aarch64-linux-gnu/bits/signum.h \
@@ -377,9 +381,9 @@ src/CMakeFiles/fceux.dir/drivers/Qt/InputConf.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qdialog.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QGroupBox \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qgroupbox.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/main.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../driver.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/main.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../driver.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../types.h \
  /usr/include/aarch64-linux-gnu/sys/stat.h \
  /usr/include/aarch64-linux-gnu/bits/stat.h \
  /usr/include/aarch64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
@@ -392,18 +396,18 @@ src/CMakeFiles/fceux.dir/drivers/Qt/InputConf.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/endian.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/../emufile.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/../emufile_types.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/endian.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/../emufile_types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/../types.h \
  /usr/include/c++/10/cassert /usr/include/c++/10/cstring \
  /usr/include/c++/10/cstdarg \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../git.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/md5.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/valuearray.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../file.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../git.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/md5.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/valuearray.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../file.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../emufile.h \
  /usr/include/c++/10/iostream /usr/include/c++/10/ostream \
  /usr/include/c++/10/ios /usr/include/c++/10/bits/basic_ios.h \
  /usr/include/c++/10/bits/locale_facets.h /usr/include/c++/10/cwctype \
@@ -414,10 +418,10 @@ src/CMakeFiles/fceux.dir/drivers/Qt/InputConf.cpp.o: \
  /usr/include/c++/10/bits/basic_ios.tcc \
  /usr/include/c++/10/bits/ostream.tcc /usr/include/c++/10/istream \
  /usr/include/c++/10/bits/istream.tcc \
- /home/emugators/Documents/emugators2.0/src/drivers/common/config.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/args.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/dface.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/input.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/config.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/args.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/dface.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/input.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QKeySequence \
@@ -428,9 +432,9 @@ src/CMakeFiles/fceux.dir/drivers/Qt/InputConf.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qaction.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qactiongroup.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qaction.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/configSys.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/config.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/keyscan.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/configSys.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/config.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/keyscan.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QtCore \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QtCoreDepends \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qglobal.h \
@@ -668,8 +672,8 @@ src/CMakeFiles/fceux.dir/drivers/Qt/InputConf.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qxmlstream.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qtcoreversion.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QKeyEvent \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/fceuWrapper.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleWindow.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/fceuWrapper.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleWindow.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qguiapplication.h \
@@ -700,14 +704,14 @@ src/CMakeFiles/fceux.dir/drivers/Qt/InputConf.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QMutex \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QColor \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qcolor.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ColorMenu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ColorMenu.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidgetAction \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidgetaction.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialog \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qdialog.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QColorDialog \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qcolordialog.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleViewerGL.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleViewerGL.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QScreen \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qscreen.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QList \
@@ -728,10 +732,10 @@ src/CMakeFiles/fceux.dir/drivers/Qt/InputConf.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qopenglcontext.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QScopedPointer \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qopenglversionfunctions.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleViewerSDL.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleViewerSDL.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QPaintEvent \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QResizeEvent \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/GamePadConf.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/GamePadConf.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QComboBox \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qcombobox.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox \
@@ -753,7 +757,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/InputConf.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qtreeview.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qtreewidgetitemiterator.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QPropertyAnimation \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/AviRecord.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/AviRecord.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QSpinBox \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qspinbox.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDoubleSpinBox \
@@ -764,13 +768,13 @@ src/CMakeFiles/fceux.dir/drivers/Qt/InputConf.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollBar \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qscrollbar.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QTreeWidgetItem \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleUtilities.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleUtilities.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QValidator \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qvalidator.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QHelpEvent \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/FamilyKeyboard.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/FamilyKeyboard.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QRect \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QMouseEvent \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QFont \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qfont.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/InputConf.h
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/InputConf.h

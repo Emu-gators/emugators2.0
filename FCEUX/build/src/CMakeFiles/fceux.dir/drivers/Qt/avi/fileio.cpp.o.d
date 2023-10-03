@@ -1,5 +1,5 @@
 src/CMakeFiles/fceux.dir/drivers/Qt/avi/fileio.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/avi/fileio.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/avi/fileio.cpp \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/aarch64-linux-gnu/sys/cdefs.h \
@@ -22,7 +22,8 @@ src/CMakeFiles/fceux.dir/drivers/Qt/avi/fileio.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/avi/gwavi.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/avi/gwavi.h \
  /usr/lib/gcc/aarch64-linux-gnu/10/include/stdint.h /usr/include/stdint.h \
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
@@ -121,7 +122,9 @@ src/CMakeFiles/fceux.dir/drivers/Qt/avi/fileio.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/select.h \
  /usr/include/aarch64-linux-gnu/bits/types/sigset_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h /usr/include/c++/10/cstdio \
  /usr/include/c++/10/cerrno /usr/include/errno.h \
  /usr/include/aarch64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \

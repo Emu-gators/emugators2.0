@@ -1,8 +1,8 @@
 src/CMakeFiles/fceux.dir/boards/189.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/boards/189.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/189.cpp \
  /usr/include/stdc-predef.h \
- /home/emugators/Documents/emugators2.0/src/boards/mapinc.h \
- /home/emugators/Documents/emugators2.0/src/boards/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/mapinc.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../types.h \
  /usr/include/aarch64-linux-gnu/sys/types.h /usr/include/features.h \
  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
@@ -57,7 +57,7 @@ src/CMakeFiles/fceux.dir/boards/189.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
- /home/emugators/Documents/emugators2.0/src/boards/../utils/endian.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../utils/endian.h \
  /usr/include/c++/10/iosfwd \
  /usr/include/aarch64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/10/bits/os_defines.h \
@@ -82,10 +82,11 @@ src/CMakeFiles/fceux.dir/boards/189.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /home/emugators/Documents/emugators2.0/src/boards/../utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/boards/../utils/../emufile.h \
- /home/emugators/Documents/emugators2.0/src/boards/../utils/../emufile_types.h \
- /home/emugators/Documents/emugators2.0/src/boards/../utils/../types.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../utils/../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../utils/../emufile_types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../utils/../types.h \
  /usr/include/c++/10/cassert /usr/include/assert.h \
  /usr/include/c++/10/cstdio /usr/include/c++/10/cstring \
  /usr/include/string.h /usr/include/strings.h /usr/include/c++/10/cstdarg \
@@ -128,6 +129,7 @@ src/CMakeFiles/fceux.dir/boards/189.cpp.o: \
  /usr/include/c++/10/bits/stl_algo.h /usr/include/c++/10/cstdlib \
  /usr/include/stdlib.h /usr/include/aarch64-linux-gnu/bits/waitflags.h \
  /usr/include/aarch64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h \
  /usr/include/c++/10/bits/algorithmfwd.h \
@@ -164,18 +166,18 @@ src/CMakeFiles/fceux.dir/boards/189.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/10/bits/charconv.h \
  /usr/include/c++/10/bits/basic_string.tcc \
- /home/emugators/Documents/emugators2.0/src/boards/../utils/memory.h \
- /home/emugators/Documents/emugators2.0/src/boards/../x6502.h \
- /home/emugators/Documents/emugators2.0/src/boards/../x6502struct.h \
- /home/emugators/Documents/emugators2.0/src/boards/../fceu.h \
- /home/emugators/Documents/emugators2.0/src/boards/../types.h \
- /home/emugators/Documents/emugators2.0/src/boards/../git.h \
- /home/emugators/Documents/emugators2.0/src/boards/../utils/md5.h \
- /home/emugators/Documents/emugators2.0/src/boards/../utils/valuearray.h \
- /home/emugators/Documents/emugators2.0/src/boards/../ppu.h \
- /home/emugators/Documents/emugators2.0/src/boards/../sound.h \
- /home/emugators/Documents/emugators2.0/src/boards/../state.h \
- /home/emugators/Documents/emugators2.0/src/boards/../cart.h \
- /home/emugators/Documents/emugators2.0/src/boards/../cheat.h \
- /home/emugators/Documents/emugators2.0/src/boards/../unif.h \
- /home/emugators/Documents/emugators2.0/src/boards/mmc3.h
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../utils/memory.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../x6502.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../x6502struct.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../fceu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../git.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../utils/md5.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../utils/valuearray.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../ppu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../sound.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../state.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../cart.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../cheat.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/../unif.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/boards/mmc3.h

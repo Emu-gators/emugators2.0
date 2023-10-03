@@ -1,5 +1,5 @@
 src/CMakeFiles/fceux.dir/drivers/Qt/avi/avi-utils.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/avi/avi-utils.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/avi/avi-utils.cpp \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/aarch64-linux-gnu/sys/cdefs.h \
@@ -21,11 +21,12 @@ src/CMakeFiles/fceux.dir/drivers/Qt/avi/avi-utils.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
- /usr/include/aarch64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h /usr/include/string.h \
  /usr/include/aarch64-linux-gnu/bits/types/locale_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/avi/gwavi.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/avi/gwavi.h \
  /usr/lib/gcc/aarch64-linux-gnu/10/include/stdint.h /usr/include/stdint.h \
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
@@ -122,7 +123,9 @@ src/CMakeFiles/fceux.dir/drivers/Qt/avi/avi-utils.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/select.h \
  /usr/include/aarch64-linux-gnu/bits/types/sigset_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h /usr/include/c++/10/cstdio \
  /usr/include/c++/10/cerrno /usr/include/errno.h \
  /usr/include/aarch64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \

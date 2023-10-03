@@ -1,5 +1,5 @@
 src/CMakeFiles/fceux.dir/lua-engine.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/lua-engine.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/lua-engine.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/10/stdlib.h \
  /usr/include/c++/10/cstdlib \
  /usr/include/aarch64-linux-gnu/c++/10/bits/c++config.h \
@@ -44,7 +44,9 @@ src/CMakeFiles/fceux.dir/lua-engine.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
- /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h /usr/include/unistd.h \
  /usr/include/aarch64-linux-gnu/bits/posix_opt.h \
  /usr/include/aarch64-linux-gnu/bits/environments.h \
@@ -89,7 +91,7 @@ src/CMakeFiles/fceux.dir/lua-engine.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/struct_sigstack.h \
  /usr/include/aarch64-linux-gnu/bits/sigthread.h \
  /usr/include/aarch64-linux-gnu/bits/signal_ext.h /usr/include/libgen.h \
- /home/emugators/Documents/emugators2.0/src/types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/types.h \
  /usr/include/aarch64-linux-gnu/sys/stat.h \
  /usr/include/aarch64-linux-gnu/bits/stat.h \
  /usr/include/aarch64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
@@ -100,7 +102,7 @@ src/CMakeFiles/fceux.dir/lua-engine.cpp.o: \
  /usr/lib/gcc/aarch64-linux-gnu/10/include/stdint.h /usr/include/stdint.h \
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
- /home/emugators/Documents/emugators2.0/src/utils/endian.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/endian.h \
  /usr/include/c++/10/iosfwd /usr/include/c++/10/bits/stringfwd.h \
  /usr/include/c++/10/bits/memoryfwd.h /usr/include/c++/10/bits/postypes.h \
  /usr/include/c++/10/cwchar /usr/include/wchar.h \
@@ -116,10 +118,11 @@ src/CMakeFiles/fceux.dir/lua-engine.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /home/emugators/Documents/emugators2.0/src/utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/utils/../emufile.h \
- /home/emugators/Documents/emugators2.0/src/utils/../emufile_types.h \
- /home/emugators/Documents/emugators2.0/src/utils/../types.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../emufile_types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../types.h \
  /usr/include/c++/10/cassert /usr/include/assert.h \
  /usr/include/c++/10/cstdio /usr/include/c++/10/cstring \
  /usr/include/string.h /usr/include/strings.h /usr/include/c++/10/cstdarg \
@@ -194,12 +197,12 @@ src/CMakeFiles/fceux.dir/lua-engine.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/10/bits/charconv.h \
  /usr/include/c++/10/bits/basic_string.tcc \
- /home/emugators/Documents/emugators2.0/src/fceu.h \
- /home/emugators/Documents/emugators2.0/src/git.h \
- /home/emugators/Documents/emugators2.0/src/utils/md5.h \
- /home/emugators/Documents/emugators2.0/src/utils/valuearray.h \
- /home/emugators/Documents/emugators2.0/src/file.h \
- /home/emugators/Documents/emugators2.0/src/emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/fceu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/git.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/md5.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/valuearray.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/file.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/emufile.h \
  /usr/include/c++/10/iostream /usr/include/c++/10/ostream \
  /usr/include/c++/10/ios /usr/include/c++/10/bits/ios_base.h \
  /usr/include/c++/10/bits/locale_classes.h \
@@ -218,17 +221,17 @@ src/CMakeFiles/fceux.dir/lua-engine.cpp.o: \
  /usr/include/c++/10/bits/basic_ios.tcc \
  /usr/include/c++/10/bits/ostream.tcc /usr/include/c++/10/istream \
  /usr/include/c++/10/bits/istream.tcc \
- /home/emugators/Documents/emugators2.0/src/video.h \
- /home/emugators/Documents/emugators2.0/src/debug.h \
- /home/emugators/Documents/emugators2.0/src/conddebug.h \
- /home/emugators/Documents/emugators2.0/src/nsf.h \
- /home/emugators/Documents/emugators2.0/src/sound.h \
- /home/emugators/Documents/emugators2.0/src/drawing.h \
- /home/emugators/Documents/emugators2.0/src/state.h \
- /home/emugators/Documents/emugators2.0/src/movie.h \
- /home/emugators/Documents/emugators2.0/src/input/zapper.h \
- /home/emugators/Documents/emugators2.0/src/input/../types.h \
- /home/emugators/Documents/emugators2.0/src/utils/guid.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/video.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/debug.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/conddebug.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/nsf.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/sound.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drawing.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/state.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/movie.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/zapper.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/guid.h \
  /usr/include/c++/10/map /usr/include/c++/10/bits/stl_tree.h \
  /usr/include/c++/10/ext/aligned_buffer.h \
  /usr/include/c++/10/bits/stl_map.h /usr/include/c++/10/tuple \
@@ -236,16 +239,16 @@ src/CMakeFiles/fceux.dir/lua-engine.cpp.o: \
  /usr/include/c++/10/bits/invoke.h \
  /usr/include/c++/10/bits/stl_multimap.h \
  /usr/include/c++/10/bits/erase_if.h \
- /home/emugators/Documents/emugators2.0/src/driver.h \
- /home/emugators/Documents/emugators2.0/src/cheat.h \
- /home/emugators/Documents/emugators2.0/src/x6502.h \
- /home/emugators/Documents/emugators2.0/src/x6502struct.h \
- /home/emugators/Documents/emugators2.0/src/ppu.h \
- /home/emugators/Documents/emugators2.0/src/utils/xstring.h \
- /home/emugators/Documents/emugators2.0/src/utils/memory.h \
- /home/emugators/Documents/emugators2.0/src/utils/crc32.h \
- /home/emugators/Documents/emugators2.0/src/fceulua.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/sdl.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/driver.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/cheat.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/x6502.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/x6502struct.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/ppu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/xstring.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/memory.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/crc32.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/fceulua.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/sdl.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/aarch64-linux-gnu/SDL2/_real_SDL_config.h \
@@ -261,6 +264,7 @@ src/CMakeFiles/fceux.dir/lua-engine.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/mathcalls.h \
  /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/aarch64-linux-gnu/bits/iscanonical.h \
+ /usr/include/aarch64-linux-gnu/bits/mathinline.h \
  /usr/lib/gcc/aarch64-linux-gnu/10/include/float.h \
  /usr/include/SDL2/SDL_assert.h /usr/include/SDL2/SDL_atomic.h \
  /usr/include/SDL2/SDL_platform.h /usr/include/SDL2/SDL_audio.h \
@@ -287,12 +291,12 @@ src/CMakeFiles/fceux.dir/lua-engine.cpp.o: \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
  /usr/include/SDL2/SDL_misc.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/main.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../driver.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/config.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/args.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/dface.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/input.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/main.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../driver.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/config.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/args.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/dface.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/input.h \
  /usr/include/c++/10/list /usr/include/c++/10/bits/stl_list.h \
  /usr/include/c++/10/bits/allocated_ptr.h \
  /usr/include/c++/10/bits/list.tcc \
@@ -416,12 +420,12 @@ src/CMakeFiles/fceux.dir/lua-engine.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qicon.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qactiongroup.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qaction.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/configSys.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/main.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/input.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/fceuWrapper.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/config.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/selection.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/configSys.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/main.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/input.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/fceuWrapper.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/config.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/selection.h \
  /usr/include/c++/10/set /usr/include/c++/10/bits/stl_set.h \
  /usr/include/c++/10/bits/stl_multiset.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QLineEdit \
@@ -431,15 +435,15 @@ src/CMakeFiles/fceux.dir/lua-engine.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qtextformat.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qpen.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qtextoption.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/laglog.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/markers.h \
- /home/emugators/Documents/emugators2.0/src/fceu.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/snapshot.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/inputlog.h \
- /home/emugators/Documents/emugators2.0/src/movie.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/taseditor_lua.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/laglog.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/fceu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/snapshot.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/inputlog.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/movie.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_lua.h \
  /usr/include/zlib.h /usr/include/zconf.h /usr/include/c++/10/bitset \
- /home/emugators/Documents/emugators2.0/src/x6502abbrev.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/x6502abbrev.h \
  /usr/include/lua5.1/lua.h /usr/include/lua5.1/luaconf.h \
  /usr/include/aarch64-linux-gnu/lua5.1-deb-multiarch.h \
  /usr/include/lua5.1/lauxlib.h /usr/include/lua5.1/lua.h \

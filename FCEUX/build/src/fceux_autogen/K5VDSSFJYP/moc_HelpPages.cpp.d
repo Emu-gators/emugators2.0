@@ -1,5 +1,5 @@
-/home/emugators/Documents/emugators2.0/build/src/fceux_autogen/K5VDSSFJYP/moc_HelpPages.cpp: /home/emugators/Documents/emugators2.0/src/drivers/Qt/HelpPages.h \
-  /home/emugators/Documents/emugators2.0/build/src/fceux_autogen/moc_predefs.h \
+/home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/K5VDSSFJYP/moc_HelpPages.cpp: /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/HelpPages.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
   /usr/include/aarch64-linux-gnu/bits/byteswap.h \
   /usr/include/aarch64-linux-gnu/bits/cpu-set.h \
   /usr/include/aarch64-linux-gnu/bits/endian.h \

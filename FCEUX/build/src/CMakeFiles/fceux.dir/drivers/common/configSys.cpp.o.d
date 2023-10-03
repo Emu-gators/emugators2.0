@@ -1,5 +1,5 @@
 src/CMakeFiles/fceux.dir/drivers/common/configSys.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/drivers/common/configSys.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/configSys.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/10/iostream \
  /usr/include/aarch64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/10/bits/os_defines.h \
@@ -110,7 +110,9 @@ src/CMakeFiles/fceux.dir/drivers/common/configSys.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/select.h \
  /usr/include/aarch64-linux-gnu/bits/types/sigset_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h /usr/include/c++/10/cstdio \
  /usr/include/stdio.h \
  /usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h \
@@ -119,9 +121,9 @@ src/CMakeFiles/fceux.dir/drivers/common/configSys.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /usr/include/c++/10/cerrno /usr/include/errno.h \
- /usr/include/aarch64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/aarch64-linux-gnu/asm/errno.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h /usr/include/c++/10/cerrno \
+ /usr/include/errno.h /usr/include/aarch64-linux-gnu/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/aarch64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/10/bits/charconv.h \
@@ -152,7 +154,7 @@ src/CMakeFiles/fceux.dir/drivers/common/configSys.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/local_lim.h \
  /usr/include/linux/limits.h \
  /usr/include/aarch64-linux-gnu/bits/dirent_ext.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/../../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/../../types.h \
  /usr/include/aarch64-linux-gnu/sys/stat.h \
  /usr/include/aarch64-linux-gnu/bits/stat.h \
  /usr/include/aarch64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
@@ -172,11 +174,11 @@ src/CMakeFiles/fceux.dir/drivers/common/configSys.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h /usr/include/inttypes.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/../../utils/endian.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/../../utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/../../utils/../emufile.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/../../utils/../emufile_types.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/../../utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/../../utils/endian.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/../../utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/../../utils/../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/../../utils/../emufile_types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/../../utils/../types.h \
  /usr/include/c++/10/cassert /usr/include/assert.h \
  /usr/include/c++/10/cstring /usr/include/c++/10/cstdarg \
  /usr/include/c++/10/vector /usr/include/c++/10/bits/stl_uninitialized.h \
@@ -189,7 +191,7 @@ src/CMakeFiles/fceux.dir/drivers/common/configSys.cpp.o: \
  /usr/include/c++/10/bits/stl_heap.h \
  /usr/include/c++/10/bits/stl_tempbuf.h \
  /usr/include/c++/10/bits/uniform_int_dist.h /usr/include/c++/10/limits \
- /home/emugators/Documents/emugators2.0/src/drivers/common/configSys.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/configSys.h \
  /usr/include/c++/10/map /usr/include/c++/10/bits/stl_tree.h \
  /usr/include/c++/10/ext/aligned_buffer.h \
  /usr/include/c++/10/bits/stl_map.h /usr/include/c++/10/tuple \

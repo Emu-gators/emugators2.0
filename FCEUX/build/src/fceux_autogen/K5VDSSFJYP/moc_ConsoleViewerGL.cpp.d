@@ -1,5 +1,5 @@
-/home/emugators/Documents/emugators2.0/build/src/fceux_autogen/K5VDSSFJYP/moc_ConsoleViewerGL.cpp: /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleViewerGL.h \
-  /home/emugators/Documents/emugators2.0/build/src/fceux_autogen/moc_predefs.h \
+/home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/K5VDSSFJYP/moc_ConsoleViewerGL.cpp: /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleViewerGL.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
   /usr/include/GL/gl.h \
   /usr/include/aarch64-linux-gnu/bits/byteswap.h \
   /usr/include/aarch64-linux-gnu/bits/cpu-set.h \

@@ -1,9 +1,9 @@
 src/CMakeFiles/fceux.dir/drivers/Qt/unix-netplay.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/unix-netplay.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/unix-netplay.cpp \
  /usr/include/stdc-predef.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/unix-netplay.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../fceu.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/unix-netplay.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../fceu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../types.h \
  /usr/include/aarch64-linux-gnu/sys/types.h /usr/include/features.h \
  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
@@ -58,7 +58,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/unix-netplay.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/endian.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/endian.h \
  /usr/include/c++/10/iosfwd \
  /usr/include/aarch64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/10/bits/os_defines.h \
@@ -83,10 +83,11 @@ src/CMakeFiles/fceux.dir/drivers/Qt/unix-netplay.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/../emufile.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/../emufile_types.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/../types.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/../emufile_types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/../types.h \
  /usr/include/c++/10/cassert /usr/include/assert.h \
  /usr/include/c++/10/cstdio /usr/include/c++/10/cstring \
  /usr/include/string.h /usr/include/strings.h /usr/include/c++/10/cstdarg \
@@ -129,6 +130,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/unix-netplay.cpp.o: \
  /usr/include/c++/10/bits/stl_algo.h /usr/include/c++/10/cstdlib \
  /usr/include/stdlib.h /usr/include/aarch64-linux-gnu/bits/waitflags.h \
  /usr/include/aarch64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h \
  /usr/include/c++/10/bits/algorithmfwd.h \
@@ -165,12 +167,12 @@ src/CMakeFiles/fceux.dir/drivers/Qt/unix-netplay.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/10/bits/charconv.h \
  /usr/include/c++/10/bits/basic_string.tcc \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../git.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/md5.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/valuearray.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../driver.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../file.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../git.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/md5.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/valuearray.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../driver.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../file.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../emufile.h \
  /usr/include/c++/10/iostream /usr/include/c++/10/ostream \
  /usr/include/c++/10/ios /usr/include/c++/10/bits/ios_base.h \
  /usr/include/c++/10/bits/locale_classes.h \
@@ -189,9 +191,9 @@ src/CMakeFiles/fceux.dir/drivers/Qt/unix-netplay.cpp.o: \
  /usr/include/c++/10/bits/basic_ios.tcc \
  /usr/include/c++/10/bits/ostream.tcc /usr/include/c++/10/istream \
  /usr/include/c++/10/bits/istream.tcc \
- /home/emugators/Documents/emugators2.0/src/utils/md5.h \
- /home/emugators/Documents/emugators2.0/src/utils/memory.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/configSys.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/md5.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/memory.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/configSys.h \
  /usr/include/c++/10/map /usr/include/c++/10/bits/stl_tree.h \
  /usr/include/c++/10/ext/aligned_buffer.h \
  /usr/include/c++/10/bits/stl_map.h /usr/include/c++/10/tuple \

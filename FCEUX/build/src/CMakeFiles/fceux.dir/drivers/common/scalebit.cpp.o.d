@@ -1,8 +1,8 @@
 src/CMakeFiles/fceux.dir/drivers/common/scalebit.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/drivers/common/scalebit.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/scalebit.cpp \
  /usr/include/stdc-predef.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/scale2x.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/scale3x.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/scale2x.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/scale3x.h \
  /usr/include/assert.h /usr/include/features.h \
  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
@@ -47,5 +47,7 @@ src/CMakeFiles/fceux.dir/drivers/common/scalebit.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
- /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h

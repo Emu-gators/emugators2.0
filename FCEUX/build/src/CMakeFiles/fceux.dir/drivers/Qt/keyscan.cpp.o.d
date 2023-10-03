@@ -1,5 +1,5 @@
 src/CMakeFiles/fceux.dir/drivers/Qt/keyscan.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/keyscan.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/keyscan.cpp \
  /usr/include/stdc-predef.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QtCore \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QtCoreDepends \
@@ -70,7 +70,9 @@ src/CMakeFiles/fceux.dir/drivers/Qt/keyscan.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
- /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h \
  /usr/include/c++/10/bits/algorithmfwd.h \
  /usr/include/c++/10/bits/stl_heap.h \
@@ -160,9 +162,9 @@ src/CMakeFiles/fceux.dir/drivers/Qt/keyscan.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /usr/include/c++/10/cerrno /usr/include/errno.h \
- /usr/include/aarch64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/aarch64-linux-gnu/asm/errno.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h /usr/include/c++/10/cerrno \
+ /usr/include/errno.h /usr/include/aarch64-linux-gnu/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/aarch64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/10/bits/charconv.h \
@@ -380,6 +382,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/keyscan.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/mathcalls.h \
  /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/aarch64-linux-gnu/bits/iscanonical.h \
+ /usr/include/aarch64-linux-gnu/bits/mathinline.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qmessageauthenticationcode.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qcryptographichash.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qmetaobject.h \
@@ -562,7 +565,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/keyscan.cpp.o: \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
  /usr/include/SDL2/SDL_misc.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/keyscan.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/keyscan.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QKeyEvent \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qevent.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qtguiglobal.h \

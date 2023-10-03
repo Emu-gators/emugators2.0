@@ -1,5 +1,5 @@
 src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleWindow.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleWindow.cpp \
  /usr/include/stdc-predef.h /usr/include/arpa/inet.h \
  /usr/include/features.h /usr/include/aarch64-linux-gnu/sys/cdefs.h \
  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
@@ -60,7 +60,8 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
- /usr/include/aarch64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h /usr/include/string.h \
  /usr/include/aarch64-linux-gnu/bits/types/locale_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h /usr/include/unistd.h \
@@ -149,6 +150,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/c++/10/ext/string_conversions.h /usr/include/c++/10/cstdlib \
  /usr/include/stdlib.h /usr/include/aarch64-linux-gnu/bits/waitflags.h \
  /usr/include/aarch64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h /usr/include/c++/10/cstdio \
  /usr/include/c++/10/cerrno /usr/include/errno.h \
@@ -388,8 +390,8 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qshortcut.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QUrl \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qurl.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../fceu.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../fceu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../types.h \
  /usr/include/aarch64-linux-gnu/sys/stat.h \
  /usr/include/aarch64-linux-gnu/bits/stat.h \
  /usr/include/aarch64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
@@ -399,43 +401,43 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/struct_statx_timestamp.h \
  /usr/include/aarch64-linux-gnu/bits/types/struct_statx.h \
  /usr/include/inttypes.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/endian.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/../emufile.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/../emufile_types.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/endian.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/../emufile_types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/../types.h \
  /usr/include/c++/10/cassert /usr/include/c++/10/cstring \
  /usr/include/c++/10/cstdarg \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../git.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/md5.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/valuearray.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../fds.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../file.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../emufile.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../input.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../movie.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../input/zapper.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../input/../types.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../utils/guid.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../wave.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../version.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/os_utils.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../fceulua.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/main.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../driver.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../file.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/config.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/args.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/dface.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/input.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../git.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/md5.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/valuearray.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../fds.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../file.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../input.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../movie.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../input/zapper.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../input/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../utils/guid.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../wave.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../version.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/os_utils.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../fceulua.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/main.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../driver.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../file.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/config.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/args.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/dface.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/input.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QKeySequence \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qkeysequence.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QAction \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qaction.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/configSys.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ColorMenu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/configSys.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ColorMenu.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidgetAction \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qwidgetaction.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QColor \
@@ -448,7 +450,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qevent.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qvector2d.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qtouchdevice.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleWindow.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleWindow.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QPushButton \
@@ -485,7 +487,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qcursor.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QMutex \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qmutex.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleViewerGL.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleViewerGL.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QOpenGLWidget \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qopenglwidget.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QWidget \
@@ -499,7 +501,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QScopedPointer \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qscopedpointer.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qopenglversionfunctions.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleViewerSDL.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleViewerSDL.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QPaintEvent \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QResizeEvent \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
@@ -517,6 +519,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/mathcalls.h \
  /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/aarch64-linux-gnu/bits/iscanonical.h \
+ /usr/include/aarch64-linux-gnu/bits/mathinline.h \
  /usr/lib/gcc/aarch64-linux-gnu/10/include/float.h \
  /usr/include/SDL2/SDL_assert.h /usr/include/signal.h \
  /usr/include/aarch64-linux-gnu/bits/signum.h \
@@ -571,7 +574,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
  /usr/include/SDL2/SDL_misc.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/GamePadConf.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/GamePadConf.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QComboBox \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qcombobox.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QCheckBox \
@@ -597,7 +600,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qvariantanimation.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qeasingcurve.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qabstractanimation.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/AviRecord.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/AviRecord.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QSpinBox \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qspinbox.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDoubleSpinBox \
@@ -606,21 +609,21 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollBar \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qscrollbar.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QTreeWidgetItem \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/InputConf.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/FamilyKeyboard.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/InputConf.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/FamilyKeyboard.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QRect \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QMouseEvent \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QFont \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qfont.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/HotKeyConf.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/PaletteConf.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/PaletteEditor.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/HelpPages.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/HotKeyConf.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/PaletteConf.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/PaletteEditor.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/HelpPages.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QSplitter \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qsplitter.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QTabWidget \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/GuiConf.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/GuiConf.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QRadioButton \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qradiobutton.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QPalette \
@@ -631,30 +634,30 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qcommonstyle.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStyle \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qstyle.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/AviRiffViewer.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/AviRiffViewer.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QProgressDialog \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qprogressdialog.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/avi/gwavi.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/MoviePlay.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleUtilities.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/avi/gwavi.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/MoviePlay.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleUtilities.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QValidator \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qvalidator.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QHelpEvent \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/MovieRecord.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/MovieOptions.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/MovieRecord.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/MovieOptions.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QStackedWidget \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qstackedwidget.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TimingConf.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TimingConf.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QSlider \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qslider.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/FrameTimingStats.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/LuaControl.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/FrameTimingStats.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/LuaControl.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QTextEdit \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qtextedit.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qtextdocument.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/CheatsConf.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/GameGenie.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/HexEditor.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/CheatsConf.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/GameGenie.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/HexEditor.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QPlainTextEdit \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qplaintextedit.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qtextedit.h \
@@ -664,33 +667,33 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qglyphrun.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qrawfont.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qfontdatabase.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TraceLogger.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TraceLogger.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QClipboard \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qclipboard.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/SymbolicDebug.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleDebugger.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/SymbolicDebug.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleDebugger.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QToolBar \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qtoolbar.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../debug.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../conddebug.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/../../nsf.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/CodeDataLogger.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleSoundConf.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../debug.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../conddebug.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/../../nsf.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/CodeDataLogger.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleSoundConf.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QProgressBar \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qprogressbar.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleVideoConf.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/MsgLogViewer.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/AboutWindow.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/fceuWrapper.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/config.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ppuViewer.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/NameTableViewer.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleVideoConf.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/MsgLogViewer.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/AboutWindow.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/fceuWrapper.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/config.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ppuViewer.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/NameTableViewer.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollArea \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/iNesHeaderEditor.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/RamWatch.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/RamSearch.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/keyscan.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/iNesHeaderEditor.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/RamWatch.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/RamSearch.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/keyscan.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QtCore \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QtCoreDepends \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qglobal.h \
@@ -901,26 +904,26 @@ src/CMakeFiles/fceux.dir/drivers/Qt/ConsoleWindow.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qwineventnotifier.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qxmlstream.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qtcoreversion.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/nes_shm.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/TasEditorWindow.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/taseditor_config.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/taseditor_project.h \
- /home/emugators/Documents/emugators2.0/src/movie.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/greenzone.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/laglog.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/selection.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/nes_shm.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/TasEditorWindow.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_config.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_project.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/movie.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/greenzone.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/laglog.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/selection.h \
  /usr/include/c++/10/set /usr/include/c++/10/bits/stl_set.h \
  /usr/include/c++/10/bits/stl_multiset.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/markers_manager.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/markers.h \
- /home/emugators/Documents/emugators2.0/src/fceu.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/snapshot.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/inputlog.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/bookmarks.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/bookmark.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/branches.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/history.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/playback.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/recorder.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/taseditor_lua.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/splicer.h
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers_manager.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/fceu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/snapshot.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/inputlog.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmarks.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmark.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/branches.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/history.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/playback.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/recorder.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_lua.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/splicer.h

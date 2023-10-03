@@ -1,5 +1,5 @@
 src/CMakeFiles/fceux.dir/input/snesmouse.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/input/snesmouse.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/snesmouse.cpp \
  /usr/include/stdc-predef.h /usr/include/string.h \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/aarch64-linux-gnu/sys/cdefs.h \
@@ -44,10 +44,12 @@ src/CMakeFiles/fceux.dir/input/snesmouse.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
- /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h \
- /home/emugators/Documents/emugators2.0/src/input/share.h \
- /home/emugators/Documents/emugators2.0/src/input/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/share.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../types.h \
  /usr/include/aarch64-linux-gnu/sys/stat.h \
  /usr/include/aarch64-linux-gnu/bits/stat.h \
  /usr/include/aarch64-linux-gnu/bits/statx.h /usr/include/linux/stat.h \
@@ -70,7 +72,7 @@ src/CMakeFiles/fceux.dir/input/snesmouse.cpp.o: \
  /usr/lib/gcc/aarch64-linux-gnu/10/include/stdint.h /usr/include/stdint.h \
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
- /home/emugators/Documents/emugators2.0/src/input/../utils/endian.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../utils/endian.h \
  /usr/include/c++/10/iosfwd /usr/include/c++/10/bits/stringfwd.h \
  /usr/include/c++/10/bits/memoryfwd.h /usr/include/c++/10/bits/postypes.h \
  /usr/include/c++/10/cwchar /usr/include/wchar.h \
@@ -86,10 +88,11 @@ src/CMakeFiles/fceux.dir/input/snesmouse.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /home/emugators/Documents/emugators2.0/src/input/../utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/input/../utils/../emufile.h \
- /home/emugators/Documents/emugators2.0/src/input/../utils/../emufile_types.h \
- /home/emugators/Documents/emugators2.0/src/input/../utils/../types.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../utils/../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../utils/../emufile_types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../utils/../types.h \
  /usr/include/c++/10/cassert /usr/include/assert.h \
  /usr/include/c++/10/cstdio /usr/include/c++/10/cstring \
  /usr/include/c++/10/cstdarg /usr/include/c++/10/vector \
@@ -164,10 +167,10 @@ src/CMakeFiles/fceux.dir/input/snesmouse.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/10/bits/charconv.h \
  /usr/include/c++/10/bits/basic_string.tcc \
- /home/emugators/Documents/emugators2.0/src/input/../input.h \
- /home/emugators/Documents/emugators2.0/src/input/../git.h \
- /home/emugators/Documents/emugators2.0/src/input/../utils/md5.h \
- /home/emugators/Documents/emugators2.0/src/input/../utils/valuearray.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../input.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../git.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../utils/md5.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../utils/valuearray.h \
  /usr/include/c++/10/ostream /usr/include/c++/10/ios \
  /usr/include/c++/10/bits/ios_base.h \
  /usr/include/c++/10/bits/locale_classes.h \
@@ -185,9 +188,9 @@ src/CMakeFiles/fceux.dir/input/snesmouse.cpp.o: \
  /usr/include/c++/10/bits/locale_facets.tcc \
  /usr/include/c++/10/bits/basic_ios.tcc \
  /usr/include/c++/10/bits/ostream.tcc \
- /home/emugators/Documents/emugators2.0/src/input/../fceu.h \
- /home/emugators/Documents/emugators2.0/src/input/../types.h \
- /home/emugators/Documents/emugators2.0/src/input/../ppu.h \
- /home/emugators/Documents/emugators2.0/src/input/../x6502.h \
- /home/emugators/Documents/emugators2.0/src/input/../x6502struct.h \
- /home/emugators/Documents/emugators2.0/src/input/../palette.h
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../fceu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../ppu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../x6502.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../x6502struct.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../palette.h

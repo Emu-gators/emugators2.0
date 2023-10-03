@@ -88,7 +88,8 @@ bool turbo = false;
 bool pauseAfterPlayback = false;
 bool suggestReadOnlyReplay = true;
 bool showStatusIconOpt = true;
-bool drawInputAidsEnable = true;
+//bool drawInputAidsEnable = true;
+bool drawInputAidsEnable = false;
 bool usePaletteForVideoBg = false;
 unsigned int gui_draw_area_width   = 256;
 unsigned int gui_draw_area_height  = 256;
@@ -1728,7 +1729,8 @@ void FCEUD_ToggleStatusIcon(void)
 
 bool FCEUD_ShouldDrawInputAids(void)
 {
-	return drawInputAidsEnable;
+	//return drawInputAidsEnable;
+	return false;
 }
 
 void FCEUD_TurboOn (void) { turbo = true; };

@@ -1,5 +1,5 @@
 src/CMakeFiles/fceux.dir/drivers/common/os_utils.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/drivers/common/os_utils.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/os_utils.cpp \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/aarch64-linux-gnu/sys/cdefs.h \
@@ -22,7 +22,8 @@ src/CMakeFiles/fceux.dir/drivers/common/os_utils.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /usr/include/c++/10/stdlib.h /usr/include/c++/10/cstdlib \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h /usr/include/c++/10/stdlib.h \
+ /usr/include/c++/10/cstdlib \
  /usr/include/aarch64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/10/bits/os_defines.h \
  /usr/include/aarch64-linux-gnu/c++/10/bits/cpu_defines.h \
@@ -53,7 +54,9 @@ src/CMakeFiles/fceux.dir/drivers/common/os_utils.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
- /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h /usr/include/errno.h \
  /usr/include/aarch64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
  /usr/include/aarch64-linux-gnu/asm/errno.h \
@@ -78,4 +81,4 @@ src/CMakeFiles/fceux.dir/drivers/common/os_utils.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/statx-generic.h \
  /usr/include/aarch64-linux-gnu/bits/types/struct_statx_timestamp.h \
  /usr/include/aarch64-linux-gnu/bits/types/struct_statx.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/os_utils.h
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/os_utils.h

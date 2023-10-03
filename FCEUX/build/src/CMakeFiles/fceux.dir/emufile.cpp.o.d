@@ -1,9 +1,9 @@
 src/CMakeFiles/fceux.dir/emufile.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/emufile.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/emufile.cpp \
  /usr/include/stdc-predef.h \
- /home/emugators/Documents/emugators2.0/src/emufile.h \
- /home/emugators/Documents/emugators2.0/src/emufile_types.h \
- /home/emugators/Documents/emugators2.0/src/types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/emufile_types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/types.h \
  /usr/include/aarch64-linux-gnu/sys/types.h /usr/include/features.h \
  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
@@ -58,7 +58,7 @@ src/CMakeFiles/fceux.dir/emufile.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
- /home/emugators/Documents/emugators2.0/src/utils/endian.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/endian.h \
  /usr/include/c++/10/iosfwd \
  /usr/include/aarch64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/10/bits/os_defines.h \
@@ -83,8 +83,9 @@ src/CMakeFiles/fceux.dir/emufile.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /home/emugators/Documents/emugators2.0/src/utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/utils/../emufile.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../emufile.h \
  /usr/include/c++/10/cassert /usr/include/assert.h \
  /usr/include/c++/10/cstdio /usr/include/c++/10/cstring \
  /usr/include/string.h /usr/include/strings.h /usr/include/c++/10/cstdarg \
@@ -127,6 +128,7 @@ src/CMakeFiles/fceux.dir/emufile.cpp.o: \
  /usr/include/c++/10/bits/stl_algo.h /usr/include/c++/10/cstdlib \
  /usr/include/stdlib.h /usr/include/aarch64-linux-gnu/bits/waitflags.h \
  /usr/include/aarch64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h \
  /usr/include/c++/10/bits/algorithmfwd.h \
@@ -163,7 +165,7 @@ src/CMakeFiles/fceux.dir/emufile.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/10/bits/charconv.h \
  /usr/include/c++/10/bits/basic_string.tcc \
- /home/emugators/Documents/emugators2.0/src/utils/xstring.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/xstring.h \
  /usr/include/c++/10/stdlib.h /usr/include/c++/10/iostream \
  /usr/include/c++/10/ostream /usr/include/c++/10/ios \
  /usr/include/c++/10/bits/ios_base.h \

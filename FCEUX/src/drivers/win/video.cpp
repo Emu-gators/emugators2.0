@@ -533,7 +533,8 @@ int SetVideoMode(int fs)
 //draw input aids if we are fullscreen
 bool FCEUD_ShouldDrawInputAids()
 {
-	return fullscreen!=0;
+	//return fullscreen!=0;
+	return false;
 }
 
 static void BlitScreenWindow(uint8 *XBuf);

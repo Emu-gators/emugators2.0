@@ -1,5 +1,5 @@
-/home/emugators/Documents/emugators2.0/build/src/fceux_autogen/4FXCKEML6F/moc_branches.cpp: /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/branches.h \
-  /home/emugators/Documents/emugators2.0/build/src/fceux_autogen/moc_predefs.h \
+/home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/4FXCKEML6F/moc_branches.cpp: /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/branches.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
   /usr/include/aarch64-linux-gnu/bits/byteswap.h \
   /usr/include/aarch64-linux-gnu/bits/cpu-set.h \
   /usr/include/aarch64-linux-gnu/bits/endian.h \

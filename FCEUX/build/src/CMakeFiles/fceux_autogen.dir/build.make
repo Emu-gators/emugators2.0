@@ -53,10 +53,10 @@ RM = /home/emugators/.local/lib/python3.9/site-packages/cmake/data/bin/cmake -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/emugators/Documents/emugators2.0
+CMAKE_SOURCE_DIR = /home/emugators/Documents/emugators2.0/FCEUX
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/emugators/Documents/emugators2.0/build
+CMAKE_BINARY_DIR = /home/emugators/Documents/emugators2.0/FCEUX/build
 
 # Utility rule file for fceux_autogen.
 
@@ -67,8 +67,8 @@ include src/CMakeFiles/fceux_autogen.dir/compiler_depend.make
 include src/CMakeFiles/fceux_autogen.dir/progress.make
 
 src/CMakeFiles/fceux_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/emugators/Documents/emugators2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target fceux"
-	cd /home/emugators/Documents/emugators2.0/build/src && /home/emugators/.local/lib/python3.9/site-packages/cmake/data/bin/cmake -E cmake_autogen /home/emugators/Documents/emugators2.0/build/src/CMakeFiles/fceux_autogen.dir/AutogenInfo.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/emugators/Documents/emugators2.0/FCEUX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target fceux"
+	cd /home/emugators/Documents/emugators2.0/FCEUX/build/src && /home/emugators/.local/lib/python3.9/site-packages/cmake/data/bin/cmake -E cmake_autogen /home/emugators/Documents/emugators2.0/FCEUX/build/src/CMakeFiles/fceux_autogen.dir/AutogenInfo.json Release
 
 fceux_autogen: src/CMakeFiles/fceux_autogen
 fceux_autogen: src/CMakeFiles/fceux_autogen.dir/build.make
@@ -79,10 +79,10 @@ src/CMakeFiles/fceux_autogen.dir/build: fceux_autogen
 .PHONY : src/CMakeFiles/fceux_autogen.dir/build
 
 src/CMakeFiles/fceux_autogen.dir/clean:
-	cd /home/emugators/Documents/emugators2.0/build/src && $(CMAKE_COMMAND) -P CMakeFiles/fceux_autogen.dir/cmake_clean.cmake
+	cd /home/emugators/Documents/emugators2.0/FCEUX/build/src && $(CMAKE_COMMAND) -P CMakeFiles/fceux_autogen.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/fceux_autogen.dir/clean
 
 src/CMakeFiles/fceux_autogen.dir/depend:
-	cd /home/emugators/Documents/emugators2.0/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emugators/Documents/emugators2.0 /home/emugators/Documents/emugators2.0/src /home/emugators/Documents/emugators2.0/build /home/emugators/Documents/emugators2.0/build/src /home/emugators/Documents/emugators2.0/build/src/CMakeFiles/fceux_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/emugators/Documents/emugators2.0/FCEUX/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emugators/Documents/emugators2.0/FCEUX /home/emugators/Documents/emugators2.0/FCEUX/src /home/emugators/Documents/emugators2.0/FCEUX/build /home/emugators/Documents/emugators2.0/FCEUX/build/src /home/emugators/Documents/emugators2.0/FCEUX/build/src/CMakeFiles/fceux_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/fceux_autogen.dir/depend
 

@@ -1,8 +1,8 @@
 src/CMakeFiles/fceux.dir/oldmovie.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/oldmovie.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/oldmovie.cpp \
  /usr/include/stdc-predef.h \
- /home/emugators/Documents/emugators2.0/src/version.h \
- /home/emugators/Documents/emugators2.0/src/types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/version.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/types.h \
  /usr/include/aarch64-linux-gnu/sys/types.h /usr/include/features.h \
  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
@@ -57,7 +57,7 @@ src/CMakeFiles/fceux.dir/oldmovie.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
- /home/emugators/Documents/emugators2.0/src/utils/endian.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/endian.h \
  /usr/include/c++/10/iosfwd \
  /usr/include/aarch64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/10/bits/os_defines.h \
@@ -82,10 +82,11 @@ src/CMakeFiles/fceux.dir/oldmovie.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /home/emugators/Documents/emugators2.0/src/utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/utils/../emufile.h \
- /home/emugators/Documents/emugators2.0/src/utils/../emufile_types.h \
- /home/emugators/Documents/emugators2.0/src/utils/../types.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../emufile_types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../types.h \
  /usr/include/c++/10/cassert /usr/include/assert.h \
  /usr/include/c++/10/cstdio /usr/include/c++/10/cstring \
  /usr/include/string.h /usr/include/strings.h /usr/include/c++/10/cstdarg \
@@ -128,6 +129,7 @@ src/CMakeFiles/fceux.dir/oldmovie.cpp.o: \
  /usr/include/c++/10/bits/stl_algo.h /usr/include/c++/10/cstdlib \
  /usr/include/stdlib.h /usr/include/aarch64-linux-gnu/bits/waitflags.h \
  /usr/include/aarch64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h \
  /usr/include/c++/10/bits/algorithmfwd.h \
@@ -164,13 +166,13 @@ src/CMakeFiles/fceux.dir/oldmovie.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/10/bits/charconv.h \
  /usr/include/c++/10/bits/basic_string.tcc \
- /home/emugators/Documents/emugators2.0/src/fceu.h \
- /home/emugators/Documents/emugators2.0/src/git.h \
- /home/emugators/Documents/emugators2.0/src/utils/md5.h \
- /home/emugators/Documents/emugators2.0/src/utils/valuearray.h \
- /home/emugators/Documents/emugators2.0/src/driver.h \
- /home/emugators/Documents/emugators2.0/src/file.h \
- /home/emugators/Documents/emugators2.0/src/emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/fceu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/git.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/md5.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/valuearray.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/driver.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/file.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/emufile.h \
  /usr/include/c++/10/iostream /usr/include/c++/10/ostream \
  /usr/include/c++/10/ios /usr/include/c++/10/bits/ios_base.h \
  /usr/include/c++/10/bits/locale_classes.h \
@@ -189,12 +191,12 @@ src/CMakeFiles/fceux.dir/oldmovie.cpp.o: \
  /usr/include/c++/10/bits/basic_ios.tcc \
  /usr/include/c++/10/bits/ostream.tcc /usr/include/c++/10/istream \
  /usr/include/c++/10/bits/istream.tcc \
- /home/emugators/Documents/emugators2.0/src/netplay.h \
- /home/emugators/Documents/emugators2.0/src/oldmovie.h \
- /home/emugators/Documents/emugators2.0/src/movie.h \
- /home/emugators/Documents/emugators2.0/src/input/zapper.h \
- /home/emugators/Documents/emugators2.0/src/input/../types.h \
- /home/emugators/Documents/emugators2.0/src/utils/guid.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/netplay.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/oldmovie.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/movie.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/zapper.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/guid.h \
  /usr/include/c++/10/map /usr/include/c++/10/bits/stl_tree.h \
  /usr/include/c++/10/ext/aligned_buffer.h \
  /usr/include/c++/10/bits/stl_map.h /usr/include/c++/10/tuple \
@@ -202,7 +204,7 @@ src/CMakeFiles/fceux.dir/oldmovie.cpp.o: \
  /usr/include/c++/10/bits/invoke.h \
  /usr/include/c++/10/bits/stl_multimap.h \
  /usr/include/c++/10/bits/erase_if.h \
- /home/emugators/Documents/emugators2.0/src/utils/xstring.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/xstring.h \
  /usr/include/c++/10/stdlib.h /usr/include/c++/10/fstream \
  /usr/include/c++/10/bits/codecvt.h \
  /usr/include/aarch64-linux-gnu/c++/10/bits/basic_file.h \

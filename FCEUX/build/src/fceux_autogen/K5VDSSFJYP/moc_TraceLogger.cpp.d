@@ -1,24 +1,24 @@
-/home/emugators/Documents/emugators2.0/build/src/fceux_autogen/K5VDSSFJYP/moc_TraceLogger.cpp: /home/emugators/Documents/emugators2.0/src/drivers/Qt/TraceLogger.h \
-  /home/emugators/Documents/emugators2.0/build/src/fceux_autogen/moc_predefs.h \
-  /home/emugators/Documents/emugators2.0/src/conddebug.h \
-  /home/emugators/Documents/emugators2.0/src/debug.h \
-  /home/emugators/Documents/emugators2.0/src/driver.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/Qt/ColorMenu.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleDebugger.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleUtilities.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/Qt/SymbolicDebug.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/Qt/main.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/common/args.h \
-  /home/emugators/Documents/emugators2.0/src/drivers/common/config.h \
-  /home/emugators/Documents/emugators2.0/src/emufile.h \
-  /home/emugators/Documents/emugators2.0/src/emufile_types.h \
-  /home/emugators/Documents/emugators2.0/src/file.h \
-  /home/emugators/Documents/emugators2.0/src/git.h \
-  /home/emugators/Documents/emugators2.0/src/nsf.h \
-  /home/emugators/Documents/emugators2.0/src/types.h \
-  /home/emugators/Documents/emugators2.0/src/utils/endian.h \
-  /home/emugators/Documents/emugators2.0/src/utils/md5.h \
-  /home/emugators/Documents/emugators2.0/src/utils/valuearray.h \
+/home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/K5VDSSFJYP/moc_TraceLogger.cpp: /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TraceLogger.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/conddebug.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/debug.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/driver.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ColorMenu.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleDebugger.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleUtilities.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/SymbolicDebug.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/main.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/args.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/config.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/emufile.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/emufile_types.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/file.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/git.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/nsf.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/types.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/utils/endian.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/utils/md5.h \
+  /home/emugators/Documents/emugators2.0/FCEUX/src/utils/valuearray.h \
   /usr/include/aarch64-linux-gnu/bits/byteswap.h \
   /usr/include/aarch64-linux-gnu/bits/confname.h \
   /usr/include/aarch64-linux-gnu/bits/cpu-set.h \

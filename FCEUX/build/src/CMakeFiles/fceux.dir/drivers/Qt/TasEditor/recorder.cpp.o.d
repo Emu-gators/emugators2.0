@@ -1,7 +1,7 @@
 src/CMakeFiles/fceux.dir/drivers/Qt/TasEditor/recorder.cpp.o: \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/recorder.cpp \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/recorder.cpp \
  /usr/include/stdc-predef.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/taseditor_project.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_project.h \
  /usr/include/time.h /usr/include/features.h \
  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
@@ -27,9 +27,9 @@ src/CMakeFiles/fceux.dir/drivers/Qt/TasEditor/recorder.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/struct_itimerspec.h \
  /usr/include/aarch64-linux-gnu/bits/types/locale_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/__locale_t.h \
- /home/emugators/Documents/emugators2.0/src/movie.h \
- /home/emugators/Documents/emugators2.0/src/input/zapper.h \
- /home/emugators/Documents/emugators2.0/src/input/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/movie.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/zapper.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../types.h \
  /usr/include/aarch64-linux-gnu/sys/types.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h \
  /usr/include/aarch64-linux-gnu/bits/byteswap.h \
@@ -66,7 +66,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/TasEditor/recorder.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
- /home/emugators/Documents/emugators2.0/src/input/../utils/endian.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../utils/endian.h \
  /usr/include/c++/10/iosfwd \
  /usr/include/aarch64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/10/bits/os_defines.h \
@@ -88,10 +88,11 @@ src/CMakeFiles/fceux.dir/drivers/Qt/TasEditor/recorder.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/sys_errlist.h \
- /home/emugators/Documents/emugators2.0/src/input/../utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/input/../utils/../emufile.h \
- /home/emugators/Documents/emugators2.0/src/input/../utils/../emufile_types.h \
- /home/emugators/Documents/emugators2.0/src/input/../utils/../types.h \
+ /usr/include/aarch64-linux-gnu/bits/stdio.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../utils/../emufile.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../utils/../emufile_types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/input/../utils/../types.h \
  /usr/include/c++/10/cassert /usr/include/assert.h \
  /usr/include/c++/10/cstdio /usr/include/c++/10/cstring \
  /usr/include/string.h /usr/include/strings.h /usr/include/c++/10/cstdarg \
@@ -134,6 +135,7 @@ src/CMakeFiles/fceux.dir/drivers/Qt/TasEditor/recorder.cpp.o: \
  /usr/include/c++/10/bits/stl_algo.h /usr/include/c++/10/cstdlib \
  /usr/include/stdlib.h /usr/include/aarch64-linux-gnu/bits/waitflags.h \
  /usr/include/aarch64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
+ /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/10/bits/std_abs.h \
  /usr/include/c++/10/bits/algorithmfwd.h \
@@ -166,10 +168,10 @@ src/CMakeFiles/fceux.dir/drivers/Qt/TasEditor/recorder.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/10/bits/charconv.h \
  /usr/include/c++/10/bits/basic_string.tcc \
- /home/emugators/Documents/emugators2.0/src/utils/guid.h \
- /home/emugators/Documents/emugators2.0/src/utils/../types.h \
- /home/emugators/Documents/emugators2.0/src/utils/valuearray.h \
- /home/emugators/Documents/emugators2.0/src/utils/md5.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/guid.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/../types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/valuearray.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/utils/md5.h \
  /usr/include/c++/10/map /usr/include/c++/10/bits/stl_tree.h \
  /usr/include/c++/10/ext/aligned_buffer.h \
  /usr/include/c++/10/bits/stl_map.h /usr/include/c++/10/tuple \
@@ -193,10 +195,10 @@ src/CMakeFiles/fceux.dir/drivers/Qt/TasEditor/recorder.cpp.o: \
  /usr/include/c++/10/bits/locale_facets.tcc \
  /usr/include/c++/10/bits/basic_ios.tcc \
  /usr/include/c++/10/bits/ostream.tcc \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/taseditor_config.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/greenzone.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/laglog.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/selection.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_config.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/greenzone.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/laglog.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/selection.h \
  /usr/include/c++/10/set /usr/include/c++/10/bits/stl_set.h \
  /usr/include/c++/10/bits/stl_multiset.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QLineEdit \
@@ -319,14 +321,14 @@ src/CMakeFiles/fceux.dir/drivers/Qt/TasEditor/recorder.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qmap.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qpen.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qtextoption.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/markers_manager.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/markers.h \
- /home/emugators/Documents/emugators2.0/src/fceu.h \
- /home/emugators/Documents/emugators2.0/src/types.h \
- /home/emugators/Documents/emugators2.0/src/git.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/snapshot.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/inputlog.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/bookmarks.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers_manager.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/fceu.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/types.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/git.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/snapshot.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/inputlog.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmarks.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QFont \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qfont.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QTimer \
@@ -337,16 +339,16 @@ src/CMakeFiles/fceux.dir/drivers/Qt/TasEditor/recorder.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QScrollBar \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qscrollbar.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/bookmark.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/branches.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmark.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/branches.h \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/QRect \
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qrect.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/history.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/playback.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/recorder.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/taseditor_lua.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/splicer.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/TasEditor/TasEditorWindow.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/history.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/playback.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/recorder.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_lua.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/splicer.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/TasEditorWindow.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QDialog \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qdialog.h \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
@@ -428,9 +430,9 @@ src/CMakeFiles/fceux.dir/drivers/Qt/TasEditor/recorder.cpp.o: \
  /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qstackedwidget.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QClipboard \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qclipboard.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/config.h \
- /home/emugators/Documents/emugators2.0/src/drivers/common/configSys.h \
- /home/emugators/Documents/emugators2.0/src/drivers/Qt/ConsoleUtilities.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/config.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/configSys.h \
+ /home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleUtilities.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QColor \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qcolor.h \
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QValidator \
