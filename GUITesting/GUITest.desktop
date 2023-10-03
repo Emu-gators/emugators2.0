@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=GUITesting
 Comment=Testing GUI from desktop
-Exec=/home/emugators/Documents/other/emugators2.0old/GUITesting/GUITesting
-Icon=/home/emugators/Documents/other/emugators2.0old/GUITesting/GUITesting.png
+Exec=/home/emugators/Documents/emugators2.0/GUITesting/GUITesting
+Icon=/home/emugators/Documents/ROMS/Nintendo-Famicom-Disk-System.png
 Terminal=false
 Type=Application
 Categories=Utility

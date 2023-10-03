@@ -248,7 +248,7 @@ void MainWindow::loadROMPaths()
     for (unsigned int i = 0; i < romImages.size(); i++)
     {
         QImage unprocessedImage(QString::fromStdString(romImages.at(i)));
-        qDebug() << QString::fromStdString(romImages.at(i));
+        //qDebug() << QString::fromStdString(romImages.at(i));
         QImage processedImage = processImage(unprocessedImage);
         roms.push_back(processedImage);
     }

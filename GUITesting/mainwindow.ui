@@ -63,7 +63,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Debug</string>
+     <string>Calibrate</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
