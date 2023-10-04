@@ -6,14 +6,92 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>750</height>
+    <width>1920</width>
+    <height>1080</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>DebugMenu</string>
+   <string>Calibration</string>
   </property>
+  <widget class="QLabel" name="target1">
+   <property name="geometry">
+    <rect>
+     <x>515</x>
+     <y>170</y>
+     <width>100</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
   </widget>
+  <widget class="QLabel" name="target2">
+   <property name="geometry">
+    <rect>
+     <x>1307</x>
+     <y>685</y>
+     <width>100</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="background">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>1080</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="target3">
+   <property name="geometry">
+    <rect>
+     <x>515</x>
+     <y>685</y>
+     <width>100</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="target4">
+   <property name="geometry">
+    <rect>
+     <x>1307</x>
+     <y>170</y>
+     <width>100</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="target5">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>428</y>
+     <width>100</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+ </widget>
  <resources/>
  <connections/>
 </ui>

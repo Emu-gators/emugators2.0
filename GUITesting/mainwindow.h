@@ -26,7 +26,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    NewWindow *mMyNewWindow;
+    NewWindow *myNewWindow;
     void loadGUIImages();
     void loadROMImages();
     void loadROMPaths();

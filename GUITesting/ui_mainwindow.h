@@ -86,7 +86,7 @@ public:
         background->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         nextButton->setText(QCoreApplication::translate("MainWindow", "Next", nullptr));
         previousButton->setText(QCoreApplication::translate("MainWindow", "Previous", nullptr));
-        debugButton->setText(QCoreApplication::translate("MainWindow", "Debug", nullptr));
+        debugButton->setText(QCoreApplication::translate("MainWindow", "Calibrate", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         games->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         famicom->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));

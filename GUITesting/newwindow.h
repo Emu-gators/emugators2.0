@@ -14,9 +14,15 @@ class NewWindow : public QMainWindow
     public:
         NewWindow(QWidget *parent = nullptr);
         ~NewWindow();
+    private slots:
+        void mousePressEvent(QMouseEvent *event);
 
     private:
         Ui::NewWindow *ui;
+        int calibrationStage;
+        QImage targetImg;
+        int count;
+        bool t1,t2,t3,t4,t5;
 };
 
 #endif // NEWWINDOW_H

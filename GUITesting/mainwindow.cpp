@@ -156,9 +156,9 @@ MainWindow::~MainWindow()
  */ 
 void MainWindow::openNewWindow()
 {
-    mMyNewWindow = new NewWindow();
-
-    mMyNewWindow->show();
+    myNewWindow = new NewWindow();
+    myNewWindow->setWindowState(Qt::WindowMaximized);
+    myNewWindow->show();
 
 }
 /*
@@ -413,7 +413,6 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
     QPoint globalCursorPos = QCursor::pos();
     int x = globalCursorPos.x();
     int y = globalCursorPos.y();
-    //TODO subtract rect->top.left()
     //Check if the mouse event occurred in the area where the rom image is located
     if (ui->label->geometry().contains(event->pos())) {
 	//If the mouse was pressed on the rom grab that rom and being a drag event
