@@ -12,7 +12,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: debian-latest
     steps:
     - uses: actions/checkout@v4
     - name: update package
@@ -25,6 +25,7 @@ jobs:
         cd lg-master
         make
         sudo make install
+        ls /usr/local/lib
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
       with:
@@ -46,7 +47,7 @@ jobs:
         contents: |
           QT += gui widgets multimedia
 
-          LIBS += usr/local/lib/liblgpiod.so
+          LIBS += /usr/local/lib/liblgpiod.so
         write-mode: append
     - name: 2nd qmake step
       run: |
