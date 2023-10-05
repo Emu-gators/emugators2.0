@@ -38,7 +38,8 @@ jobs:
       with:
         path: ${{ env.SOURCE_DIR }}/GUITesting.pro
         contents: |
-          QT += gui widgets multimedia
+          QT += gui widgets multimedia |
+          LIBS += usr/local/lib/libgpiod.so
         write-mode: append
     - name: 2nd qmake step
       run: |
