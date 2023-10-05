@@ -47,7 +47,7 @@ jobs:
         contents: |
           QT += gui widgets multimedia
 
-          LIBS += /usr/local/lib/liblgpiod.so
+          LIBS += /usr/local/lib/liblgpio.so
         write-mode: append
     - name: 2nd qmake step
       run: |
