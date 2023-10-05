@@ -19,8 +19,7 @@ jobs:
       run: sudo apt-get update
     - name: install lggpiod
       run: |
-        sudo apt install swig python-dev python3-dev
-        sudo apt install python-setuptools python3-setuptools
+        sudo apt install python3
         wget https://github.com/joan2937/lg/archive/master.zip
         unzip master.zip
         cd lg-master
