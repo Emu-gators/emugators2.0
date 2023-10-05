@@ -15,6 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - name: update package
+      run: sudo apt-get update
+    - name: install lggpiod
+      run: |
+        sudo apt install python3
+        wget https://github.com/joan2937/lg/archive/master.zip
+        unzip master.zip
+        cd lg-master
+        make
+        sudo make install
+        ls /usr/local/lib
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
       with:
@@ -35,6 +46,8 @@ jobs:
         path: ${{ env.SOURCE_DIR }}/GUITesting.pro
         contents: |
           QT += gui widgets multimedia
+
+          LIBS += /usr/local/lib/liblgpio.so
         write-mode: append
     - name: 2nd qmake step
       run: |
