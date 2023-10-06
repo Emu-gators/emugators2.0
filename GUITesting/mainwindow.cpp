@@ -47,6 +47,7 @@
 
 #include <inttypes.h>
 
+
 /*
  * This is the constructor for the MainWindow of the GUI application
  * It sets up the UI elements of the program as well as loading the
@@ -466,6 +467,7 @@ extern MainWindow* mwPointer;
 void ejectButton(int e, lgGpioAlert_p evt, void *data){
     printf("Eject was pressed!\n");
     mwPointer->raise();
+    mwPointer->activateWindow();
 }
 
 void setupGPIO(){
