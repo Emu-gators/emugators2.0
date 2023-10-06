@@ -36,4 +36,6 @@ jobs:
         dir:          ${{ runner.temp }}
         setup-python: false
     - name: run build script
-      run: sudo ./build.sh
+      run: |
+        cd ${{ env.SOURCE_DIR }}
+        sudo ./build.sh
