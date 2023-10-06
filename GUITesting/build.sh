@@ -1,5 +1,5 @@
 #!/bin/bash
-if[$#==1]; then
+if [$#==1]; then
     QMAKE_PATH = $1
 else
     QMAKE_PATH = $QMAKE_PATH
