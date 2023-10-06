@@ -35,8 +35,8 @@ jobs:
         arch:         gcc_64
         dir:          ${{ env.SOURCE_DIR }}
         setup-python: false
-    - name: debug
-      run: ls ${{ env.SOURCE_DIR }}/Qt/5.15.2/gcc_64/bin
+    - name: add to path
+      run: echo "{${{ env.SOURCE_DIR }}/Qt/5.15.2/gcc_64/bin}" >> $GITHUB_PATH
     - name: run build script
       run: |
         cd ${{ env.SOURCE_DIR }}
