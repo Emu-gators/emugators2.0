@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ $# -eq 3 ]; then
+if [ $# -eq 1 ]; then
     QPATH=$1
 else
     QPATH=$QMAKE_PATH
