@@ -41,5 +41,5 @@ jobs:
     - name: run build script
       run: |
         cd ${{ env.SOURCE_DIR }}
-        sudo ./build.sh {{ env.QMAKE_PATH }}
+        sudo ./build.sh env.QMAKE_PATH
 
