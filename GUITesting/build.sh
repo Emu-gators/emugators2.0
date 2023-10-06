@@ -1,5 +1,5 @@
 #!/bin/bash
 echo "Build"
-qmake -project "QT += gui widgets multimedia" "LIBS += /usr/local/lib/liblgpio.so"
-qmake GUITesting.pro
+$QMAKE_PATH -project "QT += gui widgets multimedia" "LIBS += /usr/local/lib/liblgpio.so"
+$QMAKE_PATH GUITesting.pro
 make
