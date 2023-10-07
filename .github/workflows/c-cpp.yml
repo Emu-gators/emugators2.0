@@ -35,16 +35,10 @@ jobs:
         arch:         gcc_64
         dir:          ${{ runner.temp }}
         setup-python: false
-    - name: initial qmake command
+    - name: build commands
       run: |
         ls ${{ github.workspace }}/..
         cd ${{ env.SOURCE_DIR }}
         qmake -project "QT += gui widgets multimedia" "LIBS += /usr/local/lib/liblgpio.so"
-    - name: 2nd qmake step
-      run: |
-        cd ${{ env.SOURCE_DIR }}
         qmake GUITesting.pro
-    - name: make
-      run: |
-        cd ${{ env.SOURCE_DIR }}
         make
