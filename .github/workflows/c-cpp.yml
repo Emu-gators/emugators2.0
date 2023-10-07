@@ -39,6 +39,4 @@ jobs:
       run: |
         ls ${{ github.workspace }}/..
         cd ${{ env.SOURCE_DIR }}
-        qmake -project "QT += gui widgets multimedia" "LIBS += /usr/local/lib/liblgpio.so"
-        qmake GUITesting.pro
-        make
+        sudo ./build.sh
