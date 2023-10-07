@@ -36,8 +36,7 @@ jobs:
         arch:         gcc_64
         dir:          ${{ env.SOURCE_DIR }}
         setup-python: false
-    - name: echo variable
-      run: echo $QMAKE_PATH
+    - name: where is qmake
     - name: run build script
       run: |
         cd ${{ env.SOURCE_DIR }}
