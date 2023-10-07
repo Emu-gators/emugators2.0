@@ -8,7 +8,7 @@ on:
 
 env:
   SOURCE_DIR:   ${{ github.workspace }}/GUITesting
-  QT_VERSION:   5.15.3
+  QT_VERSION:   5.15.2
 
 jobs:
   build:
@@ -27,17 +27,33 @@ jobs:
         sudo make install
         ls /usr/local/lib
     - name: Install Qt
+      uses: jurplel/install-qt-action@v3
+      with:
+        version:      ${{ env.QT_VERSION }}
+        host:         linux
+        target:       desktop
+        arch:         gcc_64
+        dir:          ${{ runner.temp }}
+        setup-python: false
+    - name: initial qmake command
       run: |
-        sudo apt-get install build-essential
-        sudo apt-get install qtcreator
-        sudo apt install qtbase5-dev
-        sudo apt-get build-dep qtmultimedia5-dev
-        sudo apt-get install qtmultimedia5-dev
-        sudo apt-get install libqt5multimedia5-plugins
-    - name: where is qmake
-      run: whereis qmake
-    - name: run build script
+        ls ${{ github.workspace }}/..
+        cd ${{ env.SOURCE_DIR }}
+        qmake -project
+    - name: append QT += gui widgets to GUITesting.pro
+      uses: DamianReeves/write-file-action@master
+      with:
+        path: ${{ env.SOURCE_DIR }}/GUITesting.pro
+        contents: |
+          QT += gui widgets multimedia
+
+          LIBS += /usr/local/lib/liblgpio.so
+        write-mode: append
+    - name: 2nd qmake step
       run: |
         cd ${{ env.SOURCE_DIR }}
-        sudo whereis qmake | ./build.sh 
-
+        qmake GUITesting.pro
+    - name: make
+      run: |
+        cd ${{ env.SOURCE_DIR }}
+        make
