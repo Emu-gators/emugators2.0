@@ -38,7 +38,4 @@ jobs:
     - name: debug
       run: echo $PATH
     - name: build commands
-      run: |
-        ls ${{ github.workspace }}/..
-        cd ${{ env.SOURCE_DIR }}
-        sudo ./build.sh
+      run: sudo {{ env.SOURCE_DIR }}/build.sh
