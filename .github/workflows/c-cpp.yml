@@ -8,8 +8,8 @@ on:
 
 env:
   SOURCE_DIR:   ${{ github.workspace }}/GUITesting
-  QT_VERSION:   5.15.2
-  QMAKE_PATH: ${{ github.workspace }}/GUITesting/Qt/5.15.2/gcc_64/bin/qmake
+  QT_VERSION:   5.15.3
+  QMAKE_PATH: ${{ github.workspace }}/GUITesting/Qt/5.15.3/gcc_64/bin/qmake
 
 jobs:
   build:
