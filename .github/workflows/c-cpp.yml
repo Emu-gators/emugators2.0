@@ -9,7 +9,6 @@ on:
 env:
   SOURCE_DIR:   ${{ github.workspace }}/GUITesting
   QT_VERSION:   5.15.3
-  QMAKE_PATH: ${{ github.workspace }}/GUITesting/Qt/5.15.3/gcc_64/bin/qmake
 
 jobs:
   build:
@@ -28,18 +27,17 @@ jobs:
         sudo make install
         ls /usr/local/lib
     - name: Install Qt
-      uses: jurplel/install-qt-action@v3
-      with:
-        version:      ${{ env.QT_VERSION }}
-        host:         linux
-        target:       desktop
-        arch:         gcc_64
-        dir:          ${{ env.SOURCE_DIR }}
-        setup-python: false
+      run: |
+        sudo apt-get install build-essential
+        sudo apt-get install qtcreator
+        sudo apt install qt5-default
+        sudo apt-get build-dep qtmultimedia5-dev
+        sudo apt-get install qtmultimedia5-dev
+        sudo apt-get install libqt5multimedia5-plugins
     - name: where is qmake
       run: whereis qmake
     - name: run build script
       run: |
         cd ${{ env.SOURCE_DIR }}
-        sudo ./build.sh $QMAKE_PATH
+        sudo whereis qmake | ./build.sh 
 
