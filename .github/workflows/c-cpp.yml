@@ -35,7 +35,13 @@ jobs:
         arch:         gcc_64
         dir:          ${{ runner.temp }}
         setup-python: false
-    - name: debug
-      run: echo $PATH
     - name: build commands
-      run: sudo $SOURCE_DIR/build.sh
+      run: |
+        ls ${{ github.workspace }}/..
+        cd ${{ env.SOURCE_DIR }}
+        echo "Build"
+        echo qmake -project "QT += gui widgets multimedia" "LIBS += /usr/local/lib/liblgpio.so"
+        qmake -project "QT += gui widgets multimedia" "LIBS += /usr/local/lib/liblgpio.so"
+        echo qmake GUITesting.pro
+        qmake GUITesting.pro
+        make
