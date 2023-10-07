@@ -39,16 +39,7 @@ jobs:
       run: |
         ls ${{ github.workspace }}/..
         cd ${{ env.SOURCE_DIR }}
-        qmake -project
-    - name: append QT += gui widgets to GUITesting.pro
-      uses: DamianReeves/write-file-action@master
-      with:
-        path: ${{ env.SOURCE_DIR }}/GUITesting.pro
-        contents: |
-          QT += gui widgets multimedia
-
-          LIBS += /usr/local/lib/liblgpio.so
-        write-mode: append
+        qmake -project "QT += gui widgets multimedia" "LIBS += /usr/local/lib/liblgpio.so"
     - name: 2nd qmake step
       run: |
         cd ${{ env.SOURCE_DIR }}
