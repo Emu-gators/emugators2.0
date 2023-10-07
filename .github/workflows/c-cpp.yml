@@ -38,4 +38,4 @@ jobs:
     - name: debug
       run: echo $PATH
     - name: build commands
-      run: sudo {{ env.SOURCE_DIR }}/build.sh
+      run: sudo $SOURCE_DIR/build.sh
