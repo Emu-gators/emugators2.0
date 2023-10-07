@@ -1,13 +1,7 @@
 #!/bin/bash
-if [ $# -eq 1 ]; then
-    QPATH=$1
-else
-    QPATH=$QMAKE_PATH
-fi 
-echo $QPATH
 echo "Build"
-echo $QPATH -project "QT += gui widgets multimedia" "LIBS += /usr/local/lib/liblgpio.so"
-$QPATH -project "QT += gui widgets multimedia" "LIBS += /usr/local/lib/liblgpio.so"
-echo $QPATH GUITesting.pro
-$QPATH GUITesting.pro
+echo qmake -project "QT += gui widgets multimedia" "LIBS += /usr/local/lib/liblgpio.so"
+qmake -project "QT += gui widgets multimedia" "LIBS += /usr/local/lib/liblgpio.so"
+echo qmake GUITesting.pro
+qmake GUITesting.pro
 make
