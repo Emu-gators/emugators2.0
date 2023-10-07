@@ -35,6 +35,8 @@ jobs:
         arch:         gcc_64
         dir:          ${{ runner.temp }}
         setup-python: false
+    - name: debug
+      run: echo $PATH
     - name: build commands
       run: |
         ls ${{ github.workspace }}/..
