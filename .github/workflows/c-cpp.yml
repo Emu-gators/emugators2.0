@@ -37,6 +37,7 @@ jobs:
         dir:          ${{ env.SOURCE_DIR }}
         setup-python: false
     - name: where is qmake
+      run: whereis qmake
     - name: run build script
       run: |
         cd ${{ env.SOURCE_DIR }}
