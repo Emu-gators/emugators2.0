@@ -1,4 +1,4 @@
-# Install script for directory: /home/emugators/Documents/emugators2.0/FCEUX/src
+# Install script for directory: /mnt/f/Emugators/emugators2.0/FCEUX/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -42,14 +42,14 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/fceux" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/fceux")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/fceux"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/fceux" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/fceux")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -58,27 +58,27 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   endif()
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fceux/luaScripts" TYPE FILE FILES "/home/emugators/Documents/emugators2.0/FCEUX/src/auxlib.lua")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fceux/luaScripts" TYPE FILE FILES "/mnt/f/Emugators/emugators2.0/FCEUX/src/auxlib.lua")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fceux" TYPE DIRECTORY FILES "/home/emugators/Documents/emugators2.0/FCEUX/output/.")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fceux" TYPE DIRECTORY FILES "/mnt/f/Emugators/emugators2.0/FCEUX/output/.")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pixmaps" TYPE FILE FILES "/home/emugators/Documents/emugators2.0/FCEUX/fceux1.png")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pixmaps" TYPE FILE FILES "/mnt/f/Emugators/emugators2.0/FCEUX/fceux1.png")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications" TYPE FILE FILES "/home/emugators/Documents/emugators2.0/FCEUX/fceux.desktop")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications" TYPE FILE FILES "/mnt/f/Emugators/emugators2.0/FCEUX/fceux.desktop")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man6" TYPE FILE FILES "/home/emugators/Documents/emugators2.0/FCEUX/documentation/fceux.6")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man6" TYPE FILE FILES "/mnt/f/Emugators/emugators2.0/FCEUX/documentation/fceux.6")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man6" TYPE FILE FILES "/home/emugators/Documents/emugators2.0/FCEUX/documentation/fceux-net-server.6")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man6" TYPE FILE FILES "/mnt/f/Emugators/emugators2.0/FCEUX/documentation/fceux-net-server.6")
 endif()
 

@@ -1,783 +1,897 @@
 {
-	"BUILD_DIR" : "/home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen",
-	"CMAKE_BINARY_DIR" : "/home/emugators/Documents/emugators2.0/FCEUX/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/emugators/Documents/emugators2.0/FCEUX/build/src",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/emugators/Documents/emugators2.0/FCEUX/src",
-	"CMAKE_EXECUTABLE" : "/home/emugators/.local/lib/python3.9/site-packages/cmake/data/bin/cmake",
+	"BUILD_DIR" : "/mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen",
+	"CMAKE_BINARY_DIR" : "/mnt/f/Emugators/emugators2.0/FCEUX/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/mnt/f/Emugators/emugators2.0/FCEUX/build/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/mnt/f/Emugators/emugators2.0/FCEUX/src",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/emugators/Documents/emugators2.0/FCEUX/src/CMakeLists.txt",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/GNUInstallDirs.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeParseArguments.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeParseArguments.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5OpenGL/Qt5OpenGLConfigVersion.cmake",
-		"/usr/lib/aarch64-linux-gnu/cmake/Qt5OpenGL/Qt5OpenGLConfig.cmake",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/FindPkgConfig.cmake",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/FindPackageMessage.cmake",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/FindOpenGL.cmake",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/FindPackageMessage.cmake",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/FindZLIB.cmake",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/SelectLibraryConfigurations.cmake",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/FindPackageMessage.cmake",
-		"/home/emugators/Documents/emugators2.0/FCEUX/resources.qrc"
+		"/mnt/f/Emugators/emugators2.0/FCEUX/src/CMakeLists.txt",
+		"/usr/share/cmake-3.22/Modules/GNUInstallDirs.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake",
+		"/usr/share/cmake-3.22/Modules/CMakeParseArguments.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
+		"/usr/share/cmake-3.22/Modules/CMakeParseArguments.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5OpenGL/Qt5OpenGLConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5OpenGL/Qt5OpenGLConfig.cmake",
+		"/usr/share/cmake-3.22/Modules/FindPkgConfig.cmake",
+		"/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake",
+		"/usr/share/cmake-3.22/Modules/FindOpenGL.cmake",
+		"/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake",
+		"/usr/share/cmake-3.22/Modules/FindZLIB.cmake",
+		"/usr/share/cmake-3.22/Modules/SelectLibraryConfigurations.cmake",
+		"/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake",
+		"/mnt/f/Emugators/emugators2.0/FCEUX/resources.qrc"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/emugators/Documents/emugators2.0/FCEUX",
+	"CMAKE_SOURCE_DIR" : "/mnt/f/Emugators/emugators2.0/FCEUX",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/asm.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/asm.h",
 			"MU",
 			"EWIEGA46WW/moc_asm.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/emu2413.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/emu2413.h",
 			"MU",
 			"QTQW6XQJ5Y/moc_emu2413.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/mmc3.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/mmc3.h",
 			"MU",
 			"QTQW6XQJ5Y/moc_mmc3.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/cart.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/cart.h",
 			"MU",
 			"EWIEGA46WW/moc_cart.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/cheat.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/cheat.h",
 			"MU",
 			"EWIEGA46WW/moc_cheat.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/conddebug.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/conddebug.h",
 			"MU",
 			"EWIEGA46WW/moc_conddebug.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/debug.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/debug.h",
 			"MU",
 			"EWIEGA46WW/moc_debug.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drawing.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drawing.h",
 			"MU",
 			"EWIEGA46WW/moc_drawing.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/AboutWindow.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/AboutWindow.h",
 			"MU",
 			"K5VDSSFJYP/moc_AboutWindow.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/AviRecord.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/AviRecord.h",
 			"MU",
 			"K5VDSSFJYP/moc_AviRecord.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/AviRiffViewer.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/AviRiffViewer.h",
 			"MU",
 			"K5VDSSFJYP/moc_AviRiffViewer.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/CheatsConf.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/CheatsConf.h",
 			"MU",
 			"K5VDSSFJYP/moc_CheatsConf.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/CodeDataLogger.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/CodeDataLogger.h",
 			"MU",
 			"K5VDSSFJYP/moc_CodeDataLogger.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ColorMenu.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ColorMenu.h",
 			"MU",
 			"K5VDSSFJYP/moc_ColorMenu.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleDebugger.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleDebugger.h",
 			"MU",
 			"K5VDSSFJYP/moc_ConsoleDebugger.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleSoundConf.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleSoundConf.h",
 			"MU",
 			"K5VDSSFJYP/moc_ConsoleSoundConf.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleUtilities.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleUtilities.h",
 			"MU",
 			"K5VDSSFJYP/moc_ConsoleUtilities.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleVideoConf.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleVideoConf.h",
 			"MU",
 			"K5VDSSFJYP/moc_ConsoleVideoConf.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleViewerGL.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleViewerGL.h",
 			"MU",
 			"K5VDSSFJYP/moc_ConsoleViewerGL.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleViewerSDL.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleViewerSDL.h",
 			"MU",
 			"K5VDSSFJYP/moc_ConsoleViewerSDL.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleWindow.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleWindow.h",
 			"MU",
 			"K5VDSSFJYP/moc_ConsoleWindow.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/FamilyKeyboard.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/FamilyKeyboard.h",
 			"MU",
 			"K5VDSSFJYP/moc_FamilyKeyboard.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/FrameTimingStats.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/FrameTimingStats.h",
 			"MU",
 			"K5VDSSFJYP/moc_FrameTimingStats.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/GameGenie.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/GameGenie.h",
 			"MU",
 			"K5VDSSFJYP/moc_GameGenie.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/GamePadConf.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/GamePadConf.h",
 			"MU",
 			"K5VDSSFJYP/moc_GamePadConf.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/GuiConf.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/GuiConf.h",
 			"MU",
 			"K5VDSSFJYP/moc_GuiConf.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/HelpPages.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/HelpPages.h",
 			"MU",
 			"K5VDSSFJYP/moc_HelpPages.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/HexEditor.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/HexEditor.h",
 			"MU",
 			"K5VDSSFJYP/moc_HexEditor.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/HotKeyConf.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/HotKeyConf.h",
 			"MU",
 			"K5VDSSFJYP/moc_HotKeyConf.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/InputConf.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/InputConf.h",
 			"MU",
 			"K5VDSSFJYP/moc_InputConf.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/LuaControl.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/LuaControl.h",
 			"MU",
 			"K5VDSSFJYP/moc_LuaControl.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/MovieOptions.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/MovieOptions.h",
 			"MU",
 			"K5VDSSFJYP/moc_MovieOptions.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/MoviePlay.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/MoviePlay.h",
 			"MU",
 			"K5VDSSFJYP/moc_MoviePlay.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/MovieRecord.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/MovieRecord.h",
 			"MU",
 			"K5VDSSFJYP/moc_MovieRecord.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/MsgLogViewer.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/MsgLogViewer.h",
 			"MU",
 			"K5VDSSFJYP/moc_MsgLogViewer.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/NameTableViewer.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/NameTableViewer.h",
 			"MU",
 			"K5VDSSFJYP/moc_NameTableViewer.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/PaletteConf.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/PaletteConf.h",
 			"MU",
 			"K5VDSSFJYP/moc_PaletteConf.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/PaletteEditor.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/PaletteEditor.h",
 			"MU",
 			"K5VDSSFJYP/moc_PaletteEditor.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/RamSearch.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/RamSearch.h",
 			"MU",
 			"K5VDSSFJYP/moc_RamSearch.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/RamWatch.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/RamWatch.h",
 			"MU",
 			"K5VDSSFJYP/moc_RamWatch.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/SplashScreen.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/SplashScreen.h",
 			"MU",
 			"K5VDSSFJYP/moc_SplashScreen.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/SymbolicDebug.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/SymbolicDebug.h",
 			"MU",
 			"K5VDSSFJYP/moc_SymbolicDebug.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/TasEditorWindow.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/TasEditorWindow.h",
 			"MU",
 			"4FXCKEML6F/moc_TasEditorWindow.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmark.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmark.h",
 			"MU",
 			"4FXCKEML6F/moc_bookmark.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmarks.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmarks.h",
 			"MU",
 			"4FXCKEML6F/moc_bookmarks.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/branches.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/branches.h",
 			"MU",
 			"4FXCKEML6F/moc_branches.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/greenzone.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/greenzone.h",
 			"MU",
 			"4FXCKEML6F/moc_greenzone.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/history.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/history.h",
 			"MU",
 			"4FXCKEML6F/moc_history.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/inputlog.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/inputlog.h",
 			"MU",
 			"4FXCKEML6F/moc_inputlog.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/laglog.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/laglog.h",
 			"MU",
 			"4FXCKEML6F/moc_laglog.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers.h",
 			"MU",
 			"4FXCKEML6F/moc_markers.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers_manager.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers_manager.h",
 			"MU",
 			"4FXCKEML6F/moc_markers_manager.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/playback.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/playback.h",
 			"MU",
 			"4FXCKEML6F/moc_playback.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/recorder.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/recorder.h",
 			"MU",
 			"4FXCKEML6F/moc_recorder.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/selection.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/selection.h",
 			"MU",
 			"4FXCKEML6F/moc_selection.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/snapshot.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/snapshot.h",
 			"MU",
 			"4FXCKEML6F/moc_snapshot.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/splicer.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/splicer.h",
 			"MU",
 			"4FXCKEML6F/moc_splicer.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_config.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_config.h",
 			"MU",
 			"4FXCKEML6F/moc_taseditor_config.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_lua.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_lua.h",
 			"MU",
 			"4FXCKEML6F/moc_taseditor_lua.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_project.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_project.h",
 			"MU",
 			"4FXCKEML6F/moc_taseditor_project.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TimingConf.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TimingConf.h",
 			"MU",
 			"K5VDSSFJYP/moc_TimingConf.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TraceLogger.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TraceLogger.h",
 			"MU",
 			"K5VDSSFJYP/moc_TraceLogger.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/avi/gwavi.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/avi/gwavi.h",
 			"MU",
 			"ALBSHA5XHJ/moc_gwavi.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/config.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/config.h",
 			"MU",
 			"K5VDSSFJYP/moc_config.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/fceuWrapper.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/fceuWrapper.h",
 			"MU",
 			"K5VDSSFJYP/moc_fceuWrapper.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/iNesHeaderEditor.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/iNesHeaderEditor.h",
 			"MU",
 			"K5VDSSFJYP/moc_iNesHeaderEditor.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/input.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/input.h",
 			"MU",
 			"K5VDSSFJYP/moc_input.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/keyscan.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/keyscan.h",
 			"MU",
 			"K5VDSSFJYP/moc_keyscan.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/main.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/main.h",
 			"MU",
 			"K5VDSSFJYP/moc_main.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/nes_shm.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/nes_shm.h",
 			"MU",
 			"K5VDSSFJYP/moc_nes_shm.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ppuViewer.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ppuViewer.h",
 			"MU",
 			"K5VDSSFJYP/moc_ppuViewer.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/sdl-joystick.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/sdl-joystick.h",
 			"MU",
 			"K5VDSSFJYP/moc_sdl-joystick.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/sdl-video.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/sdl-video.h",
 			"MU",
 			"K5VDSSFJYP/moc_sdl-video.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/unix-netplay.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/unix-netplay.h",
 			"MU",
 			"K5VDSSFJYP/moc_unix-netplay.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/args.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/args.h",
 			"MU",
 			"HBOUHYEJHT/moc_args.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/cheat.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/cheat.h",
 			"MU",
 			"HBOUHYEJHT/moc_cheat.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/config.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/config.h",
 			"MU",
 			"HBOUHYEJHT/moc_config.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/configSys.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/configSys.h",
 			"MU",
 			"HBOUHYEJHT/moc_configSys.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/hq2x.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/hq2x.h",
 			"MU",
 			"HBOUHYEJHT/moc_hq2x.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/hq3x.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/hq3x.h",
 			"MU",
 			"HBOUHYEJHT/moc_hq3x.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/nes_ntsc.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/nes_ntsc.h",
 			"MU",
 			"HBOUHYEJHT/moc_nes_ntsc.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/os_utils.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/os_utils.h",
 			"MU",
 			"HBOUHYEJHT/moc_os_utils.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/scale2x.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/scale2x.h",
 			"MU",
 			"HBOUHYEJHT/moc_scale2x.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/scale3x.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/scale3x.h",
 			"MU",
 			"HBOUHYEJHT/moc_scale3x.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/scalebit.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/scalebit.h",
 			"MU",
 			"HBOUHYEJHT/moc_scalebit.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/vidblit.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/vidblit.h",
 			"MU",
 			"HBOUHYEJHT/moc_vidblit.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/emufile.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/emufile.h",
 			"MU",
 			"EWIEGA46WW/moc_emufile.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/fceu.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/fceu.h",
 			"MU",
 			"EWIEGA46WW/moc_fceu.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/fds.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/fds.h",
 			"MU",
 			"EWIEGA46WW/moc_fds.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/file.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/file.h",
 			"MU",
 			"EWIEGA46WW/moc_file.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/filter.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/filter.h",
 			"MU",
 			"EWIEGA46WW/moc_filter.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/ines.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/ines.h",
 			"MU",
 			"EWIEGA46WW/moc_ines.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input.h",
 			"MU",
 			"EWIEGA46WW/moc_input.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/fkb.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/fkb.h",
 			"MU",
 			"RHTBEVGUKT/moc_fkb.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/suborkb.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/suborkb.h",
 			"MU",
 			"RHTBEVGUKT/moc_suborkb.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/zapper.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/zapper.h",
 			"MU",
 			"RHTBEVGUKT/moc_zapper.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/movie.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lapi.h",
+			"MU",
+			"E7RISXN3H2/moc_lapi.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lauxlib.h",
+			"MU",
+			"E7RISXN3H2/moc_lauxlib.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lcode.h",
+			"MU",
+			"E7RISXN3H2/moc_lcode.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/ldebug.h",
+			"MU",
+			"E7RISXN3H2/moc_ldebug.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/ldo.h",
+			"MU",
+			"E7RISXN3H2/moc_ldo.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lfunc.h",
+			"MU",
+			"E7RISXN3H2/moc_lfunc.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lgc.h",
+			"MU",
+			"E7RISXN3H2/moc_lgc.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/llex.h",
+			"MU",
+			"E7RISXN3H2/moc_llex.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lmem.h",
+			"MU",
+			"E7RISXN3H2/moc_lmem.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lobject.h",
+			"MU",
+			"E7RISXN3H2/moc_lobject.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lopcodes.h",
+			"MU",
+			"E7RISXN3H2/moc_lopcodes.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lparser.h",
+			"MU",
+			"E7RISXN3H2/moc_lparser.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lstate.h",
+			"MU",
+			"E7RISXN3H2/moc_lstate.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lstring.h",
+			"MU",
+			"E7RISXN3H2/moc_lstring.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/ltable.h",
+			"MU",
+			"E7RISXN3H2/moc_ltable.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/ltm.h",
+			"MU",
+			"E7RISXN3H2/moc_ltm.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lundump.h",
+			"MU",
+			"E7RISXN3H2/moc_lundump.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lvm.h",
+			"MU",
+			"E7RISXN3H2/moc_lvm.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lzio.h",
+			"MU",
+			"E7RISXN3H2/moc_lzio.cpp",
+			null
+		],
+		[
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/movie.h",
 			"MU",
 			"EWIEGA46WW/moc_movie.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/netplay.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/netplay.h",
 			"MU",
 			"EWIEGA46WW/moc_netplay.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/nsf.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/nsf.h",
 			"MU",
 			"EWIEGA46WW/moc_nsf.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/oldmovie.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/oldmovie.h",
 			"MU",
 			"EWIEGA46WW/moc_oldmovie.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/palette.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/palette.h",
 			"MU",
 			"EWIEGA46WW/moc_palette.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/ppu.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/ppu.h",
 			"MU",
 			"EWIEGA46WW/moc_ppu.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/sound.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/sound.h",
 			"MU",
 			"EWIEGA46WW/moc_sound.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/state.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/state.h",
 			"MU",
 			"EWIEGA46WW/moc_state.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/unif.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/unif.h",
 			"MU",
 			"EWIEGA46WW/moc_unif.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/backward.hpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/backward.hpp",
 			"MU",
 			"7HEHEGDA3T/moc_backward.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/crc32.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/crc32.h",
 			"MU",
 			"7HEHEGDA3T/moc_crc32.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/endian.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/endian.h",
 			"MU",
 			"7HEHEGDA3T/moc_endian.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/general.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/general.h",
 			"MU",
 			"7HEHEGDA3T/moc_general.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/guid.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/guid.h",
 			"MU",
 			"7HEHEGDA3T/moc_guid.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/md5.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/md5.h",
 			"MU",
 			"7HEHEGDA3T/moc_md5.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/memory.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/memory.h",
 			"MU",
 			"7HEHEGDA3T/moc_memory.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/xstring.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/xstring.h",
 			"MU",
 			"7HEHEGDA3T/moc_xstring.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/video.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/video.h",
 			"MU",
 			"EWIEGA46WW/moc_video.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/vsuni.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/vsuni.h",
 			"MU",
 			"EWIEGA46WW/moc_vsuni.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/wave.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/wave.h",
 			"MU",
 			"EWIEGA46WW/moc_wave.cpp",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/x6502.h",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/x6502.h",
 			"MU",
 			"EWIEGA46WW/moc_x6502.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen/include",
+	"MOC_COMPILATION_FILE" : "/mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"FCEUDEF_DEBUGGER",
-		"FCEUX_BUILD_TIMESTAMP=\"16:22:06  Oct 03 2023\"",
+		"FCEUX_BUILD_TIMESTAMP=\"20:51:06  Oct 08 2023\"",
 		"HAVE_ASPRINTF",
 		"LUA_USE_LINUX",
 		"PSS_STYLE=1",
@@ -804,21 +918,21 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/emugators/Documents/emugators2.0/FCEUX/src",
-		"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers",
-		"/usr/include/aarch64-linux-gnu/qt5",
-		"/usr/include/aarch64-linux-gnu/qt5/QtWidgets",
-		"/usr/include/aarch64-linux-gnu/qt5/QtGui",
-		"/usr/include/aarch64-linux-gnu/qt5/QtCore",
-		"/usr/lib/aarch64-linux-gnu/qt5/mkspecs/linux-g++",
-		"/usr/include/aarch64-linux-gnu/qt5/QtOpenGL",
+		"/mnt/f/Emugators/emugators2.0/FCEUX/src",
+		"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtOpenGL",
 		"/usr/include",
-		"/usr/include/c++/10",
-		"/usr/include/aarch64-linux-gnu/c++/10",
-		"/usr/include/c++/10/backward",
-		"/usr/lib/gcc/aarch64-linux-gnu/10/include",
+		"/usr/include/c++/11",
+		"/usr/include/x86_64-linux-gnu/c++/11",
+		"/usr/include/c++/11/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/11/include",
 		"/usr/local/include",
-		"/usr/include/aarch64-linux-gnu"
+		"/usr/include/x86_64-linux-gnu"
 	],
 	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
 	"MOC_OPTIONS" : [],
@@ -829,1556 +943,1150 @@
 		"-dM",
 		"-E",
 		"-c",
-		"/home/emugators/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"
+		"/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/emugators/Documents/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 1,
-	"PARSE_CACHE_FILE" : "/home/emugators/Documents/emugators2.0/FCEUX/build/src/CMakeFiles/fceux_autogen.dir/ParseCache.txt",
+	"PARALLEL" : 10,
+	"PARSE_CACHE_FILE" : "/mnt/f/Emugators/emugators2.0/FCEUX/build/src/CMakeFiles/fceux_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
-	"SETTINGS_FILE" : "/home/emugators/Documents/emugators2.0/FCEUX/build/src/CMakeFiles/fceux_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/mnt/f/Emugators/emugators2.0/FCEUX/build/src/CMakeFiles/fceux_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/asm.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/asm.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/01-222.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/01-222.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/09-034a.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/103.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/106.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/108.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/112.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/116.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/117.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/120.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/121.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/09-034a.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/12in1.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/15.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/151.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/156.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/158B.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/164.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/168.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/170.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/175.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/176.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/177.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/178.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/18.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/183.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/185.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/186.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/187.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/189.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/190.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/193.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/199.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/206.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/208.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/222.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/225.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/228.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/230.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/232.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/234.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/235.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/244.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/246.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/252.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/253.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/28.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/32.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/33.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/34.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/36.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/103.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/3d-block.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/40.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/41.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/106.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/411120-c.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/42.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/43.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/46.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/50.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/51.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/57.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/108.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/603-5052.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/62.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/65.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/67.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/68.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/69.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/71.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/72.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/77.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/79.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/80.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/112.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/80013-B.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/8157.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/82.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/8237.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/116.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/830118C.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/88.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/8in1.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/90.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/91.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/96.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/99.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/117.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/BMW8544.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/F-15.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/120.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/__dummy_mapper.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/121.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/a9746.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/12in1.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ac-08.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/15.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/addrlatch.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/151.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ax5705.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/156.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/bandai.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/bb.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/158B.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/bmc13in1jy110.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/164.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/bmc42in1r.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/168.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/bmc64in1nr.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/170.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/bmc70in1.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/175.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/bonza.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/bs-5.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/176.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/bs4xxxr.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/177.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/cheapocabra.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/178.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/cityfighter.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/18.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/coolboy.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/183.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/dance2000.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/185.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/datalatch.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/186.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/dream.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/187.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/edu2000.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/189.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/eh8813a.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/190.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/emu2413.c",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/193.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/et-100.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/199.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/et-4320.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/206.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/famicombox.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ffe.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/208.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/fk23c.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/fns.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/222.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ghostbusters63in1.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/225.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/gs-2004.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/228.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/gs-2013.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/230.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/h2288.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/232.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/hp10xx_hp20xx.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/234.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/hp898f.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/235.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/inlnsf.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/244.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/karaoke.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/246.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/kof97.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/252.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ks7010.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/253.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ks7012.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/28.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ks7013.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/32.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ks7016.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/33.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ks7017.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/34.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ks7030.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/36.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ks7031.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/3d-block.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ks7032.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/40.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ks7037.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/41.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/ks7057.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/le05.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/lh32.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/lh53.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/411120-c.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/malee.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/42.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/mihunche.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/mmc1.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/43.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/mmc2and4.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/mmc3.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/mmc5.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/n106.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/46.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/n625092.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/50.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/novel.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/51.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/onebus.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/57.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/pec-586.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/603-5052.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/rt-01.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/62.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/sa-9602b.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/65.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/sachen.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/67.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/sb-2000.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/68.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/sc-127.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/69.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/sheroes.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/71.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/sl1632.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/72.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/subor.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/77.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/super24.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/79.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/supervision.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/80.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/t-227-1.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/80013-B.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/t-262.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/8157.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/tengen.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/82.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/tf-1201.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/8237.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/transformer.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/830118C.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/unrom512.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/vrc1.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/88.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/vrc2and4.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/vrc3.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/vrc5.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/vrc6.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/vrc7.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/8in1.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/vrc7p.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/boards/yoko.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/cart.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/cheat.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/conddebug.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/config.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/debug.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/drawing.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/90.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/AboutWindow.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/91.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/AviRecord.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/96.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/AviRiffViewer.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/99.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/CheatsConf.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/BMW8544.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/CodeDataLogger.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/F-15.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ColorMenu.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/__dummy_mapper.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleDebugger.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/a9746.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleSoundConf.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ac-08.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleUtilities.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/addrlatch.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleVideoConf.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ax5705.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleViewerGL.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/bandai.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleViewerSDL.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/bb.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleWindow.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/bmc13in1jy110.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/FamilyKeyboard.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/bmc42in1r.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/FrameTimingStats.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/bmc64in1nr.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/GameGenie.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/bmc70in1.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/GamePadConf.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/bonza.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/GuiConf.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/bs-5.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/HelpPages.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/bs4xxxr.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/HexEditor.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/cheapocabra.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/HotKeyConf.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/cityfighter.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/InputConf.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/coolboy.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/LuaControl.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/dance2000.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/MovieOptions.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/datalatch.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/MoviePlay.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/dream.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/MovieRecord.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/edu2000.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/MsgLogViewer.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/eh8813a.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/NameTableViewer.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/emu2413.c",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/PaletteConf.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/et-100.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/PaletteEditor.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/et-4320.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/RamSearch.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/famicombox.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/RamWatch.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ffe.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/SplashScreen.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/fk23c.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/SymbolicDebug.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/fns.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/TasEditorWindow.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ghostbusters63in1.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmark.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/gs-2004.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmarks.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/gs-2013.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/branches.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/h2288.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/greenzone.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/hp10xx_hp20xx.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/history.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/hp898f.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/inputlog.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/inlnsf.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/laglog.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/karaoke.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/kof97.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers_manager.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ks7010.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/playback.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ks7012.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/recorder.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ks7013.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/selection.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ks7016.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/snapshot.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ks7017.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/splicer.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ks7030.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_config.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ks7031.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_lua.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ks7032.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_project.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ks7037.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TimingConf.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/ks7057.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TraceLogger.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/le05.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/avi/avi-utils.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/lh32.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/avi/fileio.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/lh53.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/avi/gwavi.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/malee.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/config.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/mihunche.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/fceuWrapper.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/mmc1.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/iNesHeaderEditor.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/mmc2and4.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/input.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/mmc3.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/keyscan.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/mmc5.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/main.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/n106.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/nes_shm.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/n625092.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ppuViewer.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/novel.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/sdl-joystick.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/onebus.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/sdl-sound.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/pec-586.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/sdl-throttle.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/rt-01.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/sdl-video.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/sa-9602b.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/unix-netplay.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/sachen.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/args.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/sb-2000.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/cheat.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/sc-127.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/config.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/sheroes.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/configSys.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/sl1632.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/hq2x.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/subor.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/hq3x.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/super24.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/nes_ntsc.c",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/supervision.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/os_utils.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/t-227-1.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/scale2x.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/t-262.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/scale3x.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/tengen.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/scalebit.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/tf-1201.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/vidblit.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/emufile.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/fceu.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/fds.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/file.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/filter.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/ines.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/input.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/transformer.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/arkanoid.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/unrom512.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/bworld.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/vrc1.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/cursor.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/input/fkb.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/input/fns.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/vrc2and4.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/ftrainer.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/vrc3.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/hypershot.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/vrc5.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/lcdcompzapper.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/vrc6.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/mahjong.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/input/mouse.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/vrc7.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/oekakids.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/vrc7p.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/pec586kb.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/boards/yoko.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/powerpad.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/input/quiz.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/cart.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/shadow.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/cheat.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/snesmouse.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/conddebug.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/suborkb.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/config.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/toprider.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/debug.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/virtualboy.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drawing.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/input/zapper.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua-engine.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lapi.c", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/AboutWindow.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lauxlib.c",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/AviRecord.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lbaselib.c",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lcode.c", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/AviRiffViewer.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/ldblib.c",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/CheatsConf.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/ldebug.c",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/ldo.c", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/ldump.c", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lfunc.c", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lgc.c", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/linit.c", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/CodeDataLogger.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/liolib.c",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/llex.c", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ColorMenu.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lmathlib.c",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lmem.c", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleDebugger.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/loadlib.c",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleSoundConf.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lobject.c",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleUtilities.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lopcodes.c",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleVideoConf.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/loslib.c",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleViewerGL.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lparser.c",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleViewerSDL.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lstate.c",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ConsoleWindow.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lstring.c",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/FamilyKeyboard.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lstrlib.c",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/FrameTimingStats.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/ltable.c",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/GameGenie.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/ltablib.c",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/ltm.c", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/GamePadConf.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lundump.c",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lvm.c", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/lzio.c", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/lua/src/print.c", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/movie.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/netplay.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/nsf.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/oldmovie.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/palette.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/ppu.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/sound.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/state.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/unif.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/GuiConf.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/backward.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/crc32.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/HelpPages.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/endian.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/HexEditor.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/general.cpp",
 			"MU",
 			null
 		],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/guid.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/md5.cpp", "MU", null ],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/HotKeyConf.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/memory.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/InputConf.cpp",
+			"/mnt/f/Emugators/emugators2.0/FCEUX/src/utils/xstring.cpp",
 			"MU",
 			null
 		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/LuaControl.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/MovieOptions.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/MoviePlay.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/MovieRecord.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/MsgLogViewer.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/NameTableViewer.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/PaletteConf.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/PaletteEditor.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/RamSearch.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/RamWatch.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/SplashScreen.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/SymbolicDebug.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/TasEditorWindow.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmark.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmarks.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/branches.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/greenzone.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/history.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/inputlog.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/laglog.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers_manager.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/playback.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/recorder.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/selection.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/snapshot.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/splicer.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_config.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_lua.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/taseditor_project.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TimingConf.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/TraceLogger.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/avi/avi-utils.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/avi/fileio.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/avi/gwavi.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/config.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/fceuWrapper.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/iNesHeaderEditor.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/input.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/keyscan.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/main.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/nes_shm.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/ppuViewer.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/sdl-joystick.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/sdl-sound.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/sdl-throttle.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/sdl-video.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/Qt/unix-netplay.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/args.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/cheat.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/config.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/configSys.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/hq2x.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/hq3x.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/nes_ntsc.c",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/os_utils.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/scale2x.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/scale3x.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/scalebit.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/drivers/common/vidblit.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/emufile.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/fceu.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/fds.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/file.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/filter.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/ines.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/arkanoid.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/bworld.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/cursor.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/fkb.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/fns.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/ftrainer.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/hypershot.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/lcdcompzapper.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/mahjong.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/mouse.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/oekakids.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/pec586kb.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/powerpad.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/quiz.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/shadow.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/snesmouse.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/suborkb.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/toprider.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/virtualboy.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/input/zapper.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/lua-engine.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/movie.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/netplay.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/nsf.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/oldmovie.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/palette.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/ppu.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/sound.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/state.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/unif.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/backward.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/crc32.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/endian.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/general.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/guid.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/md5.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/memory.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/utils/xstring.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/video.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/vsuni.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/wave.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/emugators/Documents/emugators2.0/FCEUX/src/x6502.cpp",
-			"MU",
-			null
-		]
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/video.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/vsuni.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/wave.cpp", "MU", null ],
+		[ "/mnt/f/Emugators/emugators2.0/FCEUX/src/x6502.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
