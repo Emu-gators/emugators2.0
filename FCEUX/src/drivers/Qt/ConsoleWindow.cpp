@@ -188,7 +188,7 @@ consoleWin_t::consoleWin_t(QWidget *parent)
 	connect(emulatorThread, &QThread::finished, emulatorThread, &QObject::deleteLater);
 	connect(emulatorThread, SIGNAL(frameFinished(void)), this, SLOT(emuFrameFinish(void)) );
 	connect(emulatorThread, SIGNAL(loadRomRequest(QString)), this, SLOT(loadRomRequestCB(QString)) );
-	connect(emulatorThread, SIGNAL(closeROMRequest(QString)), this, SLOT(closeROMCB(QString)) );
+	connect(emulatorThread, SIGNAL(closeROMRequest(void)), this, SLOT(closeROMCB(void)) );
 
 	connect( gameTimer, &QTimer::timeout, this, &consoleWin_t::updatePeriodic );
 
@@ -2423,6 +2423,7 @@ void consoleWin_t::loadRomRequestCB( QString s )
 
 void consoleWin_t::closeROMCB(void)
 {
+	printf("Closing ROM\n");
 	FCEU_WRAPPER_LOCK();
 	CloseGame();
 	FCEU_WRAPPER_UNLOCK();

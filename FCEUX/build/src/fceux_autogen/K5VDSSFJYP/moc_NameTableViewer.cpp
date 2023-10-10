@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'NameTableViewer.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.3)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -13,7 +13,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'NameTableViewer.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.15.3. It"
+#error "This file was generated using the moc from 5.15.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -78,7 +78,7 @@ void ppuNameTableView_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<ppuNameTableView_t *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->openTilePpuViewer(); break;
         case 1: _t->openPpuAddrHexEdit(); break;
@@ -87,7 +87,7 @@ void ppuNameTableView_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         default: ;
         }
     }
-    (void)_a;
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject ppuNameTableView_t::staticMetaObject = { {
@@ -165,10 +165,10 @@ static const uint qt_meta_data_ppuNameTableTileView_t[] = {
 
 void ppuNameTableTileView_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    (void)_o;
-    (void)_id;
-    (void)_c;
-    (void)_a;
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject ppuNameTableTileView_t::staticMetaObject = { {
@@ -235,10 +235,10 @@ static const uint qt_meta_data_ppuNameTablePaletteView_t[] = {
 
 void ppuNameTablePaletteView_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    (void)_o;
-    (void)_id;
-    (void)_c;
-    (void)_a;
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject ppuNameTablePaletteView_t::staticMetaObject = { {
@@ -416,7 +416,7 @@ void ppuNameTableViewerDialog_t::qt_static_metacall(QObject *_o, QMetaObject::Ca
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<ppuNameTableViewerDialog_t *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->closeWindow(); break;
         case 1: _t->refreshMenuSelections(); break;

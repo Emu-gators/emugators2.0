@@ -59,8 +59,9 @@ void set_rom(){
 		valread = read(client_fd, buffer, 1024);
 		//Load game using input ROM path from GUI
 		QString rom_path = buffer;
-
+		printf("%s\n", rom_path);
 		if(rom_path == "close"){
+			printf("In close path\n");
 			consoleWindow->emulatorThread->signalROMClose();
 		}else{
 			consoleWindow->emulatorThread->signalRomLoad(buffer);

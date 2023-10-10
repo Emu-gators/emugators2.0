@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'PaletteEditor.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.3)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -13,7 +13,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'PaletteEditor.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.15.3. It"
+#error "This file was generated using the moc from 5.15.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -82,7 +82,7 @@ void nesColorPickerDialog_t::qt_static_metacall(QObject *_o, QMetaObject::Call _
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<nesColorPickerDialog_t *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->closeWindow(); break;
         case 1: _t->colorChanged((*reinterpret_cast< const QColor(*)>(_a[1]))); break;
@@ -179,13 +179,13 @@ void nesPaletteView::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<nesPaletteView *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->editSelColor(); break;
         default: ;
         }
     }
-    (void)_a;
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject nesPaletteView::staticMetaObject = { {
@@ -298,7 +298,7 @@ void PaletteEditorDialog_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<PaletteEditorDialog_t *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->closeWindow(); break;
         case 1: _t->updatePeriodic(); break;
@@ -311,7 +311,7 @@ void PaletteEditorDialog_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c
         default: ;
         }
     }
-    (void)_a;
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject PaletteEditorDialog_t::staticMetaObject = { {
@@ -389,10 +389,10 @@ static const uint qt_meta_data_nesPalettePickerView[] = {
 
 void nesPalettePickerView::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    (void)_o;
-    (void)_id;
-    (void)_c;
-    (void)_a;
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject nesPalettePickerView::staticMetaObject = { {
@@ -480,7 +480,7 @@ void nesPalettePickerDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<nesPalettePickerDialog *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->closeWindow(); break;
         case 1: _t->cancelButtonClicked(); break;
@@ -489,7 +489,7 @@ void nesPalettePickerDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _
         default: ;
         }
     }
-    (void)_a;
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject nesPalettePickerDialog::staticMetaObject = { {

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ppuViewer.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.3)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -13,7 +13,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'ppuViewer.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.15.3. It"
+#error "This file was generated using the moc from 5.15.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -111,7 +111,7 @@ void ppuPatternView_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<ppuPatternView_t *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->toggleTileGridLines(); break;
         case 1: _t->showTileMode(); break;
@@ -130,7 +130,7 @@ void ppuPatternView_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         default: ;
         }
     }
-    (void)_a;
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject ppuPatternView_t::staticMetaObject = { {
@@ -229,7 +229,7 @@ void tilePaletteView_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<tilePaletteView_t *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->openColorPicker(); break;
         case 1: _t->exportPaletteFileDialog(); break;
@@ -238,7 +238,7 @@ void tilePaletteView_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         default: ;
         }
     }
-    (void)_a;
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject tilePaletteView_t::staticMetaObject = { {
@@ -316,10 +316,10 @@ static const uint qt_meta_data_ppuTileView_t[] = {
 
 void ppuTileView_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    (void)_o;
-    (void)_id;
-    (void)_c;
-    (void)_a;
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject ppuTileView_t::staticMetaObject = { {
@@ -386,10 +386,10 @@ static const uint qt_meta_data_ppuTileEditColorPicker_t[] = {
 
 void ppuTileEditColorPicker_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    (void)_o;
-    (void)_id;
-    (void)_c;
-    (void)_a;
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject ppuTileEditColorPicker_t::staticMetaObject = { {
@@ -478,7 +478,7 @@ void ppuTileEditor_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<ppuTileEditor_t *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->closeWindow(); break;
         case 1: _t->periodicUpdate(); break;
@@ -608,7 +608,7 @@ void ppuViewerDialog_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<ppuViewerDialog_t *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->closeWindow(); break;
         case 1: _t->periodicUpdate(); break;
@@ -710,13 +710,13 @@ void oamPatternView_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<oamPatternView_t *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->openTilePpuViewer(); break;
         default: ;
         }
     }
-    (void)_a;
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject oamPatternView_t::staticMetaObject = { {
@@ -794,10 +794,10 @@ static const uint qt_meta_data_oamTileView_t[] = {
 
 void oamTileView_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    (void)_o;
-    (void)_id;
-    (void)_c;
-    (void)_a;
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject oamTileView_t::staticMetaObject = { {
@@ -864,10 +864,10 @@ static const uint qt_meta_data_oamPaletteView_t[] = {
 
 void oamPaletteView_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    (void)_o;
-    (void)_id;
-    (void)_c;
-    (void)_a;
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject oamPaletteView_t::staticMetaObject = { {
@@ -934,10 +934,10 @@ static const uint qt_meta_data_oamPreview_t[] = {
 
 void oamPreview_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    (void)_o;
-    (void)_id;
-    (void)_c;
-    (void)_a;
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject oamPreview_t::staticMetaObject = { {
@@ -1032,7 +1032,7 @@ void spriteViewerDialog_t::qt_static_metacall(QObject *_o, QMetaObject::Call _c,
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<spriteViewerDialog_t *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->closeWindow(); break;
         case 1: _t->periodicUpdate(); break;
