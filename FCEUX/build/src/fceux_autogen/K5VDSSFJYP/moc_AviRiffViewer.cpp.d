@@ -1,6 +1,6 @@
-/mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen/K5VDSSFJYP/moc_AviRiffViewer.cpp: /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/AviRiffViewer.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/avi/gwavi.h \
+/home/jeya/emugators2.0/FCEUX/build/src/fceux_autogen/K5VDSSFJYP/moc_AviRiffViewer.cpp: /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/AviRiffViewer.h \
+  /home/jeya/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/avi/gwavi.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

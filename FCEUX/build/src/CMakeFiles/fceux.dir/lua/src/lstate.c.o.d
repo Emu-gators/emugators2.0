@@ -1,0 +1,49 @@
+src/CMakeFiles/fceux.dir/lua/src/lstate.c.o: \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/lstate.c \
+ /usr/include/stdc-predef.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/lua.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/luaconf.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+ /usr/include/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/features-time64.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/bits/timesize.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/long-double.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/time64.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/ldebug.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/lstate.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/lobject.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/llimits.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/ltm.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/lzio.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/lmem.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/ldo.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/lfunc.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/lgc.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/llex.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/lstring.h \
+ /home/jeya/emugators2.0/FCEUX/src/lua/src/ltable.h

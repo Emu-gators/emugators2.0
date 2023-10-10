@@ -1,5 +1,5 @@
-/mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen/K5VDSSFJYP/moc_SymbolicDebug.cpp: /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/SymbolicDebug.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
+/home/jeya/emugators2.0/FCEUX/build/src/fceux_autogen/K5VDSSFJYP/moc_SymbolicDebug.cpp: /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/SymbolicDebug.h \
+  /home/jeya/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

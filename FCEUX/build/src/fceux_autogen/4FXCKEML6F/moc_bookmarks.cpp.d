@@ -1,22 +1,22 @@
-/mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen/4FXCKEML6F/moc_bookmarks.cpp: /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmarks.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmark.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/inputlog.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/laglog.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/selection.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/snapshot.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/emufile.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/emufile_types.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/fceu.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/git.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/input/zapper.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/movie.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/types.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/utils/endian.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/utils/guid.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/utils/md5.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/utils/valuearray.h \
+/home/jeya/emugators2.0/FCEUX/build/src/fceux_autogen/4FXCKEML6F/moc_bookmarks.cpp: /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmarks.h \
+  /home/jeya/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/bookmark.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/inputlog.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/laglog.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/markers.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/selection.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/TasEditor/snapshot.h \
+  /home/jeya/emugators2.0/FCEUX/src/emufile.h \
+  /home/jeya/emugators2.0/FCEUX/src/emufile_types.h \
+  /home/jeya/emugators2.0/FCEUX/src/fceu.h \
+  /home/jeya/emugators2.0/FCEUX/src/git.h \
+  /home/jeya/emugators2.0/FCEUX/src/input/zapper.h \
+  /home/jeya/emugators2.0/FCEUX/src/movie.h \
+  /home/jeya/emugators2.0/FCEUX/src/types.h \
+  /home/jeya/emugators2.0/FCEUX/src/utils/endian.h \
+  /home/jeya/emugators2.0/FCEUX/src/utils/guid.h \
+  /home/jeya/emugators2.0/FCEUX/src/utils/md5.h \
+  /home/jeya/emugators2.0/FCEUX/src/utils/valuearray.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

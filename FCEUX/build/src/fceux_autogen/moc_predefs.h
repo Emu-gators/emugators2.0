@@ -61,7 +61,6 @@
 #define __FLT64X_MAX_10_EXP__ 4932
 #define __cpp_if_constexpr 201606L
 #define __LDBL_IS_IEC_60559__ 2
-#define QT_NO_DEBUG 1
 #define __FLT64X_HAS_QUIET_NAN__ 1
 #define __UINT_LEAST8_MAX__ 0xff
 #define __GCC_ATOMIC_BOOL_LOCK_FREE 2
@@ -396,7 +395,7 @@
 #define __FLT32X_NORM_MAX__ 1.79769313486231570814527423731704357e+308F32x
 #define __CHAR32_TYPE__ unsigned int
 #define __FLT_MAX__ 3.40282346638528859811704183484516925e+38F
-#define FCEUX_BUILD_TIMESTAMP "20:51:06  Oct 08 2023"
+#define FCEUX_BUILD_TIMESTAMP "15:50:35  Oct 10 2023"
 #define __cpp_constexpr 201603L
 #define __SSE2__ 1
 #define __cpp_deduction_guides 201703L

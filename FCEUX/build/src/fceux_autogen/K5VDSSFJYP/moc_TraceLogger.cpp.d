@@ -1,24 +1,24 @@
-/mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen/K5VDSSFJYP/moc_TraceLogger.cpp: /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TraceLogger.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/conddebug.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/debug.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/driver.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ColorMenu.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleDebugger.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/ConsoleUtilities.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/SymbolicDebug.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/main.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/args.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/config.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/emufile.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/emufile_types.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/file.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/git.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/nsf.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/types.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/utils/endian.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/utils/md5.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/utils/valuearray.h \
+/home/jeya/emugators2.0/FCEUX/build/src/fceux_autogen/K5VDSSFJYP/moc_TraceLogger.cpp: /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/TraceLogger.h \
+  /home/jeya/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
+  /home/jeya/emugators2.0/FCEUX/src/conddebug.h \
+  /home/jeya/emugators2.0/FCEUX/src/debug.h \
+  /home/jeya/emugators2.0/FCEUX/src/driver.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/ColorMenu.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/ConsoleDebugger.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/ConsoleUtilities.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/SymbolicDebug.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/main.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/common/args.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/common/config.h \
+  /home/jeya/emugators2.0/FCEUX/src/emufile.h \
+  /home/jeya/emugators2.0/FCEUX/src/emufile_types.h \
+  /home/jeya/emugators2.0/FCEUX/src/file.h \
+  /home/jeya/emugators2.0/FCEUX/src/git.h \
+  /home/jeya/emugators2.0/FCEUX/src/nsf.h \
+  /home/jeya/emugators2.0/FCEUX/src/types.h \
+  /home/jeya/emugators2.0/FCEUX/src/utils/endian.h \
+  /home/jeya/emugators2.0/FCEUX/src/utils/md5.h \
+  /home/jeya/emugators2.0/FCEUX/src/utils/valuearray.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

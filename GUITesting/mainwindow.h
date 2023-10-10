@@ -17,6 +17,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void openNewWindow();
+    void sendCloseROM();
 
 private slots:
     void on_nextButton_clicked();

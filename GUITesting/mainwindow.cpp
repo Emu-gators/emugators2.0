@@ -463,11 +463,16 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
     }
 }
 
+void MainWindow::sendCloseROM(){
+    send(new_socket, "close", strlen("close"), 0);
+}
+
 extern MainWindow* mwPointer;
 void ejectButton(int e, lgGpioAlert_p evt, void *data){
     printf("Eject was pressed!\n");
     mwPointer->raise();
     mwPointer->activateWindow();
+    mwPointer->sendCloseROM();
 }
 
 void setupGPIO(){

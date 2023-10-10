@@ -59,8 +59,13 @@ void set_rom(){
 		valread = read(client_fd, buffer, 1024);
 		//Load game using input ROM path from GUI
 		QString rom_path = buffer;
+
+		if(rom_path == "close"){
+			consoleWindow->emulatorThread->signalROMClose();
+		}else{
+			consoleWindow->emulatorThread->signalRomLoad(buffer);
+		}
 		
-		consoleWindow->emulatorThread->signalRomLoad(buffer);
 		std::memset(buffer, 0, 1024);
 	}
 	// closing the connected socket

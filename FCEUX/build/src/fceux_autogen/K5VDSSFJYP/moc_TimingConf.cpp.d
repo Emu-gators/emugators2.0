@@ -1,17 +1,17 @@
-/mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen/K5VDSSFJYP/moc_TimingConf.cpp: /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/TimingConf.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/driver.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/Qt/main.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/args.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/drivers/common/config.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/emufile.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/emufile_types.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/file.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/git.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/types.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/utils/endian.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/utils/md5.h \
-  /mnt/f/Emugators/emugators2.0/FCEUX/src/utils/valuearray.h \
+/home/jeya/emugators2.0/FCEUX/build/src/fceux_autogen/K5VDSSFJYP/moc_TimingConf.cpp: /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/TimingConf.h \
+  /home/jeya/emugators2.0/FCEUX/build/src/fceux_autogen/moc_predefs.h \
+  /home/jeya/emugators2.0/FCEUX/src/driver.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/Qt/main.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/common/args.h \
+  /home/jeya/emugators2.0/FCEUX/src/drivers/common/config.h \
+  /home/jeya/emugators2.0/FCEUX/src/emufile.h \
+  /home/jeya/emugators2.0/FCEUX/src/emufile_types.h \
+  /home/jeya/emugators2.0/FCEUX/src/file.h \
+  /home/jeya/emugators2.0/FCEUX/src/git.h \
+  /home/jeya/emugators2.0/FCEUX/src/types.h \
+  /home/jeya/emugators2.0/FCEUX/src/utils/endian.h \
+  /home/jeya/emugators2.0/FCEUX/src/utils/md5.h \
+  /home/jeya/emugators2.0/FCEUX/src/utils/valuearray.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
