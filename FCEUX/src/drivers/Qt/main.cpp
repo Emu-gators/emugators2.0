@@ -60,6 +60,11 @@ void set_rom(){
 		//Load game using input ROM path from GUI
 		QString rom_path = buffer;
 		printf("%s\n", rom_path);
+		
+		if(valread == 0){
+			break;
+		}
+
 		if(rom_path == "close"){
 			printf("In close path\n");
 			consoleWindow->emulatorThread->signalROMClose();
@@ -71,6 +76,7 @@ void set_rom(){
 	}
 	// closing the connected socket
 	::close(client_fd);
+	consoleWindow->closeApp();
 }
 
 static void MessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
@@ -223,6 +229,7 @@ int main( int argc, char *argv[] )
 	printf("Hello message sent\n");
 	valread = read(client_fd, buffer, 1024);
 	printf("%s\n", buffer);
+	std::memset(buffer, 0, 1024);
 	//TODO: Clear buffer between each loaded game/message
 	//read in ROM path of loaded game
     //End of client code

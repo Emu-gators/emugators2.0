@@ -327,8 +327,8 @@ class  consoleWin_t : public QMainWindow
 		void winResizeIx(int iScale);
 		void loadRomRequestCB( QString s );
 		void closeROMCB(void);
-	private slots:
 		void closeApp(void);
+	private slots:
 		void openROMFile(void);
 		void loadNSF(void);
 		void loadStateFrom(void);
