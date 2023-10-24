@@ -241,6 +241,8 @@ void MainWindow::loadROMPaths()
             std::string correspondingRomPath = convertExtension(romImagePath, path.toStdString());
 
             romImages.push_back(correspondingRomPath);
+
+            romNames.push_back(nameFromNES(path));
         }
     }
 
@@ -265,6 +267,42 @@ std::string MainWindow::convertExtension(std::string romImageDir, std::string pa
     //qDebug() << QString::fromStdString(path);
     //Return the path of the rom file image
     return path;
+}
+
+QString MainWindow::nameFromNES(QString path){
+    qsizetype nameLength = path.size() - 1 - path.lastIndexOf('/');
+    QString namePreFormat = path.right(nameLength);
+    namePreFormat.chop(4);
+
+    QRegularExpression re("((?<=[a-z])[A-Z]|[A-Z](?=[a-z]))");
+    QRegularExpressionMatchIterator matchIt = re.globalMatch(namePreFormat);
+
+    QStringList list;
+
+    std::vector<int> indices;
+
+    while(matchIt.hasNext()){
+
+        QRegularExpressionMatch match = matchIt.next();
+
+        indices.push_back(match.capturedStart());
+
+    }
+
+    for(int i = 0; i < indices.size(); i++){ //could do this to i < indices.size() - 1 to remove "Japan" etc
+        int length;
+        if(i == indices.size()){
+            length = -1;
+        }else{
+            length = indices[i+1] - indices[i];
+        }
+
+        list.append(namePreFormat.mid(indices[i], length));
+    }
+
+    QString name = list.join(' ');
+
+    return name.trimmed();
 }
 
 /*
@@ -324,6 +362,12 @@ void MainWindow::loadGUIImages()
     QImage right("/home/emugators/Documents/ROMS/rightArrow.png");
     QIcon rightButton(QPixmap::fromImage(right));
     ui->nextButton->setIcon(rightButton);
+
+    /* Setting tooltips */
+    ui->famicom->setToolTip("Drag and drop one of the cartridges above to start playing!");
+
+    ui->debugButton->setToolTip("Launch Zapper calibration sequence");
+
 }
 
 /*
@@ -342,6 +386,8 @@ void MainWindow::displayCurROM()
     //to match that of what is currently being viewed
     ui->label->raise();
     ui->label->setPixmap(QPixmap::fromImage(roms.at(curRom)));
+
+    ui->label->setToolTip(romNames[curRom]);
 }
 
 /*

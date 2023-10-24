@@ -35,6 +35,7 @@ private:
     void displayCurROM();
     void changeRomPath();
     QImage processImage(QImage unprocessedImage);
+    QString nameFromNES(QString);
     std::string convertExtension(std::string romImageDir, std::string path);
     std::vector<QImage> roms;
     int curRom;
@@ -43,6 +44,7 @@ private:
     //Socket
     int server_fd;
     int new_socket;
+    std::vector<QString> romNames;
 
 };
 
