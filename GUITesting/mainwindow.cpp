@@ -303,6 +303,11 @@ void MainWindow::loadGUIImages()
     QIcon rightButton(QPixmap::fromImage(right));
     ui->nextButton->setIcon(rightButton);
 
+    //Loads icon for the helpButton
+    QImage help("/home/emugators/Documents/ROMS/help.png");
+    QIcon ButtonIcon(help);
+    ui->helpButton->setIcon(ButtonIcon);
+
     /* Setting tooltips */
     ui->famicom->setToolTip("Drag and drop one of the cartridges above to start playing!");
 
