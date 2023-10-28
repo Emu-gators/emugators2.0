@@ -74,6 +74,8 @@ MainWindow::MainWindow(QWidget *parent)
     //gridLayout->addWidget(ui->debugButton,0,2,1,1);
     //this->centralWidget()->setLayout(gridLayout);
     
+    showHelp = false;
+
     //Load the GUI images, ROM images, and ROM paths from default specified directories
     loadGUIImages();
     loadROMPaths();
@@ -389,6 +391,18 @@ void MainWindow::on_debugButton_clicked()
 {
     //Opens the new window
     openNewWindow();
+}
+
+void MainWindow::on_helpButton_clicked()
+{
+    if(!showHelp){
+        showHelp = true;
+        ui->helpButton->move(300, 100);
+    }else{
+        showHelp = false;
+        ui->helpButton->move(20, 666);
+    }
+
 }
 
 /*

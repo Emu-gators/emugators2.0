@@ -47,6 +47,8 @@ private:
     int server_fd;
     int client_fd;
     std::vector<QString> romNames;
+
+    bool showHelp;
 };
 
 void setupGPIO();
