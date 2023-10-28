@@ -79,67 +79,7 @@ MainWindow::MainWindow(QWidget *parent)
     loadROMPaths();
     displayCurROM();
     setupGPIO();
-
-    //Socket server code specified below was adapted from an example at
-    //www.geeksforgeeks.org/socket-programming-cc/
-    //Socket Server code sample
-    struct sockaddr_in address;
-    int opt = 1;
-    int addrlen = sizeof(address);
-    char buffer[1024] = { 0 };
-    
-
-    // Creating socket file descriptor
-    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
-	    perror("socket failed");
-	    exit(EXIT_FAILURE);
-    }
-
-    // Forcefully attaching socket to the port 8080
-    if (setsockopt(server_fd, SOL_SOCKET,
-			    SO_REUSEADDR | SO_REUSEPORT, &opt,
-			    sizeof(opt))) {
-	    perror("setsockopt");
-	    exit(EXIT_FAILURE);
-    }
-    address.sin_family = AF_INET;
-    address.sin_addr.s_addr = INADDR_ANY;
-    address.sin_port = htons(PORT);
-    printf("attached socket \n");
-	// Forcefully attaching socket to the port 8080
-	if (bind(server_fd, (struct sockaddr*)&address,
-			sizeof(address))
-		< 0) {
-		perror("bind failed");
-		exit(EXIT_FAILURE);
-	}
-    printf("Binding on socket \n");
-	if (listen(server_fd, 3) < 0) {
-		perror("listen");
-		exit(EXIT_FAILURE);
-	}
-    //Launching FCEUX
-    OpenFCEUX();
-    printf("Listening on socket \n");
-	if ((new_socket
-		= accept(server_fd, (struct sockaddr*)&address,
-				(socklen_t*)&addrlen))
-		< 0) {
-		perror("accept");
-		exit(EXIT_FAILURE);
-	}
-    printf("Accepted on socket \n");
-    int valread = read(new_socket, buffer, 1024);
-    if(valread == 0){
-        std::cout << "ERROR: Connection closed on other end.\n";
-    }
-    printf("%s\n", buffer);
-    std::string std_hello = "hello";
-    const char* hello = std_hello.c_str();
-    send(new_socket, hello, strlen(hello), 0);
-    printf("Hello message sent\n");
-
-    
+    connectWithFCEUX();
 }
 
 /*
@@ -489,7 +429,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         {
 	    //Send rom path of game to be loaded based on what user drags and drops
             printf("Before send\n");
-	    send(new_socket, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), 0);
+	    send(client_fd, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), 0);
 	    //Play game drop sound as new game is dropped on console
 	    QMediaPlayer* gamedrop = new QMediaPlayer();
 	    gamedrop->setMedia(QUrl("file:///home/emugators/Documents/ROMS/emugator/gamedrop.mp3"));
@@ -510,7 +450,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 }
 
 void MainWindow::sendCloseROM(){
-    send(new_socket, "close", strlen("close"), 0);
+    send(client_fd, "close", strlen("close"), 0);
 }
 
 extern MainWindow* mwPointer;
@@ -530,5 +470,68 @@ void setupGPIO(){
     lgGpioClaimAlert(handle,LG_SET_PULL_DOWN,LG_RISING_EDGE,buttonC4,-1);
 }
 
+void MainWindow::connectWithFCEUX(){
+    //Socket server code specified below was adapted from an example at
+    //www.geeksforgeeks.org/socket-programming-cc/
+    //Socket Server code sample
+    struct sockaddr_in address;
+    int opt = 1;
+    int addrlen = sizeof(address);
+    char buffer[1024] = { 0 };
+    
+    // Creating socket file descriptor
+    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
+	    perror("socket failed");
+	    exit(EXIT_FAILURE);
+    }
 
+    // Forcefully attaching socket to the port 8080
+    if (setsockopt(server_fd, SOL_SOCKET,
+			    SO_REUSEADDR | SO_REUSEPORT, &opt,
+			    sizeof(opt))) {
+	    perror("setsockopt");
+	    exit(EXIT_FAILURE);
+    }
+    address.sin_family = AF_INET;
+    address.sin_addr.s_addr = INADDR_ANY;
+    address.sin_port = htons(PORT);
+    printf("attached socket \n");
+
+	// Forcefully attaching socket to the port 8080
+	if (bind(server_fd, (struct sockaddr*)&address,
+			sizeof(address))
+		< 0) {
+		perror("bind failed");
+		exit(EXIT_FAILURE);
+	}
+    printf("Binding on socket \n");
+	if (listen(server_fd, 3) < 0) {
+		perror("listen");
+		exit(EXIT_FAILURE);
+	}
+
+    //Launching FCEUX
+    OpenFCEUX();
+
+    printf("Listening on socket \n");
+	if ((client_fd
+		= accept(server_fd, (struct sockaddr*)&address,
+				(socklen_t*)&addrlen))
+		< 0) {
+		perror("accept");
+		exit(EXIT_FAILURE);
+	}
+
+    printf("Accepted on socket \n");
+    int valread = read(client_fd, buffer, 1024);
+    if(valread == 0){
+        std::cout << "ERROR: Connection closed on other end.\n";
+    }
+
+    printf("%s\n", buffer);
+    std::string std_hello = "hello";
+    const char* hello = std_hello.c_str();
+    send(client_fd, hello, strlen(hello), 0);
+    printf("Hello message sent\n");
+}
 

@@ -34,6 +34,8 @@ private:
     void OpenFCEUX();
     void displayCurROM();
     void changeRomPath();
+    void connectWithFCEUX();
+
     QImage processImage(QImage unprocessedImage);
     QString nameFromNES(QString);
     std::string convertExtension(std::string romImageDir, std::string path);
@@ -43,9 +45,8 @@ private:
     std::vector<std::string> romPaths;
     //Socket
     int server_fd;
-    int new_socket;
+    int client_fd;
     std::vector<QString> romNames;
-
 };
 
 void setupGPIO();
