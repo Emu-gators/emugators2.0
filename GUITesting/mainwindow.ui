@@ -66,6 +66,16 @@
      <string>Calibrate</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="helpButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>600</y>
+      <width>64</width>
+      <height>64</height>
+     </rect>
+    </property>
+   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
