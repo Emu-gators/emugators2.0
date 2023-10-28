@@ -305,8 +305,10 @@ void MainWindow::loadGUIImages()
 
     //Loads icon for the helpButton
     QImage help("/home/emugators/Documents/ROMS/help.png");
-    QIcon ButtonIcon(QPixmap::fromImage(help));
+    QImage scaleHelp = help.scaled(64,64,Qt::KeepAspectRatio);
+    QIcon ButtonIcon(QPixmap::fromImage(scaleHelp));
     ui->helpButton->setIcon(ButtonIcon);
+    button->setIconSize(pixmap.rect().size());
 
     /* Setting tooltips */
     ui->famicom->setToolTip("Drag and drop one of the cartridges above to start playing!");
