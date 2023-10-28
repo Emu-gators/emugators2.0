@@ -305,7 +305,7 @@ void MainWindow::loadGUIImages()
 
     //Loads icon for the helpButton
     QImage help("/home/emugators/Documents/ROMS/help.png");
-    QIcon ButtonIcon(help);
+    QIcon ButtonIcon(QPixmap::fromImage(help));
     ui->helpButton->setIcon(ButtonIcon);
 
     /* Setting tooltips */
