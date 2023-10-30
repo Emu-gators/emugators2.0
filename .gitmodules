@@ -1,3 +1,6 @@
 [submodule "/home/emugators/Documents/emugators2.0/fceux"]
 	path = /home/emugators/Documents/emugators2.0/fceux
 	url = https://github.com/TASEmulators/fceux
+[submodule "emugatorsfceux"]
+	path = emugatorsfceux
+	url = https://github.com/Emu-gators/emugatorsfceux.git
