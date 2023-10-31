@@ -229,7 +229,7 @@ QString MainWindow::nameFromNES(QString path){
 
     }
 
-    for(int i = 0; i < indices.size(); i++){ //could do this to i < indices.size() - 1 to remove "Japan" etc
+    for(unsigned int i = 0; i < indices.size(); i++){ //could do this to i < indices.size() - 1 to remove "Japan" etc
         int length;
         if(i == indices.size()){
             length = -1;
@@ -273,22 +273,22 @@ void MainWindow::loadGUIImages()
     //Loads the background image, scales it, and then connects it to the background ui
     //element
     QImage background("/home/emugators/Documents/ROMS/background.jpg");
-    QImage scaleBack = background.scaled(500,750,Qt::KeepAspectRatio);
+    QImage scaleBack = background.scaled(800,600,Qt::KeepAspectRatioByExpanding);
     ui->background->setPixmap(QPixmap::fromImage(scaleBack));
 
     //Loads the bookshelf image, scales it, and connects to ui element
     QImage games("/home/emugators/Documents/ROMS/lowresbookshelfedit.png");
-    QImage scaleGame = games.scaled(400,125,Qt::KeepAspectRatio);
+    QImage scaleGame = games.scaled(400,125,Qt::KeepAspectRatioByExpanding);
     ui->games->setPixmap(QPixmap::fromImage(scaleGame));
 
     //Loads the Famicom image, scale sit, and connects to ui element
     QImage famicom("/home/emugators/Documents/ROMS/Nintendo-Famicom-Disk-System.png");
-    QImage scaleFam = famicom.scaled(360,300,Qt::KeepAspectRatio);
+    QImage scaleFam = famicom.scaled(360,300,Qt::KeepAspectRatioByExpanding);
     ui->famicom->setPixmap(QPixmap::fromImage(scaleFam));
 
     //Loads the shelf image, scales it, and connects to ui element
     QImage shelf("/home/emugators/Documents/ROMS/shelfedit.jpg");
-    QImage scaleShelf = shelf.scaled(450,65,Qt::KeepAspectRatio);
+    QImage scaleShelf = shelf.scaled(450,65,Qt::KeepAspectRatioByExpanding);
     ui->shelf->setPixmap(QPixmap::fromImage(scaleShelf));
     ui->shelf->lower();
     ui->background->lower();
@@ -397,11 +397,16 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 {
     //Gets the global position of the mouse at time of the event and pulls out
     //the x and y coordinates
-    QPoint globalCursorPos = QCursor::pos();
+    QPoint globalCursorPos = event->globalPos();
     int x = globalCursorPos.x();
     int y = globalCursorPos.y();
+
+    QPoint topLeft = ui->widget->pos();
+    x = x - topLeft.x();
+    y = y - topLeft.y();
+
     //Check if the mouse event occurred in the area where the rom image is located
-    if (ui->label->geometry().contains(event->pos())) {
+    if (ui->label->geometry().contains(x,y)) {
 	//If the mouse was pressed on the rom grab that rom and being a drag event
         draggedRom = curRom;
         
@@ -420,7 +425,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         x = globalCursorPos.x();
         y = globalCursorPos.y();
 	//Find the x and y location of the mouse within the window
-	QPoint topLeft = this->pos();
+    topLeft = ui->widget->pos();
 	x = x - topLeft.x();
 	y = y - topLeft.y();
         //Check if x and y of mouse is over the famicom image
