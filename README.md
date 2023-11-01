@@ -1,6 +1,16 @@
 # Emugators 2.0
 
-A project for the Microcomputer Musuem. Features a GUI that operates alongside FCEUX ([an open source NES emulator](https://github.com/TASEmulators/fceux)). 
+**A project for the Microcomputer Musuem. Features a GUI that operates alongside FCEUX ([an open source NES emulator](https://github.com/TASEmulators/fceux)).**
+
+## Directory Structure
+
+* ### Documentation
+    - Contains documentation related to the project including build instructions for FCEUX and the GUI.
+* ### GUITesting
+    - Main directory that relates to the GUI. Contains source code and scripts for building the GUI. 
+    - The executable for the GUI will be created here by default.
+* ### emugatorsfceux
+    - A Git submodule that contains a fork of FCEUX. On GitHub, you can click this directory to go to the emugatorsfceux GitHub repository.
 
 ## Build
 
@@ -17,7 +27,7 @@ The GUI can be launched by executing the GUITesting executable found in the GUIT
 
 To play games, drag and drop the cartridges near the top of the screen onto the Famicom near the center of the GUI. 
 
-To scroll through the available games, use the "Next" and "Previous" buttons on the sides of the current cartridge image.
+To scroll through the available games, use the "Next" and "Previous" buttons to the sides of the current cartridge.
 
 To help calibrate the Zapper, you can press the "Calibrate" button to bring up a calibration screen.
 
