@@ -35,9 +35,10 @@ public:
     QLabel *shelf;
     QLabel *background;
     QPushButton *debugButton;
-    QPushButton *pushButton;
+    QPushButton *helpButton;
     QPushButton *nextButton;
     QLabel *label;
+    QLabel *helpScreen;
     QSpacerItem *horizontalSpacer_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -83,24 +84,29 @@ public:
         debugButton = new QPushButton(widget);
         debugButton->setObjectName(QString::fromUtf8("debugButton"));
         debugButton->setGeometry(QRect(340, 20, 80, 23));
-        pushButton = new QPushButton(widget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(690, 20, 80, 23));
+        helpButton = new QPushButton(widget);
+        helpButton->setObjectName(QString::fromUtf8("helpButton"));
+        helpButton->setGeometry(QRect(680, 20, 80, 23));
         nextButton = new QPushButton(widget);
         nextButton->setObjectName(QString::fromUtf8("nextButton"));
         nextButton->setGeometry(QRect(500, 170, 80, 23));
         label = new QLabel(widget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(350, 70, 111, 101));
+        helpScreen = new QLabel(widget);
+        helpScreen->setObjectName(QString::fromUtf8("helpScreen"));
+        helpScreen->setGeometry(QRect(50, 50, 700, 500));
+        helpScreen->setMinimumSize(QSize(700, 500));
         background->raise();
         previousButton->raise();
         games->raise();
         famicom->raise();
         shelf->raise();
         debugButton->raise();
-        pushButton->raise();
+        helpButton->raise();
         nextButton->raise();
         label->raise();
+        helpScreen->raise();
 
         horizontalLayout->addWidget(widget);
 
@@ -131,9 +137,10 @@ public:
         shelf->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         background->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         debugButton->setText(QCoreApplication::translate("MainWindow", "Calibrate", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
+        helpButton->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
         nextButton->setText(QCoreApplication::translate("MainWindow", "Next", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        helpScreen->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
     } // retranslateUi
 
 };
