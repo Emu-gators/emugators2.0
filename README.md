@@ -1,5 +1,7 @@
 # Emugators 2.0
 
+![Emugators Logo](https://github.com/Emu-gators/emugators2.0/blob/main/emugator.png)
+
 **A project for the Microcomputer Musuem. Features a GUI that operates alongside FCEUX ([an open source NES emulator](https://github.com/TASEmulators/fceux)).**
 
 ## Directory Structure
