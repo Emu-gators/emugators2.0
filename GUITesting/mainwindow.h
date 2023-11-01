@@ -23,6 +23,7 @@ private slots:
     void on_nextButton_clicked();
     void on_previousButton_clicked();
     void on_debugButton_clicked();
+    void on_helpButton_clicked();
     void mousePressEvent(QMouseEvent *event);
 
 private:
@@ -47,6 +48,8 @@ private:
     int server_fd;
     int client_fd;
     std::vector<QString> romNames;
+
+    bool showHelp;
 };
 
 void setupGPIO();
