@@ -25,6 +25,8 @@ The build process requires two steps.
 
 ## GUI
 
+![Image of the GUI](https://github.com/Emu-gators/emugators2.0/blob/main/GUI.png)
+
 The GUI can be launched by executing the GUITesting executable found in the GUITesting folder.
 
 To play games, drag and drop the cartridges near the top of the screen onto the Famicom near the center of the GUI. 
