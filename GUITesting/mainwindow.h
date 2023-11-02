@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "newwindow.h"
 #include <lgpio.h>
+#include <QMediaPlayer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -48,6 +49,8 @@ private:
     int server_fd;
     int client_fd;
     std::vector<QString> romNames;
+
+    QMediaPlayer* gamedrop;
 
     bool showHelp;
 };

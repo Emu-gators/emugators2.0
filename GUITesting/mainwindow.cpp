@@ -76,6 +76,7 @@ MainWindow::MainWindow(QWidget *parent)
     
     showHelp = true;
 
+    gamedrop = new QMediaPlayer();
     //Load the GUI images, ROM images, and ROM paths from default specified directories
     loadGUIImages();
     loadROMPaths();
@@ -404,6 +405,7 @@ void MainWindow::on_helpButton_clicked(){
     showHelp = !showHelp;
 
     if(showHelp){
+        ui->helpScreen->raise();
         ui->helpScreen->show();
     }else{
         ui->helpScreen->hide();
@@ -462,11 +464,10 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
             printf("Before send\n");
 	    send(client_fd, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), 0);
 	    //Play game drop sound as new game is dropped on console
-	    QMediaPlayer* gamedrop = new QMediaPlayer();
-	    gamedrop->setMedia(QUrl("file://./GUI_ASSETS/gamedrop.mp3"));
+        gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
 	    gamedrop->setVolume(50);
 	    gamedrop->play();
-	    //Debugging print statement
+        //Debugging print statement
 	    printf("After send\n");
 	    
 	    //Bring the game image back to the front
