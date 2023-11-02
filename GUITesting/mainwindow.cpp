@@ -74,6 +74,8 @@ MainWindow::MainWindow(QWidget *parent)
     //gridLayout->addWidget(ui->debugButton,0,2,1,1);
     //this->centralWidget()->setLayout(gridLayout);
     
+    showHelp = true;
+
     //Load the GUI images, ROM images, and ROM paths from default specified directories
     loadGUIImages();
     loadROMPaths();
@@ -303,6 +305,12 @@ void MainWindow::loadGUIImages()
     QIcon rightButton(QPixmap::fromImage(right));
     ui->nextButton->setIcon(rightButton);
 
+    //Loads the Famicom image, scale sit, and connects to ui element
+    QImage help("/home/emugators/Documents/ROMS/help.png");
+    QImage scaleHelp = help.scaled(600,500,Qt::KeepAspectRatioByExpanding);
+    ui->helpScreen->setPixmap(QPixmap::fromImage(scaleHelp));
+    ui->helpScreen->raise();
+
     /* Setting tooltips */
     ui->famicom->setToolTip("Drag and drop one of the cartridges above to start playing!");
 
@@ -328,6 +336,10 @@ void MainWindow::displayCurROM()
     ui->label->setPixmap(QPixmap::fromImage(roms.at(curRom)));
 
     ui->label->setToolTip(romNames[curRom]);
+
+    if(showHelp){
+        ui->helpScreen->raise();
+    }
 }
 
 /*
@@ -382,6 +394,17 @@ void MainWindow::on_debugButton_clicked()
 {
     //Opens the new window
     openNewWindow();
+}
+
+/* Toggles the help menu */
+void MainWindow::on_helpButton_clicked(){
+    showHelp = !showHelp;
+
+    if(showHelp){
+        ui->helpScreen->show();
+    }else{
+        ui->helpScreen->hide();
+    }
 }
 
 /*
@@ -539,4 +562,3 @@ void MainWindow::connectWithFCEUX(){
     send(client_fd, hello, strlen(hello), 0);
     printf("Hello message sent\n");
 }
-

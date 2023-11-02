@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.2
+** Created by: Qt User Interface Compiler version 5.15.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -11,10 +11,12 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -24,14 +26,20 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QLabel *background;
-    QPushButton *nextButton;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer;
+    QWidget *widget;
     QPushButton *previousButton;
-    QPushButton *debugButton;
-    QLabel *label;
     QLabel *games;
     QLabel *famicom;
     QLabel *shelf;
+    QLabel *background;
+    QPushButton *debugButton;
+    QPushButton *helpButton;
+    QPushButton *nextButton;
+    QLabel *label;
+    QLabel *helpScreen;
+    QSpacerItem *horizontalSpacer_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -39,37 +47,77 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1200, 750);
+        MainWindow->resize(1280, 762);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
+        MainWindow->setSizePolicy(sizePolicy);
+        MainWindow->setMinimumSize(QSize(1280, 720));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        background = new QLabel(centralWidget);
-        background->setObjectName(QString::fromUtf8("background"));
-        background->setGeometry(QRect(0, 0, 500, 750));
-        nextButton = new QPushButton(centralWidget);
-        nextButton->setObjectName(QString::fromUtf8("nextButton"));
-        nextButton->setGeometry(QRect(360, 240, 80, 21));
-        previousButton = new QPushButton(centralWidget);
+        centralWidget->setMinimumSize(QSize(1280, 720));
+        horizontalLayout = new QHBoxLayout(centralWidget);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        widget = new QWidget(centralWidget);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setMinimumSize(QSize(800, 600));
+        previousButton = new QPushButton(widget);
         previousButton->setObjectName(QString::fromUtf8("previousButton"));
-        previousButton->setGeometry(QRect(80, 240, 80, 21));
-        debugButton = new QPushButton(centralWidget);
-        debugButton->setObjectName(QString::fromUtf8("debugButton"));
-        debugButton->setGeometry(QRect(200, 90, 80, 21));
-        label = new QLabel(centralWidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(210, 200, 100, 100));
-        games = new QLabel(centralWidget);
+        previousButton->setGeometry(QRect(210, 170, 80, 23));
+        games = new QLabel(widget);
         games->setObjectName(QString::fromUtf8("games"));
-        games->setGeometry(QRect(60, 168, 400, 125));
-        famicom = new QLabel(centralWidget);
+        games->setGeometry(QRect(280, 80, 241, 61));
+        famicom = new QLabel(widget);
         famicom->setObjectName(QString::fromUtf8("famicom"));
-        famicom->setGeometry(QRect(75, 350, 360, 300));
-        shelf = new QLabel(centralWidget);
+        famicom->setGeometry(QRect(190, 320, 400, 300));
+        shelf = new QLabel(widget);
         shelf->setObjectName(QString::fromUtf8("shelf"));
-        shelf->setGeometry(QRect(30, 260, 450, 65));
+        shelf->setGeometry(QRect(180, 90, 441, 121));
+        background = new QLabel(widget);
+        background->setObjectName(QString::fromUtf8("background"));
+        background->setGeometry(QRect(0, 0, 801, 701));
+        debugButton = new QPushButton(widget);
+        debugButton->setObjectName(QString::fromUtf8("debugButton"));
+        debugButton->setGeometry(QRect(340, 20, 80, 23));
+        helpButton = new QPushButton(widget);
+        helpButton->setObjectName(QString::fromUtf8("helpButton"));
+        helpButton->setGeometry(QRect(680, 20, 80, 23));
+        nextButton = new QPushButton(widget);
+        nextButton->setObjectName(QString::fromUtf8("nextButton"));
+        nextButton->setGeometry(QRect(500, 170, 80, 23));
+        label = new QLabel(widget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(350, 70, 111, 101));
+        helpScreen = new QLabel(widget);
+        helpScreen->setObjectName(QString::fromUtf8("helpScreen"));
+        helpScreen->setGeometry(QRect(50, 50, 700, 500));
+        helpScreen->setMinimumSize(QSize(700, 500));
+        background->raise();
+        previousButton->raise();
+        games->raise();
+        famicom->raise();
+        shelf->raise();
+        debugButton->raise();
+        helpButton->raise();
+        nextButton->raise();
+        label->raise();
+        helpScreen->raise();
+
+        horizontalLayout->addWidget(widget);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_2);
+
         MainWindow->setCentralWidget(centralWidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1200, 27));
+        menubar->setGeometry(QRect(0, 0, 1280, 20));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -83,14 +131,16 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        background->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        nextButton->setText(QCoreApplication::translate("MainWindow", "Next", nullptr));
         previousButton->setText(QCoreApplication::translate("MainWindow", "Previous", nullptr));
-        debugButton->setText(QCoreApplication::translate("MainWindow", "Calibrate", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         games->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         famicom->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         shelf->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        background->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        debugButton->setText(QCoreApplication::translate("MainWindow", "Calibrate", nullptr));
+        helpButton->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
+        nextButton->setText(QCoreApplication::translate("MainWindow", "Next", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        helpScreen->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
     } // retranslateUi
 
 };
