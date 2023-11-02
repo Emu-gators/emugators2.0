@@ -43,11 +43,11 @@ FCEUX was initially forked from https://github.com/TASEmulators/fceux , and [the
 
 ## Lightgun
 
-This project includes a working lightgun. To make it functional with any type of display, 4 IR Leds are mounted at the corners of the screen and an IR camera within the gun allows a 
+This project includes a working lightgun. To make it functional with any type of display, 4 IR Leds are mounted at the corners of the screen and an IR camera within the gun allows a mouse to be emulated. 
 
-mouse to be emulated. The mouse is then used in the emulator as a lightgun, where a click is registered as a shot. Credit for the [open-source code](https://github.com/Emu-gators/emugators2.0/tree/main/Samco_4IR) goes 
+The mouse is then used in the emulator as a lightgun, where a click is registered as a shot. 
 
-to Sam Ballantyne.
+Credit for the [open-source code](https://github.com/Emu-gators/emugators2.0/tree/main/Samco_4IR) goes to Sam Ballantyne.
 
 ## Group Members
 Jeya Iyadurai
