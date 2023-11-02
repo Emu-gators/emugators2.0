@@ -70,10 +70,10 @@ public:
         widget->setMinimumSize(QSize(800, 600));
         previousButton = new QPushButton(widget);
         previousButton->setObjectName(QString::fromUtf8("previousButton"));
-        previousButton->setGeometry(QRect(100, 230, 80, 23));
+        previousButton->setGeometry(QRect(80, 260, 80, 23));
         famicom = new QLabel(widget);
         famicom->setObjectName(QString::fromUtf8("famicom"));
-        famicom->setGeometry(QRect(220, 310, 400, 300));
+        famicom->setGeometry(QRect(220, 280, 400, 300));
         famicom->setAlignment(Qt::AlignCenter);
         background = new QLabel(widget);
         background->setObjectName(QString::fromUtf8("background"));
@@ -86,14 +86,14 @@ public:
         helpButton->setGeometry(QRect(680, 20, 80, 23));
         nextButton = new QPushButton(widget);
         nextButton->setObjectName(QString::fromUtf8("nextButton"));
-        nextButton->setGeometry(QRect(600, 230, 80, 23));
+        nextButton->setGeometry(QRect(620, 260, 80, 23));
         helpScreen = new QLabel(widget);
         helpScreen->setObjectName(QString::fromUtf8("helpScreen"));
         helpScreen->setGeometry(QRect(50, 50, 700, 500));
         helpScreen->setMinimumSize(QSize(700, 500));
         gridLayoutWidget = new QWidget(widget);
         gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(10, 140, 781, 80));
+        gridLayoutWidget->setGeometry(QRect(10, 150, 781, 80));
         gridLayout_6 = new QGridLayout(gridLayoutWidget);
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
         gridLayout_6->setContentsMargins(0, 0, 0, 0);
@@ -126,7 +126,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1280, 25));
+        menubar->setGeometry(QRect(0, 0, 1280, 18));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

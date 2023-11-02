@@ -298,7 +298,18 @@ void MainWindow::loadGUIImages()
     ui->gameTitle->setStyleSheet("QLabel { color : orange; }");
 
     ui->nextButton->setIcon(QIcon("./GUI_ASSETS/rightArrow.png"));
+    ui->nextButton->setIconSize(QSize(100,100));
+    ui->nextButton->setMinimumWidth(100);
+    ui->nextButton->setMinimumHeight(100);
+    ui->nextButton->setFlat(true);
+    ui->nextButton->setStyleSheet("QPushButton { background-color: transparent }");
     ui->previousButton->setIcon(QIcon("./GUI_ASSETS/leftArrow.png"));
+    ui->previousButton->setIconSize(QSize(100,100));
+    ui->previousButton->setMinimumWidth(100);
+    ui->previousButton->setMinimumHeight(100);
+    ui->previousButton->setFlat(true);
+    ui->previousButton->setStyleSheet("QPushButton { background-color: transparent }");
+
 
     /* Setting tooltips */
     ui->famicom->setToolTip("Drag and drop one of the cartridges above to start playing!");
