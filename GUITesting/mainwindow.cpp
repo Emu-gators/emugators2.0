@@ -274,42 +274,31 @@ void MainWindow::loadGUIImages()
 {
     //Loads the background image, scales it, and then connects it to the background ui
     //element
-    QImage background("/home/emugators/Documents/ROMS/background.jpg");
+    QImage background("./GUI_ASSETS/background.jpg");
     QImage scaleBack = background.scaled(800,600,Qt::KeepAspectRatioByExpanding);
     ui->background->setPixmap(QPixmap::fromImage(scaleBack));
 
-    //Loads the bookshelf image, scales it, and connects to ui element
-    QImage games("/home/emugators/Documents/ROMS/lowresbookshelfedit.png");
-    QImage scaleGame = games.scaled(400,125,Qt::KeepAspectRatioByExpanding);
-    ui->games->setPixmap(QPixmap::fromImage(scaleGame));
-
-    //Loads the Famicom image, scale sit, and connects to ui element
-    QImage famicom("/home/emugators/Documents/ROMS/Nintendo-Famicom-Disk-System.png");
-    QImage scaleFam = famicom.scaled(360,300,Qt::KeepAspectRatioByExpanding);
+    //Loads the Famicom image, scales it, and connects to ui element
+    QImage famicom("./GUI_ASSETS/Nintendo-Famicom-Disk-System.png");
+    QImage scaleFam = famicom.scaled(180,150,Qt::KeepAspectRatioByExpanding);
     ui->famicom->setPixmap(QPixmap::fromImage(scaleFam));
 
-    //Loads the shelf image, scales it, and connects to ui element
-    QImage shelf("/home/emugators/Documents/ROMS/shelfedit.jpg");
-    QImage scaleShelf = shelf.scaled(450,65,Qt::KeepAspectRatioByExpanding);
-    ui->shelf->setPixmap(QPixmap::fromImage(scaleShelf));
-    ui->shelf->lower();
-    ui->background->lower();
-
-    //Loads the left arrow image, scales it, and connects it to ui element
-    QImage left("/home/emugators/Documents/ROMS/leftArrow.png");
-    QIcon leftButton(QPixmap::fromImage(left));
-    ui->previousButton->setIcon(leftButton);
-
-    //Loads the right arrow image, scales it, and connects it to ui element
-    QImage right("/home/emugators/Documents/ROMS/rightArrow.png");
-    QIcon rightButton(QPixmap::fromImage(right));
-    ui->nextButton->setIcon(rightButton);
-
-    //Loads the Famicom image, scale sit, and connects to ui element
-    QImage help("/home/emugators/Documents/ROMS/help.png");
+    //Loads the Famicom image, scales it, and connects to ui element
+    QImage help("./GUI_ASSETS/help.png");
     QImage scaleHelp = help.scaled(600,500,Qt::KeepAspectRatioByExpanding);
     ui->helpScreen->setPixmap(QPixmap::fromImage(scaleHelp));
     ui->helpScreen->raise();
+
+    int id = QFontDatabase::addApplicationFont("./GUI_ASSETS/ARCADECLASSIC.TTF");
+    QString family = QFontDatabase::applicationFontFamilies(id).at(0);
+    QFont monospace(family);
+    monospace.setPointSize(16);
+    ui->gameTitle->setFont(monospace);
+
+    ui->gameTitle->setStyleSheet("QLabel { color : orange; }");
+
+    ui->nextButton->setIcon(QIcon("./GUI_ASSETS/rightArrow.png"));
+    ui->previousButton->setIcon(QIcon("./GUI_ASSETS/leftArrow.png"));
 
     /* Setting tooltips */
     ui->famicom->setToolTip("Drag and drop one of the cartridges above to start playing!");
@@ -336,6 +325,9 @@ void MainWindow::displayCurROM()
     ui->label->setPixmap(QPixmap::fromImage(roms.at(curRom)));
 
     ui->label->setToolTip(romNames[curRom]);
+    ui->gameTitle->setText(romNames[curRom]);
+    ui->gameTitle->setMinimumWidth(ui->gameTitle->sizeHint().width());
+    ui->gameTitle->setAlignment(Qt::AlignHCenter);
 
     if(showHelp){
         ui->helpScreen->raise();
@@ -460,7 +452,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 	    send(client_fd, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), 0);
 	    //Play game drop sound as new game is dropped on console
 	    QMediaPlayer* gamedrop = new QMediaPlayer();
-	    gamedrop->setMedia(QUrl("file:///home/emugators/Documents/ROMS/emugator/gamedrop.mp3"));
+	    gamedrop->setMedia(QUrl("file://./GUI_ASSETS/gamedrop.mp3"));
 	    gamedrop->setVolume(50);
 	    gamedrop->play();
 	    //Debugging print statement

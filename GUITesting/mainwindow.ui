@@ -57,53 +57,30 @@
       <widget class="QPushButton" name="previousButton">
        <property name="geometry">
         <rect>
-         <x>210</x>
-         <y>170</y>
+         <x>100</x>
+         <y>230</y>
          <width>80</width>
          <height>23</height>
         </rect>
        </property>
        <property name="text">
-        <string>Previous</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="games">
-       <property name="geometry">
-        <rect>
-         <x>280</x>
-         <y>80</y>
-         <width>241</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>TextLabel</string>
+        <string/>
        </property>
       </widget>
       <widget class="QLabel" name="famicom">
        <property name="geometry">
         <rect>
-         <x>190</x>
-         <y>320</y>
+         <x>220</x>
+         <y>310</y>
          <width>400</width>
          <height>300</height>
         </rect>
        </property>
        <property name="text">
-        <string>TextLabel</string>
+        <string>Famicom</string>
        </property>
-      </widget>
-      <widget class="QLabel" name="shelf">
-       <property name="geometry">
-        <rect>
-         <x>180</x>
-         <y>90</y>
-         <width>441</width>
-         <height>121</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>TextLabel</string>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
       <widget class="QLabel" name="background">
@@ -148,27 +125,14 @@
       <widget class="QPushButton" name="nextButton">
        <property name="geometry">
         <rect>
-         <x>500</x>
-         <y>170</y>
+         <x>600</x>
+         <y>230</y>
          <width>80</width>
          <height>23</height>
         </rect>
        </property>
        <property name="text">
-        <string>Next</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label">
-       <property name="geometry">
-        <rect>
-         <x>350</x>
-         <y>70</y>
-         <width>111</width>
-         <height>101</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>TextLabel</string>
+        <string/>
        </property>
       </widget>
       <widget class="QLabel" name="helpScreen">
@@ -190,16 +154,53 @@
         <string>TextLabel</string>
        </property>
       </widget>
+      <widget class="QWidget" name="gridLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>140</y>
+         <width>781</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <widget class="QLabel" name="gameTitle">
+          <property name="text">
+           <string>ROM Title</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>230</y>
+         <width>151</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ROM</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <zorder>helpScreen</zorder>
       <zorder>background</zorder>
       <zorder>previousButton</zorder>
-      <zorder>games</zorder>
       <zorder>famicom</zorder>
-      <zorder>shelf</zorder>
       <zorder>debugButton</zorder>
       <zorder>helpButton</zorder>
       <zorder>nextButton</zorder>
+      <zorder>gridLayoutWidget</zorder>
       <zorder>label</zorder>
-      <zorder>helpScreen</zorder>
      </widget>
     </item>
     <item>
@@ -223,7 +224,7 @@
      <x>0</x>
      <y>0</y>
      <width>1280</width>
-     <height>20</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
