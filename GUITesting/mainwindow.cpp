@@ -276,7 +276,7 @@ void MainWindow::loadGUIImages()
     //Loads the background image, scales it, and then connects it to the background ui
     //element
     QImage background("./GUI_ASSETS/background.jpg");
-    QImage scaleBack = background.scaled(800,600,Qt::KeepAspectRatioByExpanding);
+    QImage scaleBack = background.scaled(720,480,Qt::IgnoreAspectRatio);
     ui->background->setPixmap(QPixmap::fromImage(scaleBack));
 
     //Loads the Famicom image, scales it, and connects to ui element
@@ -286,7 +286,7 @@ void MainWindow::loadGUIImages()
 
     //Loads the Famicom image, scales it, and connects to ui element
     QImage help("./GUI_ASSETS/help.png");
-    QImage scaleHelp = help.scaled(600,500,Qt::KeepAspectRatioByExpanding);
+    QImage scaleHelp = help.scaled(600,500,Qt::IgnoreAspectRatio);
     ui->helpScreen->setPixmap(QPixmap::fromImage(scaleHelp));
     ui->helpScreen->raise();
 
