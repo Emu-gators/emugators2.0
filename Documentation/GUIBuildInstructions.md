@@ -1,6 +1,6 @@
 # GUI Build and Config Instructions
 
-## If running on a new board run these commands first:
+## Required Dependencies (run these commands if you are using a fresh board) :
 
 ### Qt Dependencies
 ```
