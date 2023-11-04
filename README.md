@@ -15,6 +15,8 @@
     - Contains source code for the Zapper firmware.
 * ### emugatorsfceux
     - A Git submodule that contains a fork of FCEUX. On GitHub, you can click this directory to go to the emugatorsfceux GitHub repository.
+* ### hardwareaestheticassets
+    - Contains design and related files for the 3d printed housings and other physical aesthetic assets.
 
 ## Build
 
