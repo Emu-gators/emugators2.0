@@ -48,3 +48,4 @@ fceux-net-server
 *.fds
 
 /GUITesting/.qmake.stash
+/GUITesting/config.txt

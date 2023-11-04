@@ -1,2 +1,2 @@
-/mnt/c/Emugators/ROMs
-/mnt/c/Emugators/ROM_Carts
+/mnt/f/Emugators/ROMs
+/mnt/f/Emugators/ROM_Carts
