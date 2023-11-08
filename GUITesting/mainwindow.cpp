@@ -47,6 +47,8 @@
 
 #include <inttypes.h>
 
+#include <QMediaPlaylist>
+
 
 /*
  * This is the constructor for the MainWindow of the GUI application
@@ -77,6 +79,10 @@ MainWindow::MainWindow(QWidget *parent)
     showHelp = true;
 
     gamedrop = new QMediaPlayer();
+    playlist = new QMediaPlaylist();
+    music = new QMediaPlayer();
+    playlist->setPlaybackMode(QMediaPlaylist::Loop);
+    music->setPlaylist(playlist);
     //Load the GUI images, ROM images, and ROM paths from default specified directories
     loadGUIImages();
     loadROMPaths();
@@ -144,6 +150,7 @@ void MainWindow::loadROMPaths()
 
     std::string romPath;
     std::string romImagePath;
+    std::string musicPath;
 
     if (configFile.is_open())
     {
@@ -151,6 +158,7 @@ void MainWindow::loadROMPaths()
 
         getline(configFile, romPath);
         getline(configFile, romImagePath);
+        getline(configFile, musicPath);
 
         configFile.close();
 
@@ -164,8 +172,12 @@ void MainWindow::loadROMPaths()
         QString QromImagePath = QFileDialog::getExistingDirectory(this, tr("Select ROM Image Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
         romImagePath = QromImagePath.toStdString();
 
+        QString QmusicPath = QFileDialog::getExistingDirectory(this, tr("Select Music Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+        musicPath = QmusicPath.toStdString();
+
         newConfigFile << romPath << "\n";
         newConfigFile << romImagePath << "\n";
+        newConfigFile << musicPath << "\n";
 
         newConfigFile.close();
     }
@@ -181,9 +193,13 @@ void MainWindow::loadROMPaths()
         {
             romPaths.push_back(path.toStdString());
 
-            std::string correspondingRomPath = convertExtension(romImagePath, path.toStdString());
+            std::string correspondingRomPath = convertExtension(romImagePath, path.toStdString(), ".jpg");
+
+            std::string correspondingMusicPath = convertExtension(musicPath, path.toStdString(), ".mp3");
 
             romImages.push_back(correspondingRomPath);
+
+            playlist->addMedia(QUrl::fromLocalFile(QString::fromStdString(correspondingMusicPath)));
 
             romNames.push_back(nameFromNES(path));
         }
@@ -201,12 +217,12 @@ void MainWindow::loadROMPaths()
 }
 
 
-std::string MainWindow::convertExtension(std::string romImageDir, std::string path)
+std::string MainWindow::convertExtension(std::string romImageDir, std::string path, std::string extension)
 {
     int nameIndex = path.find_last_of('/');
     //Get the substring of the path that just has the rom file name
     path = path.substr(nameIndex + 1);
-    path = romImageDir + "/" +  path.substr(0, path.size()-4)+ ".jpg";
+    path = romImageDir + "/" +  path.substr(0, path.size()-4)+ extension;
     //qDebug() << QString::fromStdString(path);
     //Return the path of the rom file image
     return path;
@@ -344,6 +360,10 @@ void MainWindow::displayCurROM()
     if(showHelp){
         ui->helpScreen->raise();
     }
+
+    //play the roms music
+    music->play();
+
 }
 
 /*
@@ -364,6 +384,11 @@ void MainWindow::on_nextButton_clicked()
     {
         curRom = 0;
     }
+
+    //updates the position in the playlist and plays it
+    playlist->setCurrentIndex(curRom);
+
+
     //Updates the rom that is being displayed to reflect the new current rom
     displayCurROM();
 }

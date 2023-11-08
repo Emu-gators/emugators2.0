@@ -1,2 +1,3 @@
 /mnt/f/Emugators/ROMs
 /mnt/f/Emugators/ROM_Carts
+/mnt/f/Emugators/ROM_Music
