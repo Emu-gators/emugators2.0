@@ -79,7 +79,7 @@ MainWindow::MainWindow(QWidget *parent)
     gamedrop = new QMediaPlayer();
     playlist = new QMediaPlaylist();
     music = new QMediaPlayer();
-    playlist->setPlaybackMode(QMediaPlaylist::Loop);
+    playlist->setPlaybackMode(QMediaPlaylist::CurrentItemInLoop);
     music->setPlaylist(playlist);
 
     showHelp = true;
