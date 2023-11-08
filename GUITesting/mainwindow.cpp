@@ -77,6 +77,7 @@ MainWindow::MainWindow(QWidget *parent)
     //this->centralWidget()->setLayout(gridLayout);
     
     showHelp = true;
+    playMusic = true;
 
     gamedrop = new QMediaPlayer();
     playlist = new QMediaPlaylist();
@@ -361,8 +362,10 @@ void MainWindow::displayCurROM()
         ui->helpScreen->raise();
     }
 
-    //play the roms music
-    music->play();
+    //play the roms music if not in a game
+    if(playMusic){
+        music->play();
+    }
 
 }
 
@@ -385,7 +388,7 @@ void MainWindow::on_nextButton_clicked()
         curRom = 0;
     }
 
-    //updates the position in the playlist and plays it
+    //updates the position in the playlist 
     playlist->setCurrentIndex(curRom);
 
 
@@ -410,6 +413,10 @@ void MainWindow::on_previousButton_clicked()
     {
         curRom = roms.size()-1;
     }
+
+    //updates the position in the playlist 
+    playlist->setCurrentIndex(curRom);
+
     //Updates the rom that is being displayed to reflect the change in current rom
     displayCurROM();
       
@@ -491,6 +498,8 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 	    //Play game drop sound as new game is dropped on console
         gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
 	    gamedrop->setVolume(50);
+        playMusic = false;
+        music->pause();
 	    gamedrop->play();
         //Debugging print statement
 	    printf("After send\n");
@@ -516,6 +525,7 @@ void ejectButton(int e, lgGpioAlert_p evt, void *data){
     mwPointer->raise();
     mwPointer->activateWindow();
     mwPointer->sendCloseROM();
+    mwPointer->playMusic = true;
 }
 
 void setupGPIO(){

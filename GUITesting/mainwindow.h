@@ -19,6 +19,7 @@ public:
     ~MainWindow();
     void openNewWindow();
     void sendCloseROM();
+    bool playMusic;
 
 private slots:
     void on_nextButton_clicked();
