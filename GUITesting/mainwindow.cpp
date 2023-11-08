@@ -75,15 +75,17 @@ MainWindow::MainWindow(QWidget *parent)
     //gridLayout->addWidget(ui->previousButton,0,0,0.25,0.25);
     //gridLayout->addWidget(ui->debugButton,0,2,1,1);
     //this->centralWidget()->setLayout(gridLayout);
-    
-    showHelp = true;
-    playMusic = true;
 
     gamedrop = new QMediaPlayer();
     playlist = new QMediaPlaylist();
     music = new QMediaPlayer();
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
     music->setPlaylist(playlist);
+
+    showHelp = true;
+    music->setVolume(25);
+    playMusic = true;
+
     //Load the GUI images, ROM images, and ROM paths from default specified directories
     loadGUIImages();
     loadROMPaths();
@@ -439,8 +441,10 @@ void MainWindow::on_helpButton_clicked(){
     if(showHelp){
         ui->helpScreen->raise();
         ui->helpScreen->show();
+        music->setVolume(25);
     }else{
         ui->helpScreen->hide();
+        music->setVolume(50);
     }
 }
 
