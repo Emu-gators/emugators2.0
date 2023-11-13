@@ -6,6 +6,15 @@
 #include <lgpio.h>
 #include <QMediaPlayer>
 
+//Socket Programming
+#include <netinet/in.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <unistd.h>
+#define PORT 8080
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -55,7 +64,7 @@ private:
     int client_fd;
     int addrlen;
     struct sockaddr_in address;
-    
+
     std::vector<QString> romNames;
 
     QMediaPlayer* gamedrop;
