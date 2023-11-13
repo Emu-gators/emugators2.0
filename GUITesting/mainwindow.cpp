@@ -569,7 +569,7 @@ void MainWindow::initServerSocket(){
     //www.geeksforgeeks.org/socket-programming-cc/
     //Socket Server code sample
     int opt = 1;
-    int addrlen = sizeof(address);
+    addrlen = sizeof(address);
     std::memset(buffer, 0, 1024);
     
     // Creating socket file descriptor
