@@ -516,7 +516,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
                 perror("Failed Send");
                 ::close(client_fd);
                 connectWithFCEUX();
-                send(client_fd, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), MSG_NOSIGNAL);
+                val = send(client_fd, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), MSG_NOSIGNAL);
             }
 
             tries--;
