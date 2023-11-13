@@ -23,15 +23,6 @@
 #include <QThread>
 //#include <string.h>
 
-//Socket Programming
-#include <netinet/in.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/socket.h>
-#include <unistd.h>
-#define PORT 8080
-
 #include <QtCore>
 #include <QtGui>
 #include <QPushButton>
@@ -46,6 +37,12 @@
 
 
 #include <inttypes.h>
+
+#include <QMediaPlaylist>
+
+#include <errno.h>
+
+#include <cstring>
 
 
 /*
@@ -73,15 +70,23 @@ MainWindow::MainWindow(QWidget *parent)
     //gridLayout->addWidget(ui->previousButton,0,0,0.25,0.25);
     //gridLayout->addWidget(ui->debugButton,0,2,1,1);
     //this->centralWidget()->setLayout(gridLayout);
-    
-    showHelp = true;
 
     gamedrop = new QMediaPlayer();
+    playlist = new QMediaPlaylist();
+    music = new QMediaPlayer();
+    playlist->setPlaybackMode(QMediaPlaylist::CurrentItemInLoop);
+    music->setPlaylist(playlist);
+
+    showHelp = true;
+    music->setVolume(25);
+    playMusic = true;
+
     //Load the GUI images, ROM images, and ROM paths from default specified directories
     loadGUIImages();
     loadROMPaths();
     displayCurROM();
     setupGPIO();
+    initServerSocket();
     connectWithFCEUX();
 }
 
@@ -144,6 +149,7 @@ void MainWindow::loadROMPaths()
 
     std::string romPath;
     std::string romImagePath;
+    std::string musicPath;
 
     if (configFile.is_open())
     {
@@ -151,6 +157,7 @@ void MainWindow::loadROMPaths()
 
         getline(configFile, romPath);
         getline(configFile, romImagePath);
+        getline(configFile, musicPath);
 
         configFile.close();
 
@@ -164,8 +171,12 @@ void MainWindow::loadROMPaths()
         QString QromImagePath = QFileDialog::getExistingDirectory(this, tr("Select ROM Image Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
         romImagePath = QromImagePath.toStdString();
 
+        QString QmusicPath = QFileDialog::getExistingDirectory(this, tr("Select Music Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+        musicPath = QmusicPath.toStdString();
+
         newConfigFile << romPath << "\n";
         newConfigFile << romImagePath << "\n";
+        newConfigFile << musicPath << "\n";
 
         newConfigFile.close();
     }
@@ -181,9 +192,20 @@ void MainWindow::loadROMPaths()
         {
             romPaths.push_back(path.toStdString());
 
-            std::string correspondingRomPath = convertExtension(romImagePath, path.toStdString());
+            std::string correspondingRomPath = convertExtension(romImagePath, path.toStdString(), ".jpg");
+
+            std::string correspondingMusicPath = convertExtension(musicPath, path.toStdString(), ".mp3");
 
             romImages.push_back(correspondingRomPath);
+
+            // add the music to the playlist, if the music file doesn't exist, add stock music instead
+            if (QFile::exists(QString::fromStdString(correspondingMusicPath)))
+            {
+                playlist->addMedia(QUrl::fromLocalFile(QString::fromStdString(correspondingMusicPath)));
+            } else {
+                playlist->addMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/stockmusic.mp3"));
+            }
+            
 
             romNames.push_back(nameFromNES(path));
         }
@@ -193,6 +215,11 @@ void MainWindow::loadROMPaths()
 
     for (unsigned int i = 0; i < romImages.size(); i++)
     {
+        //if the rom image file does not exist, use the stock image instead
+        if (!QFile::exists(QString::fromStdString(romImages.at(i))))
+        {
+            romImages.at(i) = "./GUI_ASSETS/stockimage.png";
+        }
         QImage unprocessedImage(QString::fromStdString(romImages.at(i)));
         //qDebug() << QString::fromStdString(romImages.at(i));
         QImage processedImage = processImage(unprocessedImage);
@@ -201,12 +228,12 @@ void MainWindow::loadROMPaths()
 }
 
 
-std::string MainWindow::convertExtension(std::string romImageDir, std::string path)
+std::string MainWindow::convertExtension(std::string romImageDir, std::string path, std::string extension)
 {
     int nameIndex = path.find_last_of('/');
     //Get the substring of the path that just has the rom file name
     path = path.substr(nameIndex + 1);
-    path = romImageDir + "/" +  path.substr(0, path.size()-4)+ ".jpg";
+    path = romImageDir + "/" +  path.substr(0, path.size()-4)+ extension;
     //qDebug() << QString::fromStdString(path);
     //Return the path of the rom file image
     return path;
@@ -344,6 +371,12 @@ void MainWindow::displayCurROM()
     if(showHelp){
         ui->helpScreen->raise();
     }
+
+    //play the roms music if not in a game
+    if(playMusic){
+        music->play();
+    }
+
 }
 
 /*
@@ -364,6 +397,11 @@ void MainWindow::on_nextButton_clicked()
     {
         curRom = 0;
     }
+
+    //updates the position in the playlist 
+    playlist->setCurrentIndex(curRom);
+
+
     //Updates the rom that is being displayed to reflect the new current rom
     displayCurROM();
 }
@@ -385,6 +423,10 @@ void MainWindow::on_previousButton_clicked()
     {
         curRom = roms.size()-1;
     }
+
+    //updates the position in the playlist 
+    playlist->setCurrentIndex(curRom);
+
     //Updates the rom that is being displayed to reflect the change in current rom
     displayCurROM();
       
@@ -407,8 +449,10 @@ void MainWindow::on_helpButton_clicked(){
     if(showHelp){
         ui->helpScreen->raise();
         ui->helpScreen->show();
+        music->setVolume(25);
     }else{
         ui->helpScreen->hide();
+        music->setVolume(50);
     }
 }
 
@@ -462,10 +506,27 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         {
 	    //Send rom path of game to be loaded based on what user drags and drops
             printf("Before send\n");
-	    send(client_fd, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), 0);
+	    
+        int tries = 3;
+        int val;
+        do{
+            val = send(client_fd, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), MSG_NOSIGNAL);
+
+            if(val == -1){
+                perror("Failed Send");
+                ::close(client_fd);
+                connectWithFCEUX();
+                val = send(client_fd, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), MSG_NOSIGNAL);
+            }
+
+            tries--;
+        }while(val == -1 && tries >= 0);
+        
 	    //Play game drop sound as new game is dropped on console
         gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
 	    gamedrop->setVolume(50);
+        playMusic = false;
+        music->pause();
 	    gamedrop->play();
         //Debugging print statement
 	    printf("After send\n");
@@ -482,7 +543,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 }
 
 void MainWindow::sendCloseROM(){
-    send(client_fd, "close", strlen("close"), 0);
+    send(client_fd, "close\0", strlen("close\0"), 0);
 }
 
 extern MainWindow* mwPointer;
@@ -491,6 +552,8 @@ void ejectButton(int e, lgGpioAlert_p evt, void *data){
     mwPointer->raise();
     mwPointer->activateWindow();
     mwPointer->sendCloseROM();
+    mwPointer->playMusic = true;
+    mwPointer->music->play();
 }
 
 void setupGPIO(){
@@ -502,14 +565,13 @@ void setupGPIO(){
     lgGpioClaimAlert(handle,LG_SET_PULL_DOWN,LG_RISING_EDGE,buttonC4,-1);
 }
 
-void MainWindow::connectWithFCEUX(){
+void MainWindow::initServerSocket(){
     //Socket server code specified below was adapted from an example at
     //www.geeksforgeeks.org/socket-programming-cc/
     //Socket Server code sample
-    struct sockaddr_in address;
     int opt = 1;
-    int addrlen = sizeof(address);
-    char buffer[1024] = { 0 };
+    addrlen = sizeof(address);
+    std::memset(buffer, 0, 1024);
     
     // Creating socket file descriptor
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
@@ -541,7 +603,9 @@ void MainWindow::connectWithFCEUX(){
 		perror("listen");
 		exit(EXIT_FAILURE);
 	}
+}
 
+void MainWindow::connectWithFCEUX(){
     //Launching FCEUX
     OpenFCEUX();
 

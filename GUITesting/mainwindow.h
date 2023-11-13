@@ -6,6 +6,15 @@
 #include <lgpio.h>
 #include <QMediaPlayer>
 
+//Socket Programming
+#include <netinet/in.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <unistd.h>
+#define PORT 8080
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -19,6 +28,8 @@ public:
     ~MainWindow();
     void openNewWindow();
     void sendCloseROM();
+    bool playMusic;
+    QMediaPlayer* music;
 
 private slots:
     void on_nextButton_clicked();
@@ -37,20 +48,27 @@ private:
     void displayCurROM();
     void changeRomPath();
     void connectWithFCEUX();
+    void initServerSocket();
 
     QImage processImage(QImage unprocessedImage);
     QString nameFromNES(QString);
-    std::string convertExtension(std::string romImageDir, std::string path);
+    std::string convertExtension(std::string romImageDir, std::string path, std::string extension);
     std::vector<QImage> roms;
     int curRom;
     int draggedRom;
     std::vector<std::string> romPaths;
+    std::vector<std::string> musicPaths;
     //Socket
+    char buffer[1024];
     int server_fd;
     int client_fd;
+    int addrlen;
+    struct sockaddr_in address;
+
     std::vector<QString> romNames;
 
     QMediaPlayer* gamedrop;
+    QMediaPlaylist* playlist;
 
     bool showHelp;
 };
