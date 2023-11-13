@@ -86,6 +86,7 @@ MainWindow::MainWindow(QWidget *parent)
     loadROMPaths();
     displayCurROM();
     setupGPIO();
+    initServerSocket();
     connectWithFCEUX();
 }
 
