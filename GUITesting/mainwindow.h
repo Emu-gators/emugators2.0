@@ -39,6 +39,7 @@ private:
     void displayCurROM();
     void changeRomPath();
     void connectWithFCEUX();
+    void initServerSocket();
 
     QImage processImage(QImage unprocessedImage);
     QString nameFromNES(QString);

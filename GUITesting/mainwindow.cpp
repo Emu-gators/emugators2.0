@@ -571,7 +571,7 @@ void setupGPIO(){
     lgGpioClaimAlert(handle,LG_SET_PULL_DOWN,LG_RISING_EDGE,buttonC4,-1);
 }
 
-void MainWindow::connectWithFCEUX(){
+void MainWindow::initServerSocket(){
     //Socket server code specified below was adapted from an example at
     //www.geeksforgeeks.org/socket-programming-cc/
     //Socket Server code sample
@@ -610,7 +610,9 @@ void MainWindow::connectWithFCEUX(){
 		perror("listen");
 		exit(EXIT_FAILURE);
 	}
+}
 
+void MainWindow::connectWithFCEUX(){
     //Launching FCEUX
     OpenFCEUX();
 
