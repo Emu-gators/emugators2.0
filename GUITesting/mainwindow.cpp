@@ -47,6 +47,8 @@
 
 #include <inttypes.h>
 
+#include <QMediaPlaylist>
+
 
 /*
  * This is the constructor for the MainWindow of the GUI application
@@ -73,10 +75,17 @@ MainWindow::MainWindow(QWidget *parent)
     //gridLayout->addWidget(ui->previousButton,0,0,0.25,0.25);
     //gridLayout->addWidget(ui->debugButton,0,2,1,1);
     //this->centralWidget()->setLayout(gridLayout);
-    
-    showHelp = true;
 
     gamedrop = new QMediaPlayer();
+    playlist = new QMediaPlaylist();
+    music = new QMediaPlayer();
+    playlist->setPlaybackMode(QMediaPlaylist::CurrentItemInLoop);
+    music->setPlaylist(playlist);
+
+    showHelp = true;
+    music->setVolume(25);
+    playMusic = true;
+
     //Load the GUI images, ROM images, and ROM paths from default specified directories
     loadGUIImages();
     loadROMPaths();
@@ -144,6 +153,7 @@ void MainWindow::loadROMPaths()
 
     std::string romPath;
     std::string romImagePath;
+    std::string musicPath;
 
     if (configFile.is_open())
     {
@@ -151,6 +161,7 @@ void MainWindow::loadROMPaths()
 
         getline(configFile, romPath);
         getline(configFile, romImagePath);
+        getline(configFile, musicPath);
 
         configFile.close();
 
@@ -164,8 +175,12 @@ void MainWindow::loadROMPaths()
         QString QromImagePath = QFileDialog::getExistingDirectory(this, tr("Select ROM Image Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
         romImagePath = QromImagePath.toStdString();
 
+        QString QmusicPath = QFileDialog::getExistingDirectory(this, tr("Select Music Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+        musicPath = QmusicPath.toStdString();
+
         newConfigFile << romPath << "\n";
         newConfigFile << romImagePath << "\n";
+        newConfigFile << musicPath << "\n";
 
         newConfigFile.close();
     }
@@ -181,9 +196,13 @@ void MainWindow::loadROMPaths()
         {
             romPaths.push_back(path.toStdString());
 
-            std::string correspondingRomPath = convertExtension(romImagePath, path.toStdString());
+            std::string correspondingRomPath = convertExtension(romImagePath, path.toStdString(), ".jpg");
+
+            std::string correspondingMusicPath = convertExtension(musicPath, path.toStdString(), ".mp3");
 
             romImages.push_back(correspondingRomPath);
+
+            playlist->addMedia(QUrl::fromLocalFile(QString::fromStdString(correspondingMusicPath)));
 
             romNames.push_back(nameFromNES(path));
         }
@@ -201,12 +220,12 @@ void MainWindow::loadROMPaths()
 }
 
 
-std::string MainWindow::convertExtension(std::string romImageDir, std::string path)
+std::string MainWindow::convertExtension(std::string romImageDir, std::string path, std::string extension)
 {
     int nameIndex = path.find_last_of('/');
     //Get the substring of the path that just has the rom file name
     path = path.substr(nameIndex + 1);
-    path = romImageDir + "/" +  path.substr(0, path.size()-4)+ ".jpg";
+    path = romImageDir + "/" +  path.substr(0, path.size()-4)+ extension;
     //qDebug() << QString::fromStdString(path);
     //Return the path of the rom file image
     return path;
@@ -344,6 +363,12 @@ void MainWindow::displayCurROM()
     if(showHelp){
         ui->helpScreen->raise();
     }
+
+    //play the roms music if not in a game
+    if(playMusic){
+        music->play();
+    }
+
 }
 
 /*
@@ -364,6 +389,11 @@ void MainWindow::on_nextButton_clicked()
     {
         curRom = 0;
     }
+
+    //updates the position in the playlist 
+    playlist->setCurrentIndex(curRom);
+
+
     //Updates the rom that is being displayed to reflect the new current rom
     displayCurROM();
 }
@@ -385,6 +415,10 @@ void MainWindow::on_previousButton_clicked()
     {
         curRom = roms.size()-1;
     }
+
+    //updates the position in the playlist 
+    playlist->setCurrentIndex(curRom);
+
     //Updates the rom that is being displayed to reflect the change in current rom
     displayCurROM();
       
@@ -407,8 +441,10 @@ void MainWindow::on_helpButton_clicked(){
     if(showHelp){
         ui->helpScreen->raise();
         ui->helpScreen->show();
+        music->setVolume(25);
     }else{
         ui->helpScreen->hide();
+        music->setVolume(50);
     }
 }
 
@@ -466,6 +502,8 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 	    //Play game drop sound as new game is dropped on console
         gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
 	    gamedrop->setVolume(50);
+        playMusic = false;
+        music->pause();
 	    gamedrop->play();
         //Debugging print statement
 	    printf("After send\n");
@@ -491,6 +529,8 @@ void ejectButton(int e, lgGpioAlert_p evt, void *data){
     mwPointer->raise();
     mwPointer->activateWindow();
     mwPointer->sendCloseROM();
+    mwPointer->playMusic = true;
+    mwPointer->music->play();
 }
 
 void setupGPIO(){

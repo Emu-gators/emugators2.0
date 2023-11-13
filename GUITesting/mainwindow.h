@@ -19,6 +19,8 @@ public:
     ~MainWindow();
     void openNewWindow();
     void sendCloseROM();
+    bool playMusic;
+    QMediaPlayer* music;
 
 private slots:
     void on_nextButton_clicked();
@@ -40,17 +42,19 @@ private:
 
     QImage processImage(QImage unprocessedImage);
     QString nameFromNES(QString);
-    std::string convertExtension(std::string romImageDir, std::string path);
+    std::string convertExtension(std::string romImageDir, std::string path, std::string extension);
     std::vector<QImage> roms;
     int curRom;
     int draggedRom;
     std::vector<std::string> romPaths;
+    std::vector<std::string> musicPaths;
     //Socket
     int server_fd;
     int client_fd;
     std::vector<QString> romNames;
 
     QMediaPlayer* gamedrop;
+    QMediaPlaylist* playlist;
 
     bool showHelp;
 };
