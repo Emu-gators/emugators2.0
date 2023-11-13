@@ -204,7 +204,14 @@ void MainWindow::loadROMPaths()
 
             romImages.push_back(correspondingRomPath);
 
-            playlist->addMedia(QUrl::fromLocalFile(QString::fromStdString(correspondingMusicPath)));
+            // add the music to the playlist, if the music file doesn't exist, add stock music instead
+            if (QFile::exists(QString::fromStdString(correspondingMusicPath)))
+            {
+                playlist->addMedia(QUrl::fromLocalFile(QString::fromStdString(correspondingMusicPath)));
+            } else {
+                playlist->addMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/stockmusic.mp3"));
+            }
+            
 
             romNames.push_back(nameFromNES(path));
         }
@@ -214,6 +221,11 @@ void MainWindow::loadROMPaths()
 
     for (unsigned int i = 0; i < romImages.size(); i++)
     {
+        //if the rom image file does not exist, use the stock image instead
+        if (!QFile::exists(QString::fromStdString(romImages.at(i))))
+        {
+            romImages.at(i) = "./GUI_ASSETS/stockimage.png";
+        }
         QImage unprocessedImage(QString::fromStdString(romImages.at(i)));
         //qDebug() << QString::fromStdString(romImages.at(i));
         QImage processedImage = processImage(unprocessedImage);
