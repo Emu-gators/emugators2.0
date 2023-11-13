@@ -28,6 +28,7 @@ private slots:
     void on_debugButton_clicked();
     void on_helpButton_clicked();
     void mousePressEvent(QMouseEvent *event);
+    void resizeEvent(QResizeEvent *evt);
 
 private:
     Ui::MainWindow *ui;

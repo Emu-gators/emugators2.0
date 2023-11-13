@@ -294,7 +294,7 @@ QString MainWindow::nameFromNES(QString path){
 QImage MainWindow::processImage(QImage unprocessedImage)
 {
     //Scale the inputted image to 100x100 to keep uniformity between rom images
-    QImage scaled = unprocessedImage.scaled(100,100,Qt::KeepAspectRatio);
+    QImage scaled = unprocessedImage.scaled(200,200,Qt::KeepAspectRatio);
     return scaled;
 }
 
@@ -308,9 +308,14 @@ void MainWindow::loadGUIImages()
 {
     //Loads the background image, scales it, and then connects it to the background ui
     //element
-    QImage background("./GUI_ASSETS/background.jpg");
-    QImage scaleBack = background.scaled(720,480,Qt::IgnoreAspectRatio);
-    ui->background->setPixmap(QPixmap::fromImage(scaleBack));
+    //QImage background("./GUI_ASSETS/background.jpg");
+    //QImage scaleBack = background.scaled(720,480,Qt::IgnoreAspectRatio);
+    //ui->background->setPixmap(QPixmap::fromImage(scaleBack));
+    QPixmap bg("./GUI_ASSETS/background.jpg");
+    bg = bg.scaled(this->size(), Qt::IgnoreAspectRatio);
+    QPalette palette;
+    palette.setBrush(QPalette::Window, bg);
+    this->setPalette(palette);
 
     //Loads the Famicom image, scales it, and connects to ui element
     QImage famicom("./GUI_ASSETS/Nintendo-Famicom-Disk-System.png");
@@ -479,7 +484,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
     int x = globalCursorPos.x();
     int y = globalCursorPos.y();
 
-    QPoint topLeft = ui->widget->pos();
+    QPoint topLeft = this->centralWidget()->pos();
     x = x - topLeft.x();
     y = y - topLeft.y();
 
@@ -503,7 +508,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         x = globalCursorPos.x();
         y = globalCursorPos.y();
 	//Find the x and y location of the mouse within the window
-    topLeft = ui->widget->pos();
+    topLeft = this->centralWidget()->pos();
 	x = x - topLeft.x();
 	y = y - topLeft.y();
         //Check if x and y of mouse is over the famicom image
@@ -634,4 +639,16 @@ void MainWindow::connectWithFCEUX(){
     const char* hello = std_hello.c_str();
     send(client_fd, hello, strlen(hello), 0);
     printf("Hello message sent\n");
+}
+
+void MainWindow::resizeEvent(QResizeEvent *evt)
+{
+    
+    QPixmap bg("./GUI_ASSETS/background.jpg");
+    bg = bg.scaled(this->size(), Qt::IgnoreAspectRatio);
+    QPalette palette;
+    palette.setBrush(QPalette::Window, bg);
+    this->setPalette(palette);
+
+    QMainWindow::resizeEvent(evt); //call base implementation
 }
