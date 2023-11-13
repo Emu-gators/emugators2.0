@@ -50,8 +50,12 @@ private:
     std::vector<std::string> romPaths;
     std::vector<std::string> musicPaths;
     //Socket
+    char buffer[1024];
     int server_fd;
     int client_fd;
+    int addrlen;
+    struct sockaddr_in address;
+    
     std::vector<QString> romNames;
 
     QMediaPlayer* gamedrop;

@@ -51,6 +51,8 @@
 
 #include <errno.h>
 
+#include <cstring>
+
 
 /*
  * This is the constructor for the MainWindow of the GUI application
@@ -575,10 +577,9 @@ void MainWindow::initServerSocket(){
     //Socket server code specified below was adapted from an example at
     //www.geeksforgeeks.org/socket-programming-cc/
     //Socket Server code sample
-    struct sockaddr_in address;
     int opt = 1;
     int addrlen = sizeof(address);
-    char buffer[1024] = { 0 };
+    std::memset(buffer, 0, 1024);
     
     // Creating socket file descriptor
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
