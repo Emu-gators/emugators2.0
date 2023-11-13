@@ -49,6 +49,8 @@
 
 #include <QMediaPlaylist>
 
+#include <errno.h>
+
 
 /*
  * This is the constructor for the MainWindow of the GUI application
@@ -498,7 +500,22 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         {
 	    //Send rom path of game to be loaded based on what user drags and drops
             printf("Before send\n");
-	    send(client_fd, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), 0);
+	    
+        int tries = 3;
+        int val;
+        do{
+            val = send(client_fd, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), 0);
+
+            if(val == -1){
+                perror("Failed Send");
+                ::close(client_fd);
+                connectWithFCEUX();
+                send(client_fd, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), 0);
+            }
+
+            tries--;
+        }while(val == -1 && tries >= 0);
+        
 	    //Play game drop sound as new game is dropped on console
         gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
 	    gamedrop->setVolume(50);
@@ -520,7 +537,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 }
 
 void MainWindow::sendCloseROM(){
-    send(client_fd, "close", strlen("close"), 0);
+    send(client_fd, "close\0", strlen("close\0"), 0);
 }
 
 extern MainWindow* mwPointer;
