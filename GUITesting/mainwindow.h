@@ -64,6 +64,8 @@ private:
     int client_fd;
     int addrlen;
     struct sockaddr_in address;
+    
+    std::string GUITestingPath;
 
     std::vector<QString> romNames;
 
