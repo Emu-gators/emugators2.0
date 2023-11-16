@@ -82,8 +82,8 @@ MainWindow::MainWindow(QWidget *parent)
     playMusic = true;
 
     //Load the GUI images, ROM images, and ROM paths from default specified directories
-    loadGUIImages();
     loadROMPaths();
+    loadGUIImages();
     displayCurROM();
     setupGPIO();
     initServerSocket();
@@ -158,6 +158,7 @@ void MainWindow::loadROMPaths()
         getline(configFile, romPath);
         getline(configFile, romImagePath);
         getline(configFile, musicPath);
+        getline(configFile, GUITestingPath);
 
         configFile.close();
 
@@ -174,9 +175,13 @@ void MainWindow::loadROMPaths()
         QString QmusicPath = QFileDialog::getExistingDirectory(this, tr("Select Music Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
         musicPath = QmusicPath.toStdString();
 
+        QString QGUITestingPath = QFileDialog::getExistingDirectory(this, tr("Select GUITesting Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+        GUITestingPath = QGUITestingPath.toStdString();
+
         newConfigFile << romPath << "\n";
         newConfigFile << romImagePath << "\n";
         newConfigFile << musicPath << "\n";
+        newConfigFile << GUITestingPath << "\n";
 
         newConfigFile.close();
     }
@@ -218,7 +223,7 @@ void MainWindow::loadROMPaths()
         //if the rom image file does not exist, use the stock image instead
         if (!QFile::exists(QString::fromStdString(romImages.at(i))))
         {
-            romImages.at(i) = "./GUI_ASSETS/stockimage.png";
+            romImages.at(i) = GUITestingPath + "/GUI_ASSETS/stockimage.png";
         }
         QImage unprocessedImage(QString::fromStdString(romImages.at(i)));
         //qDebug() << QString::fromStdString(romImages.at(i));
@@ -302,22 +307,22 @@ void MainWindow::loadGUIImages()
 {
     //Loads the background image, scales it, and then connects it to the background ui
     //element
-    QImage background("./GUI_ASSETS/background.jpg");
+    QImage background(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/background.jpg");
     QImage scaleBack = background.scaled(720,480,Qt::IgnoreAspectRatio);
     ui->background->setPixmap(QPixmap::fromImage(scaleBack));
 
     //Loads the Famicom image, scales it, and connects to ui element
-    QImage famicom("./GUI_ASSETS/Nintendo-Famicom-Disk-System.png");
+    QImage famicom(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/Nintendo-Famicom-Disk-System.png");
     QImage scaleFam = famicom.scaled(180,150,Qt::KeepAspectRatioByExpanding);
     ui->famicom->setPixmap(QPixmap::fromImage(scaleFam));
 
     //Loads the Famicom image, scales it, and connects to ui element
-    QImage help("./GUI_ASSETS/help.png");
+    QImage help(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/help.png");
     QImage scaleHelp = help.scaled(600,500,Qt::IgnoreAspectRatio);
     ui->helpScreen->setPixmap(QPixmap::fromImage(scaleHelp));
     ui->helpScreen->raise();
 
-    int id = QFontDatabase::addApplicationFont("./GUI_ASSETS/ARCADECLASSIC.TTF");
+    int id = QFontDatabase::addApplicationFont(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/ARCADECLASSIC.TTF");
     QString family = QFontDatabase::applicationFontFamilies(id).at(0);
     QFont monospace(family);
     monospace.setPointSize(16);
@@ -325,13 +330,13 @@ void MainWindow::loadGUIImages()
 
     ui->gameTitle->setStyleSheet("QLabel { color : orange; }");
 
-    ui->nextButton->setIcon(QIcon("./GUI_ASSETS/rightArrow.png"));
+    ui->nextButton->setIcon(QIcon(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/rightArrow.png"));
     ui->nextButton->setIconSize(QSize(100,100));
     ui->nextButton->setMinimumWidth(100);
     ui->nextButton->setMinimumHeight(100);
     ui->nextButton->setFlat(true);
     ui->nextButton->setStyleSheet("QPushButton { background-color: transparent }");
-    ui->previousButton->setIcon(QIcon("./GUI_ASSETS/leftArrow.png"));
+    ui->previousButton->setIcon(QIcon(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/leftArrow.png"));
     ui->previousButton->setIconSize(QSize(100,100));
     ui->previousButton->setMinimumWidth(100);
     ui->previousButton->setMinimumHeight(100);
