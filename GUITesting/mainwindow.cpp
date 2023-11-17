@@ -512,6 +512,13 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 	    //Send rom path of game to be loaded based on what user drags and drops
             printf("Before send\n");
 	    
+        //Play game drop sound as new game is dropped on console
+        gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
+	    gamedrop->setVolume(50);
+        playMusic = false;
+        music->stop();
+	    gamedrop->play();
+
         int tries = 3;
         int val;
         do{
@@ -526,21 +533,14 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 
             tries--;
         }while(val == -1 && tries >= 0);
+
+        gamedrop->stop();
         
-	    //Play game drop sound as new game is dropped on console
-        gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
-	    gamedrop->setVolume(50);
-        playMusic = false;
-        music->pause();
-	    gamedrop->play();
         //Debugging print statement
 	    printf("After send\n");
 	    
 	    //Bring the game image back to the front
 	    ui->label->raise();
-	    //Iterate to next rom after game is dropped
-	    //TODO:FIX THIS LOGIC(likely by using next and previous button functions)
-	    on_nextButton_clicked();
 	    
 	    this->lower();
         }
