@@ -8,6 +8,7 @@
 #include <QLabel>
 #include <QDrag>
 #include <QMouseEvent>
+#include <QEvent>
 #include <QMimeData>
 #include <string>
 #include <QProcess>
@@ -37,6 +38,7 @@
 #include <QPushButton>
 #include <QGridLayout>
 #include <QMediaPlayer>
+#include <QCursor>
 
 
 
@@ -68,15 +70,8 @@ MainWindow::MainWindow(QWidget *parent)
     //Setup UI based on UI file
     ui->setupUi(this);
     curRom = 0;
-    draggedRom = 0;
     //Connect some ui elements and layout based on location.
     connect(ui->debugButton, SIGNAL(click()), this, SLOT(openNewWindow()));
-    //QGridLayout *gridLayout = new QGridLayout;
-    // addWidget(*Widget, row, column, rowspan, colspan)
-    //gridLayout->addWidget(ui->nextButton,0,10,0.25,0.25);
-    //gridLayout->addWidget(ui->previousButton,0,0,0.25,0.25);
-    //gridLayout->addWidget(ui->debugButton,0,2,1,1);
-    //this->centralWidget()->setLayout(gridLayout);
 
     gamedrop = new QMediaPlayer();
     playlist = new QMediaPlaylist();
@@ -94,6 +89,8 @@ MainWindow::MainWindow(QWidget *parent)
     displayCurROM();
     setupGPIO();
     connectWithFCEUX();
+    this->setAcceptDrops(true);
+
 }
 
 /*
@@ -321,12 +318,18 @@ void MainWindow::loadGUIImages()
     QImage famicom("./GUI_ASSETS/Nintendo-Famicom-Disk-System.png");
     QImage scaleFam = famicom.scaled(180,150,Qt::KeepAspectRatioByExpanding);
     ui->famicom->setPixmap(QPixmap::fromImage(scaleFam));
+ 
 
     //Loads the Famicom image, scales it, and connects to ui element
+    helpScreen = new QLabel(this);
+    helpScreen->setGeometry(0, 0, 600, 500);
+    helpScreen->move(this->centralWidget()->rect().center() - helpScreen->rect().center());
+
+    helpScreen->show();
     QImage help("./GUI_ASSETS/help.png");
     QImage scaleHelp = help.scaled(600,500,Qt::IgnoreAspectRatio);
-    ui->helpScreen->setPixmap(QPixmap::fromImage(scaleHelp));
-    ui->helpScreen->raise();
+    helpScreen->setPixmap(QPixmap::fromImage(scaleHelp));
+    helpScreen->raise();
 
     int id = QFontDatabase::addApplicationFont("./GUI_ASSETS/ARCADECLASSIC.TTF");
     QString family = QFontDatabase::applicationFontFamilies(id).at(0);
@@ -380,7 +383,7 @@ void MainWindow::displayCurROM()
     ui->gameTitle->setAlignment(Qt::AlignHCenter);
 
     if(showHelp){
-        ui->helpScreen->raise();
+        helpScreen->raise();
     }
 
     //play the roms music if not in a game
@@ -458,11 +461,11 @@ void MainWindow::on_helpButton_clicked(){
     showHelp = !showHelp;
 
     if(showHelp){
-        ui->helpScreen->raise();
-        ui->helpScreen->show();
+        helpScreen->raise();
+        helpScreen->show();
         music->setVolume(25);
     }else{
-        ui->helpScreen->hide();
+        helpScreen->hide();
         music->setVolume(50);
     }
 }
@@ -476,81 +479,83 @@ void MainWindow::on_helpButton_clicked(){
  * event.
  * 
  */ 
+
 void MainWindow::mousePressEvent(QMouseEvent *event)
 {
-    //Gets the global position of the mouse at time of the event and pulls out
-    //the x and y coordinates
-    QPoint globalCursorPos = event->globalPos();
-    int x = globalCursorPos.x();
-    int y = globalCursorPos.y();
+    if (event->button() == Qt::LeftButton)
+        dragStartPosition = event->pos();
+}
 
-    QPoint topLeft = this->centralWidget()->pos();
-    x = x - topLeft.x();
-    y = y - topLeft.y();
+void MainWindow::mouseMoveEvent(QMouseEvent *event)
+{
+    int adjust = (ui->romLeftSpacer1->geometry().size().width() + ui->romLeftSpacer2->geometry().size().width() + ui->romLeftSpacer3->geometry().size().width() + ui->previousButton->width());
+    if (!(event->buttons() & Qt::LeftButton) || !(ui->romWidget->geometry().adjusted(adjust,0,-adjust,0).contains(event->pos())))
+        return;
+    if ((event->pos() - dragStartPosition).manhattanLength()
+         < QApplication::startDragDistance())
+        return;
 
-    //Check if the mouse event occurred in the area where the rom image is located
-    if (ui->label->geometry().contains(x,y)) {
-	//If the mouse was pressed on the rom grab that rom and being a drag event
-        draggedRom = curRom;
-        
-        QDrag *drag = new QDrag(this);
+    QDrag *drag = new QDrag(this);
+    QMimeData *mimeData = new QMimeData;
 
-        QMimeData *mimeData = new QMimeData;
+    mimeData->setText("Success!");
+    drag->setMimeData(mimeData);
+    drag->setPixmap(QPixmap::fromImage(roms.at(curRom)));
 
-        mimeData->setText("Success!");
-        drag->setMimeData(mimeData);
-	//Set rom image to be dragged/follow the mouse cursor until next mouse event.
-        drag->setPixmap(QPixmap::fromImage(roms.at(curRom)));
-        //This blocks until the mouse button is released
-        drag->exec();
-	//Get the mouse position when the mouse button is released
-        globalCursorPos = QCursor::pos();
-        x = globalCursorPos.x();
-        y = globalCursorPos.y();
-	//Find the x and y location of the mouse within the window
-    topLeft = this->centralWidget()->pos();
-	x = x - topLeft.x();
-	y = y - topLeft.y();
-        //Check if x and y of mouse is over the famicom image
-        
-	if(ui->famicom->geometry().contains(x,y))
-        {
-	    //Send rom path of game to be loaded based on what user drags and drops
-            printf("Before send\n");
-	    
-        int tries = 3;
-        int val;
-        do{
-            val = send(client_fd, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), 0);
+    Qt::DropAction dropAction = drag->exec(Qt::CopyAction | Qt::MoveAction);
+}
 
-            if(val == -1){
-                perror("Failed Send");
-                ::close(client_fd);
-                connectWithFCEUX();
-                send(client_fd, romPaths.at(draggedRom).c_str(), strlen(romPaths.at(draggedRom).c_str()), 0);
-            }
+void MainWindow::dragEnterEvent(QDragEnterEvent *event)
+{
+        std::cout << "\nDragged\n";
+        event->acceptProposedAction();
 
-            tries--;
-        }while(val == -1 && tries >= 0);
-        
-	    //Play game drop sound as new game is dropped on console
-        gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
-	    gamedrop->setVolume(50);
-        playMusic = false;
-        music->pause();
-	    gamedrop->play();
-        //Debugging print statement
-	    printf("After send\n");
-	    
-	    //Bring the game image back to the front
-	    ui->label->raise();
-	    //Iterate to next rom after game is dropped
-	    //TODO:FIX THIS LOGIC(likely by using next and previous button functions)
-	    on_nextButton_clicked();
-	    
-	    this->lower();
-        }
+}
+
+void MainWindow::dropEvent(QDropEvent *event)
+{
+    QPoint mousePos = this->centralWidget()->mapFromGlobal(QCursor::pos());
+
+    if(!ui->famicomWidget->geometry().adjusted(ui->famicomLeftSpacer->geometry().size().width(),0,-ui->famicomRightSpacer->geometry().size().width(),0).contains(mousePos)){
+        return;
     }
+    //Send rom path of game to be loaded based on what user drags and drops
+    printf("Before send\n");
+    
+    int tries = 3;
+    int val;
+    do{
+        val = send(client_fd, romPaths.at(curRom).c_str(), strlen(romPaths.at(curRom).c_str()), 0);
+
+        if(val == -1){
+            perror("Failed Send");
+            ::close(client_fd);
+            connectWithFCEUX();
+            send(client_fd, romPaths.at(curRom).c_str(), strlen(romPaths.at(curRom).c_str()), 0);
+        }
+
+        tries--;
+    }while(val == -1 && tries >= 0);
+    
+    //Play game drop sound as new game is dropped on console
+    gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
+    gamedrop->setVolume(50);
+    playMusic = false;
+    music->pause();
+    gamedrop->play();
+    //Debugging print statement
+    printf("After send\n");
+    
+    //Bring the game image back to the front
+    ui->label->raise();
+    //Iterate to next rom after game is dropped
+    //TODO:FIX THIS LOGIC(likely by using next and previous button functions)
+    on_nextButton_clicked();
+    
+    this->lower();
+    
+
+    event->acceptProposedAction();
 }
 
 void MainWindow::sendCloseROM(){
@@ -649,6 +654,14 @@ void MainWindow::resizeEvent(QResizeEvent *evt)
     QPalette palette;
     palette.setBrush(QPalette::Window, bg);
     this->setPalette(palette);
+
+    helpScreen->move(this->centralWidget()->rect().center() - helpScreen->rect().center());
+
+    //print out the position of the famicom label
+    std::cout << ui->famicom->geometry().x() << " " << ui->famicom->geometry().y() << " " << ui->famicom->geometry().width() << " " << ui->famicom->geometry().height() << std::endl;
+    //print out the position of the label
+    std::cout << ui->label->geometry().x() << " " << ui->label->geometry().y() << " " << ui->label->geometry().width() << " " << ui->label->geometry().height() << std::endl;
+
 
     QMainWindow::resizeEvent(evt); //call base implementation
 }

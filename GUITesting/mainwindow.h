@@ -5,6 +5,8 @@
 #include "newwindow.h"
 #include <lgpio.h>
 #include <QMediaPlayer>
+#include <QLabel>
+#include <QMimeType>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -28,6 +30,9 @@ private slots:
     void on_debugButton_clicked();
     void on_helpButton_clicked();
     void mousePressEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
+    void dragEnterEvent(QDragEnterEvent *event);
+    void dropEvent(QDropEvent *event);
     void resizeEvent(QResizeEvent *evt);
 
 private:
@@ -46,7 +51,6 @@ private:
     std::string convertExtension(std::string romImageDir, std::string path, std::string extension);
     std::vector<QImage> roms;
     int curRom;
-    int draggedRom;
     std::vector<std::string> romPaths;
     std::vector<std::string> musicPaths;
     //Socket
@@ -56,6 +60,11 @@ private:
 
     QMediaPlayer* gamedrop;
     QMediaPlaylist* playlist;
+
+    QLabel* helpScreen;
+
+    QPoint dragStartPosition;
+    QMimeType mimeType;
 
     bool showHelp;
 };
