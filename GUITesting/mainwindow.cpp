@@ -381,7 +381,7 @@ void MainWindow::displayCurROM()
 
     //play the roms music if not in a game
     if(playMusic){
-        music->play();
+        //music->play();
     }
 
 }
@@ -561,7 +561,7 @@ void ejectButton(int e, lgGpioAlert_p evt, void *data){
     mwPointer->activateWindow();
     mwPointer->sendCloseROM();
     mwPointer->playMusic = true;
-    mwPointer->music->play();
+    //mwPointer->music->play();
 }
 
 void setupGPIO(){
