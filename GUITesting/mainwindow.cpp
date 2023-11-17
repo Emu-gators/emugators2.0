@@ -91,7 +91,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     gamedrop->setMedia(QUrl::fromLocalFile(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/gamedrop.mp3"));
 }
-
++
 /*
  * Destructor for the mainwindow when program is closing/shutting down.
  */
@@ -537,7 +537,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
             tries--;
         }while(val == -1 && tries >= 0);
 
-        gamedrop->stop();
+        //gamedrop->stop();
         
         //Debugging print statement
 	    printf("After send\n");
