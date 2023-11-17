@@ -88,6 +88,8 @@ MainWindow::MainWindow(QWidget *parent)
     setupGPIO();
     initServerSocket();
     connectWithFCEUX();
+
+    gamedrop->setMedia(QUrl::fromLocalFile(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/gamedrop.mp3"));
 }
 
 /*
@@ -512,11 +514,12 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 	    //Send rom path of game to be loaded based on what user drags and drops
             printf("Before send\n");
 	    
-        //Play game drop sound as new game is dropped on console
-        gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
-	    gamedrop->setVolume(50);
+        //stop music
         playMusic = false;
         music->stop();
+
+        //Play game drop sound as new game is dropped on console
+	    gamedrop->setVolume(50);
 	    gamedrop->play();
 
         int tries = 3;
