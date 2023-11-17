@@ -520,7 +520,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 
         //Play game drop sound as new game is dropped on console
 	    gamedrop->setVolume(50);
-	    gamedrop->play();
+	    //gamedrop->play();
 
         int tries = 3;
         int val;
