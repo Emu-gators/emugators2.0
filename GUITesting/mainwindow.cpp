@@ -598,17 +598,16 @@ void ejectButton(int e, lgGpioAlert_p evt, void *data){
 
 void MainWindow::setEjectFlag(){
     ejectFlag = true;
-    printf("Set Eject Flag\n");
 }
 
 void MainWindow::pollEjectFlag(){
-    printf("Polled Flag\n");
     if(ejectFlag){
         raise();
         activateWindow();
         sendCloseROM();
         music->setPlaylist(playlist);
         playMusic = true;
+        music->play();
         ejectFlag = false;
     }
 }
