@@ -613,7 +613,7 @@ void MainWindow::pollEjectFlag(){
         playlistLoadedFlag = false;
         playlist->setCurrentIndex(curRom);
         while(!playlistLoadedFlag){
-            printf("Waiting for load!\n")
+            printf("Waiting for load!\n");
         }
         music->play();
         playMusic = true;
