@@ -612,8 +612,8 @@ void MainWindow::pollEjectFlag(){
         music->setPlaylist(playlist);
         playlistLoadedFlag = false;
         playlist->setCurrentIndex(curRom);
-        while(!playlistLoadedFlag){
-            printf("Waiting for load!\n");
+        while(!playlistLoadedFlag || !playlistFailedFlag){
+            std::cout << (int)(music->mediaStatus()) << "\n";
         }
         music->play();
         playMusic = true;
