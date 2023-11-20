@@ -614,8 +614,10 @@ void MainWindow::pollEjectFlag(){
         playlist->setCurrentIndex(curRom);
         while(!playlistLoadedFlag);
         music->play();
-        music->setPlaylist(playlist);
         playMusic = true;
+
+        on_nextButton_clicked();
+        on_previousButton_clicked();
     }
 }
 
