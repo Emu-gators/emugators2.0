@@ -590,7 +590,7 @@ void ejectButton(int e, lgGpioAlert_p evt, void *data){
     mwPointer->raise();
     mwPointer->activateWindow();
     mwPointer->sendCloseROM();
-    mwPointer->music->setPlaylist(playlist);
+    mwPointer->music->setPlaylist(mwPointer->playlist);
     mwPointer->playMusic = true;
     mwPointer->music->play();
 }
