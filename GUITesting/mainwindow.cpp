@@ -545,6 +545,7 @@ void MainWindow::dropEvent(QDropEvent *event)
     playMusic = false;
     music->stop();
     delete music;
+    music = nullptr;
     //gamedrop->play();
     //Debugging print statement
     printf("After send\n");
@@ -584,6 +585,7 @@ void MainWindow::sendCloseROM(){
 }
 
 void MainWindow::handleEjectMusic(){
+    delete music;
     playlist->setCurrentIndex(curRom);
     playMusic = true;
     music = new QMediaPlayer();
