@@ -544,6 +544,7 @@ void MainWindow::dropEvent(QDropEvent *event)
     //gamedrop->setVolume(50);
     playMusic = false;
     music->stop();
+    delete music;
     //gamedrop->play();
     //Debugging print statement
     printf("After send\n");
@@ -588,7 +589,11 @@ void ejectButton(int e, lgGpioAlert_p evt, void *data){
     mwPointer->raise();
     mwPointer->activateWindow();
     mwPointer->sendCloseROM();
+    mwPointer->playlist->setCurrentIndex(curRom);
     mwPointer->playMusic = true;
+    mwPointer->music = new QMediaPlayer();
+    mwPointer->music->setPlaylist(playlist);
+    mwPointer->music->setVolume(50);
     mwPointer->music->play();
 }
 

@@ -24,6 +24,7 @@ public:
     void sendCloseROM();
     bool playMusic;
     QMediaPlayer* music;
+    QMediaPlaylist* playlist;
 
 private slots:
     void on_nextButton_clicked();
@@ -60,7 +61,6 @@ private:
     std::vector<QString> romNames;
 
     QMediaPlayer* gamedrop;
-    QMediaPlaylist* playlist;
 
     QLabel* helpScreen;
 
