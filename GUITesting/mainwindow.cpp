@@ -601,9 +601,8 @@ void MainWindow::pollEjectFlag(){
         raise();
         activateWindow();
         sendCloseROM();
-        music->setPlaylist(playlist);
         playlist->setCurrentIndex(curRom);
-        while(music->mediaStatus() == QMediaPlayer::LoadingMedia);
+        music->setPlaylist(playlist);
         music->play();
         playMusic = true;
     }
