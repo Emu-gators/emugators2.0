@@ -25,6 +25,7 @@ public:
     bool playMusic;
     QMediaPlayer* music;
     QMediaPlaylist* playlist;
+    int curRom;
 
 private slots:
     void on_nextButton_clicked();
@@ -52,7 +53,6 @@ private:
     QString nameFromNES(QString);
     std::string convertExtension(std::string romImageDir, std::string path, std::string extension);
     std::vector<QImage> roms;
-    int curRom;
     std::vector<std::string> romPaths;
     std::vector<std::string> musicPaths;
     //Socket

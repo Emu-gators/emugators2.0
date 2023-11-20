@@ -589,10 +589,10 @@ void ejectButton(int e, lgGpioAlert_p evt, void *data){
     mwPointer->raise();
     mwPointer->activateWindow();
     mwPointer->sendCloseROM();
-    mwPointer->playlist->setCurrentIndex(curRom);
+    mwPointer->playlist->setCurrentIndex(mwPointer->curRom);
     mwPointer->playMusic = true;
     mwPointer->music = new QMediaPlayer();
-    mwPointer->music->setPlaylist(playlist);
+    mwPointer->music->setPlaylist(mwPointer->playlist);
     mwPointer->music->setVolume(50);
     mwPointer->music->play();
 }
