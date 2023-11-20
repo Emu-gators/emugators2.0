@@ -7,6 +7,7 @@
 #include <QMediaPlayer>
 #include <QLabel>
 #include <QMimeType>
+#include <QGuiApplication>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -67,6 +68,9 @@ private:
     QMimeType mimeType;
 
     bool showHelp;
+    QScreen* screen;
+    double widthRatio;
+    double heightRatio;
 };
 
 void setupGPIO();

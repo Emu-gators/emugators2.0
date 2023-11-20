@@ -434,7 +434,8 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
 newwindow.o: newwindow.cpp newwindow.h \
-		ui_newwindow.h
+		ui_newwindow.h \
+		mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o newwindow.o newwindow.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 

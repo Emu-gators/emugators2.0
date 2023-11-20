@@ -37,7 +37,6 @@
 #include <QtGui>
 #include <QPushButton>
 #include <QGridLayout>
-#include <QMediaPlayer>
 #include <QCursor>
 
 
@@ -50,6 +49,10 @@
 #include <inttypes.h>
 
 #include <QMediaPlaylist>
+
+
+
+
 
 #include <errno.h>
 
@@ -84,6 +87,9 @@ MainWindow::MainWindow(QWidget *parent)
     playMusic = true;
 
     //Load the GUI images, ROM images, and ROM paths from default specified directories
+    screen = QGuiApplication::primaryScreen();
+    widthRatio = screen->availableSize().width() / 720.0;
+    heightRatio = screen->availableSize().height() / 480.0;
     loadGUIImages();
     loadROMPaths();
     displayCurROM();
@@ -109,7 +115,7 @@ MainWindow::~MainWindow()
 void MainWindow::openNewWindow()
 {
     myNewWindow = new NewWindow();
-    myNewWindow->setWindowState(Qt::WindowMaximized);
+    myNewWindow->setWindowState(Qt::WindowFullScreen);
     myNewWindow->show();
 
 }
@@ -291,7 +297,7 @@ QString MainWindow::nameFromNES(QString path){
 QImage MainWindow::processImage(QImage unprocessedImage)
 {
     //Scale the inputted image to 100x100 to keep uniformity between rom images
-    QImage scaled = unprocessedImage.scaled(200,200,Qt::KeepAspectRatio);
+    QImage scaled = unprocessedImage.scaled(100 * widthRatio,100 * heightRatio,Qt::KeepAspectRatio);
     return scaled;
 }
 
@@ -303,54 +309,67 @@ QImage MainWindow::processImage(QImage unprocessedImage)
  */ 
 void MainWindow::loadGUIImages()
 {
-    //Loads the background image, scales it, and then connects it to the background ui
-    //element
-    //QImage background("./GUI_ASSETS/background.jpg");
-    //QImage scaleBack = background.scaled(720,480,Qt::IgnoreAspectRatio);
-    //ui->background->setPixmap(QPixmap::fromImage(scaleBack));
+
     QPixmap bg("./GUI_ASSETS/background.jpg");
     bg = bg.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette palette;
     palette.setBrush(QPalette::Window, bg);
     this->setPalette(palette);
 
+    //screen->availableSize();
+
     //Loads the Famicom image, scales it, and connects to ui element
     QImage famicom("./GUI_ASSETS/Nintendo-Famicom-Disk-System.png");
-    QImage scaleFam = famicom.scaled(180,150,Qt::KeepAspectRatioByExpanding);
+    QImage scaleFam = famicom.scaled(180 * widthRatio, 150 * heightRatio, Qt::IgnoreAspectRatio);
     ui->famicom->setPixmap(QPixmap::fromImage(scaleFam));
  
 
     //Loads the Famicom image, scales it, and connects to ui element
     helpScreen = new QLabel(this);
-    helpScreen->setGeometry(0, 0, 600, 500);
+    helpScreen->setGeometry(0, 0, 600 * widthRatio, 500 * heightRatio);
     helpScreen->move(this->centralWidget()->rect().center() - helpScreen->rect().center());
 
     helpScreen->show();
     QImage help("./GUI_ASSETS/help.png");
-    QImage scaleHelp = help.scaled(600,500,Qt::IgnoreAspectRatio);
+    QImage scaleHelp = help.scaled(600 * widthRatio,500 * heightRatio,Qt::IgnoreAspectRatio);
     helpScreen->setPixmap(QPixmap::fromImage(scaleHelp));
     helpScreen->raise();
 
     int id = QFontDatabase::addApplicationFont("./GUI_ASSETS/ARCADECLASSIC.TTF");
     QString family = QFontDatabase::applicationFontFamilies(id).at(0);
     QFont monospace(family);
-    monospace.setPointSize(16);
+    monospace.setPointSize(15 * heightRatio);
     ui->gameTitle->setFont(monospace);
-
     ui->gameTitle->setStyleSheet("QLabel { color : orange; }");
 
     ui->nextButton->setIcon(QIcon("./GUI_ASSETS/rightArrow.png"));
-    ui->nextButton->setIconSize(QSize(100,100));
-    ui->nextButton->setMinimumWidth(100);
-    ui->nextButton->setMinimumHeight(100);
+    ui->nextButton->setIconSize(QSize(100 * widthRatio,100 * heightRatio));
+    ui->nextButton->setMinimumWidth(100 * widthRatio);
+    ui->nextButton->setMinimumHeight(100 * heightRatio);
     ui->nextButton->setFlat(true);
     ui->nextButton->setStyleSheet("QPushButton { background-color: transparent }");
     ui->previousButton->setIcon(QIcon("./GUI_ASSETS/leftArrow.png"));
-    ui->previousButton->setIconSize(QSize(100,100));
-    ui->previousButton->setMinimumWidth(100);
-    ui->previousButton->setMinimumHeight(100);
+    ui->previousButton->setIconSize(QSize(100 * widthRatio,100 * heightRatio));
+    ui->previousButton->setMinimumWidth(100 * widthRatio);
+    ui->previousButton->setMinimumHeight(100 * heightRatio);
     ui->previousButton->setFlat(true);
     ui->previousButton->setStyleSheet("QPushButton { background-color: transparent }");
+
+    ui->debugButton->setIcon(QIcon("./GUI_ASSETS/calibrate.png"));
+    ui->debugButton->setIconSize(QSize(23 * widthRatio,23 * heightRatio));
+    ui->debugButton->setMinimumWidth(23 * widthRatio);
+    ui->debugButton->setMinimumHeight(23 * heightRatio);
+    ui->debugButton->setFlat(true);
+    ui->debugButton->setStyleSheet("QPushButton { background-color: transparent }");
+
+    ui->helpButton->setIcon(QIcon("./GUI_ASSETS/info.png"));
+    ui->helpButton->setIconSize(QSize(23 * widthRatio,23 * heightRatio));
+    ui->helpButton->setMinimumWidth(23 * widthRatio);
+    ui->helpButton->setMinimumHeight(23 * heightRatio);
+    ui->helpButton->setFlat(true);
+    ui->helpButton->setStyleSheet("QPushButton { background-color: transparent }");
+
+
 
 
     /* Setting tooltips */
@@ -656,11 +675,6 @@ void MainWindow::resizeEvent(QResizeEvent *evt)
     this->setPalette(palette);
 
     helpScreen->move(this->centralWidget()->rect().center() - helpScreen->rect().center());
-
-    //print out the position of the famicom label
-    std::cout << ui->famicom->geometry().x() << " " << ui->famicom->geometry().y() << " " << ui->famicom->geometry().width() << " " << ui->famicom->geometry().height() << std::endl;
-    //print out the position of the label
-    std::cout << ui->label->geometry().x() << " " << ui->label->geometry().y() << " " << ui->label->geometry().width() << " " << ui->label->geometry().height() << std::endl;
 
 
     QMainWindow::resizeEvent(evt); //call base implementation
