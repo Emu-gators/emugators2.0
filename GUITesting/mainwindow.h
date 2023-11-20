@@ -24,8 +24,15 @@ public:
     void sendCloseROM();
     bool playMusic;
     QMediaPlayer* music;
+    QMediaPlaylist* playlist;
+    int curRom;
+    void handleEjectMusic();
+    void displayCurROM();
+    void setEjectFlag();
 
 private slots:
+    void pollEjectFlag();
+    void setPlaylistLoadedFlag();
     void on_nextButton_clicked();
     void on_previousButton_clicked();
     void on_debugButton_clicked();
@@ -43,7 +50,6 @@ private:
     void loadROMImages();
     void loadROMPaths();
     void OpenFCEUX();
-    void displayCurROM();
     void changeRomPath();
     void connectWithFCEUX();
 
@@ -51,7 +57,6 @@ private:
     QString nameFromNES(QString);
     std::string convertExtension(std::string romImageDir, std::string path, std::string extension);
     std::vector<QImage> roms;
-    int curRom;
     std::vector<std::string> romPaths;
     std::vector<std::string> musicPaths;
     //Socket
@@ -60,7 +65,6 @@ private:
     std::vector<QString> romNames;
 
     QMediaPlayer* gamedrop;
-    QMediaPlaylist* playlist;
 
     QLabel* helpScreen;
 
@@ -71,6 +75,12 @@ private:
     QScreen* screen;
     double widthRatio;
     double heightRatio;
+
+    QTimer* pollEjectTimer;
+
+    bool ejectFlag;
+
+    bool playlistLoadedFlag;
 };
 
 void setupGPIO();

@@ -76,7 +76,7 @@ MainWindow::MainWindow(QWidget *parent)
     //Connect some ui elements and layout based on location.
     connect(ui->debugButton, SIGNAL(click()), this, SLOT(openNewWindow()));
 
-    gamedrop = new QMediaPlayer();
+    //gamedrop = new QMediaPlayer();
     playlist = new QMediaPlaylist();
     music = new QMediaPlayer();
     playlist->setPlaybackMode(QMediaPlaylist::CurrentItemInLoop);
@@ -97,6 +97,15 @@ MainWindow::MainWindow(QWidget *parent)
     connectWithFCEUX();
     this->setAcceptDrops(true);
 
+    ejectFlag = false;
+
+    pollEjectTimer = new QTimer(this);
+    pollEjectTimer->setInterval(17);
+    connect(pollEjectTimer, SIGNAL(timeout()), this, SLOT(pollEjectFlag()));
+    pollEjectTimer->start();
+
+    playlistLoadedFlag = false;
+    connect(playlist, SIGNAL(loaded()), this, SLOT(setPlaylistLoadedFlag()));
 }
 
 /*
@@ -434,7 +443,6 @@ void MainWindow::on_nextButton_clicked()
     //updates the position in the playlist 
     playlist->setCurrentIndex(curRom);
 
-
     //Updates the rom that is being displayed to reflect the new current rom
     displayCurROM();
 }
@@ -538,6 +546,18 @@ void MainWindow::dropEvent(QDropEvent *event)
     if(!ui->famicomWidget->geometry().adjusted(ui->famicomLeftSpacer->geometry().size().width(),0,-ui->famicomRightSpacer->geometry().size().width(),0).contains(mousePos)){
         return;
     }
+
+    //Play game drop sound as new game is dropped on console
+    //gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
+    //gamedrop->setVolume(50);
+    playMusic = false;
+    music->stop();
+    music->setMedia(nullptr);
+    
+    //gamedrop->play();
+    //Debugging print statement
+    printf("After send\n");
+
     //Send rom path of game to be loaded based on what user drags and drops
     printf("Before send\n");
     
@@ -556,23 +576,10 @@ void MainWindow::dropEvent(QDropEvent *event)
         tries--;
     }while(val == -1 && tries >= 0);
     
-    //Play game drop sound as new game is dropped on console
-    gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
-    gamedrop->setVolume(50);
-    playMusic = false;
-    music->pause();
-    gamedrop->play();
-    //Debugging print statement
-    printf("After send\n");
-    
     //Bring the game image back to the front
     ui->label->raise();
-    //Iterate to next rom after game is dropped
-    //TODO:FIX THIS LOGIC(likely by using next and previous button functions)
-    on_nextButton_clicked();
     
     this->lower();
-    
 
     event->acceptProposedAction();
 }
@@ -581,14 +588,37 @@ void MainWindow::sendCloseROM(){
     send(client_fd, "close\0", strlen("close\0"), 0);
 }
 
+void MainWindow::setPlaylistLoadedFlag(){
+    playlistLoadedFlag = true;
+}
+
 extern MainWindow* mwPointer;
 void ejectButton(int e, lgGpioAlert_p evt, void *data){
     printf("Eject was pressed!\n");
-    mwPointer->raise();
-    mwPointer->activateWindow();
-    mwPointer->sendCloseROM();
-    mwPointer->playMusic = true;
-    mwPointer->music->play();
+    mwPointer->setEjectFlag();
+}
+
+void MainWindow::setEjectFlag(){
+    ejectFlag = true;
+}
+
+void MainWindow::pollEjectFlag(){
+    if(ejectFlag){
+        ejectFlag = false;
+        raise();
+        activateWindow();
+        sendCloseROM();
+        //playlist->setCurrentIndex(curRom);
+        music->setPlaylist(playlist);
+        /*playlistLoadedFlag = false;
+        playlist->setCurrentIndex(curRom);
+        while(!playlistLoadedFlag);
+        music->play();*/
+        playMusic = true;
+
+        on_nextButton_clicked();
+        on_previousButton_clicked();
+    }
 }
 
 void setupGPIO(){
