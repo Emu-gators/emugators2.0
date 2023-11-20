@@ -76,7 +76,7 @@ MainWindow::MainWindow(QWidget *parent)
     //Connect some ui elements and layout based on location.
     connect(ui->debugButton, SIGNAL(click()), this, SLOT(openNewWindow()));
 
-    gamedrop = new QMediaPlayer();
+    //gamedrop = new QMediaPlayer();
     playlist = new QMediaPlaylist();
     music = new QMediaPlayer();
     playlist->setPlaybackMode(QMediaPlaylist::CurrentItemInLoop);
@@ -544,8 +544,6 @@ void MainWindow::dropEvent(QDropEvent *event)
     //gamedrop->setVolume(50);
     playMusic = false;
     music->stop();
-    delete music;
-    music = nullptr;
     //gamedrop->play();
     //Debugging print statement
     printf("After send\n");
@@ -584,23 +582,14 @@ void MainWindow::sendCloseROM(){
     send(client_fd, "close\0", strlen("close\0"), 0);
 }
 
-void MainWindow::handleEjectMusic(){
-    delete music;
-    playlist->setCurrentIndex(curRom);
-    playMusic = true;
-    music = new QMediaPlayer();
-    music->setPlaylist(playlist);
-    music->setVolume(50);
-    music->play();
-}
-
 extern MainWindow* mwPointer;
 void ejectButton(int e, lgGpioAlert_p evt, void *data){
     printf("Eject was pressed!\n");
     mwPointer->raise();
     mwPointer->activateWindow();
     mwPointer->sendCloseROM();
-    mwPointer->handleEjectMusic();
+    mwPointer->playMusic = true;
+    mwPointer->music->play();
 }
 
 void setupGPIO(){
