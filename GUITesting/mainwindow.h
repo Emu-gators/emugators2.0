@@ -32,6 +32,7 @@ public:
 
 private slots:
     void pollEjectFlag();
+    void setPlaylistLoadedFlag();
     void on_nextButton_clicked();
     void on_previousButton_clicked();
     void on_debugButton_clicked();
@@ -78,6 +79,8 @@ private:
     QTimer* pollEjectTimer;
 
     bool ejectFlag;
+
+    bool playlistLoadedFlag;
 };
 
 void setupGPIO();
