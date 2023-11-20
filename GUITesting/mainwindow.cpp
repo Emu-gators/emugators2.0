@@ -584,10 +584,10 @@ void MainWindow::sendCloseROM(){
 }
 
 void MainWindow::handleEjectMusic(){
-    playlist->setCurrentIndex(mwPointer->curRom);
+    playlist->setCurrentIndex(curRom);
     playMusic = true;
     music = new QMediaPlayer();
-    music->setPlaylist(mwPointer->playlist);
+    music->setPlaylist(playlist);
     music->setVolume(50);
     music->play();
 }
