@@ -27,6 +27,7 @@ public:
     QMediaPlaylist* playlist;
     int curRom;
     void handleEjectMusic();
+    void displayCurROM();
 
 private slots:
     void on_nextButton_clicked();
@@ -46,7 +47,6 @@ private:
     void loadROMImages();
     void loadROMPaths();
     void OpenFCEUX();
-    void displayCurROM();
     void changeRomPath();
     void connectWithFCEUX();
 
