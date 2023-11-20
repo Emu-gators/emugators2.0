@@ -583,18 +583,22 @@ void MainWindow::sendCloseROM(){
     send(client_fd, "close\0", strlen("close\0"), 0);
 }
 
+void MainWindow::handleEjectMusic(){
+    playlist->setCurrentIndex(mwPointer->curRom);
+    playMusic = true;
+    music = new QMediaPlayer();
+    music->setPlaylist(mwPointer->playlist);
+    music->setVolume(50);
+    music->play();
+}
+
 extern MainWindow* mwPointer;
 void ejectButton(int e, lgGpioAlert_p evt, void *data){
     printf("Eject was pressed!\n");
     mwPointer->raise();
     mwPointer->activateWindow();
     mwPointer->sendCloseROM();
-    mwPointer->playlist->setCurrentIndex(mwPointer->curRom);
-    mwPointer->playMusic = true;
-    mwPointer->music = new QMediaPlayer();
-    mwPointer->music->setPlaylist(mwPointer->playlist);
-    mwPointer->music->setVolume(50);
-    mwPointer->music->play();
+    mwPointer->handleEjectMusic();
 }
 
 void setupGPIO(){

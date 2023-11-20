@@ -26,6 +26,7 @@ public:
     QMediaPlayer* music;
     QMediaPlaylist* playlist;
     int curRom;
+    void handleEjectMusic();
 
 private slots:
     void on_nextButton_clicked();
