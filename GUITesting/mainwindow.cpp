@@ -604,6 +604,7 @@ void MainWindow::pollEjectFlag(){
         music->setPlaylist(playlist);
         playMusic = true;
         music->play();
+        displayCurROM();
         ejectFlag = false;
     }
 }
