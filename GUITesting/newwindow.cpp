@@ -133,6 +133,7 @@ void NewWindow::spawnUFO(){
     explosionTimer->setSingleShot(true);
     explosionTimer->setInterval(380);
     connect(explosionTimer, SIGNAL(timeout()), this, SLOT(explode()));
+    testing = true;
 
 }
 
@@ -163,15 +164,17 @@ void NewWindow::resizeEvent(QResizeEvent *evt)
 }
 
 void NewWindow::mousePressEvent(QMouseEvent *event){
-    if(event->button() == Qt::LeftButton){
-        if(ufo->isUnderMouse()){
-            score += 10;
-            ui->scoreLabel->setText("SCORE: " + QString::number(score));
-            ui->scoreLabel->setMinimumWidth(ui->scoreLabel->sizeHint().width());
-            ui->scoreLabel->setAlignment(Qt::AlignHCenter);
-            ufo->setPixmap(*explosionImg);
-            isExploding = true;
-            explosionTimer->start();
+    if(testing){
+        if(event->button() == Qt::LeftButton){
+            if(ufo->isUnderMouse()){
+                score += 10;
+                ui->scoreLabel->setText("SCORE: " + QString::number(score));
+                ui->scoreLabel->setMinimumWidth(ui->scoreLabel->sizeHint().width());
+                ui->scoreLabel->setAlignment(Qt::AlignHCenter);
+                ufo->setPixmap(*explosionImg);
+                isExploding = true;
+                explosionTimer->start();
+            }
         }
     }
 }

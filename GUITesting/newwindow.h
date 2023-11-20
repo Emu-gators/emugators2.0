@@ -53,6 +53,7 @@ class NewWindow : public QMainWindow
         int timer2;
         QTimer* explosionTimer;
         bool isExploding = false;
+        bool testing = false;
         int score = 0;
         QMediaPlaylist* playlist;
         QMediaPlayer* music;
