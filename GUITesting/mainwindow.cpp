@@ -538,6 +538,16 @@ void MainWindow::dropEvent(QDropEvent *event)
     if(!ui->famicomWidget->geometry().adjusted(ui->famicomLeftSpacer->geometry().size().width(),0,-ui->famicomRightSpacer->geometry().size().width(),0).contains(mousePos)){
         return;
     }
+
+    //Play game drop sound as new game is dropped on console
+    //gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
+    //gamedrop->setVolume(50);
+    playMusic = false;
+    music->stop();
+    //gamedrop->play();
+    //Debugging print statement
+    printf("After send\n");
+
     //Send rom path of game to be loaded based on what user drags and drops
     printf("Before send\n");
     
@@ -555,15 +565,6 @@ void MainWindow::dropEvent(QDropEvent *event)
 
         tries--;
     }while(val == -1 && tries >= 0);
-    
-    //Play game drop sound as new game is dropped on console
-    gamedrop->setMedia(QUrl::fromLocalFile(QDir::currentPath() + "/GUI_ASSETS/gamedrop.mp3"));
-    gamedrop->setVolume(50);
-    playMusic = false;
-    music->pause();
-    gamedrop->play();
-    //Debugging print statement
-    printf("After send\n");
     
     //Bring the game image back to the front
     ui->label->raise();
