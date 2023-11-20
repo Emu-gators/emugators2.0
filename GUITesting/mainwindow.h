@@ -28,7 +28,7 @@ public:
     int curRom;
     void handleEjectMusic();
     void displayCurROM();
-    void pollEject();
+    void pollEjectFlag();
     void setEjectFlag();
 
 private slots:
