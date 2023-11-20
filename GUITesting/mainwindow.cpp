@@ -101,7 +101,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     pollEjectTimer = new QTimer(this);
     pollEjectTimer->setInterval(17);
-    connect(pollEjectTimer, SIGNAL(timeout()), this, SLOT(pollEject()));
+    connect(pollEjectTimer, SIGNAL(timeout()), this, SLOT(pollEjectFlag()));
     pollEjectTimer.start();
 }
 
