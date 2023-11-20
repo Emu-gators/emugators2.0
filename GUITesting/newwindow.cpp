@@ -29,20 +29,22 @@ NewWindow::NewWindow(QWidget *parent) :
     this->setPalette(palette);
     
     ui->topLeft->setIcon(QIcon("./GUI_ASSETS/Target.png"));
-    ui->topLeft->move(0.19 * screen->availableSize().width(), 0.16 * screen->availableSize().height());
     ui->topLeft->setIconSize(QSize(100 * widthRatio,100 * heightRatio));
+    ui->topLeft->resize(ui->topLeft->iconSize());
     ui->topLeft->setMinimumWidth(100 * widthRatio);
     ui->topLeft->setMinimumHeight(100 * heightRatio);
     ui->topLeft->setFlat(true);
     ui->topLeft->setStyleSheet("QPushButton { background-color: transparent }");
+    ui->topLeft->move((300 * (screen->availableSize().width() / 1063)) + (ui->topLeft->iconSize().width() / 2), (float)(200 * ((float)screen->availableSize().height() / 768.0)) - ((float)ui->topLeft->iconSize().height() / 2.0));
 
     ui->bottomRight->setIcon(QIcon("./GUI_ASSETS/Target.png"));
-    ui->bottomRight->move(0.60 * screen->availableSize().width(), 0.63 * screen->availableSize().height());
     ui->bottomRight->setIconSize(QSize(100 * widthRatio,100 * heightRatio));
+    ui->bottomRight->resize(ui->bottomRight->iconSize());
     ui->bottomRight->setMinimumWidth(100 * widthRatio);
     ui->bottomRight->setMinimumHeight(100 * heightRatio);
     ui->bottomRight->setFlat(true);
     ui->bottomRight->setStyleSheet("QPushButton { background-color: transparent }");
+    ui->bottomRight->move((float)screen->availableSize().width() - ((float)300 * ((float)screen->availableSize().width() / 1063.0)) - ((float)ui->topLeft->iconSize().width()/2.0), screen->availableSize().height() - (float)(200 * ((float)screen->availableSize().height() / 768.0)) - ((float)ui->topLeft->iconSize().height() / 2.0));
 
     mwPointer->playMusic = false;
     mwPointer->music->pause();
@@ -128,7 +130,6 @@ void NewWindow::spawnUFO(){
     ufo = ufoScene->addPixmap(*ufoImg);
     ufo->setPos(100 + ufoImg->width(),100 + ufoImg->height());
     timer1 = startTimer(50);
-    timer2 = startTimer(600);
     explosionTimer = new QTimer(this);
     explosionTimer->setSingleShot(true);
     explosionTimer->setInterval(380);

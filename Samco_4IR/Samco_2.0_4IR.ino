@@ -133,7 +133,7 @@ void loop() {
 
     skip();
     getPosition();
-    mouseCount();
+    mouseCount1();
     mouseButtons();
     PrintResults();
 
@@ -166,6 +166,7 @@ void loop() {
     AbsMouse.move((res_x - 300), (res_y - 200));
     
     mouseCount();
+    mouseButtons();
     getPosition();
 
     xRight = finalX;
@@ -365,6 +366,26 @@ void mouseButtons() {    // Setup Left, Right & Middle Mouse buttons
 
 
 void mouseCount() {    // Set count down on trigger
+
+  buttonState2 = digitalRead(_tiggerPin);
+
+  if (buttonState2 != lastButtonState2) {
+    if (buttonState2 == LOW) {
+      AbsMouse.press(MOUSE_LEFT);
+      count--;
+      delay(10);
+      AbsMouse.release(MOUSE_LEFT);
+    }
+    else { // do nothing
+      AbsMouse.release(MOUSE_LEFT);
+    }
+    delay(10);
+  }
+
+  lastButtonState2 = buttonState2;
+}
+
+void mouseCount1() {    // Set count down on trigger
 
   buttonState2 = digitalRead(_tiggerPin);
 

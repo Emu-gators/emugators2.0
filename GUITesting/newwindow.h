@@ -50,7 +50,6 @@ class NewWindow : public QMainWindow
         float movement_x = 5;
         float movement_y = 4; 
         int timer1;
-        int timer2;
         QTimer* explosionTimer;
         bool isExploding = false;
         bool testing = false;
