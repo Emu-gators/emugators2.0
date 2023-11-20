@@ -182,7 +182,7 @@ void NewWindow::explode(){
 }
 
 void NewWindow::close(){
-    music->pause();
+    music->setMedia(nullptr);
     mwPointer->playMusic = true;
     mwPointer->music->play();
     QMainWindow::close();
