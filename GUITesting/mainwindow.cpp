@@ -597,14 +597,15 @@ void MainWindow::setEjectFlag(){
 
 void MainWindow::pollEjectFlag(){
     if(ejectFlag){
+        ejectFlag = false;
         raise();
         activateWindow();
         sendCloseROM();
         music->setPlaylist(playlist);
         playlist->setCurrentIndex(curRom);
+        while(music->MediaStatus == QMediaPlayer::LoadingMedia);
         music->play();
         playMusic = true;
-        ejectFlag = false;
     }
 }
 
