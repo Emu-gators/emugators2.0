@@ -603,6 +603,7 @@ void MainWindow::pollEjectFlag(){
         sendCloseROM();
         //playlist->setCurrentIndex(curRom);
         music->setPlaylist(playlist);
+        playlist->setCurrentIndex(curRom);
         music->play();
         playMusic = true;
     }
