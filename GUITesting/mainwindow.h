@@ -28,10 +28,10 @@ public:
     int curRom;
     void handleEjectMusic();
     void displayCurROM();
-    void pollEjectFlag();
     void setEjectFlag();
 
 private slots:
+    void pollEjectFlag();
     void on_nextButton_clicked();
     void on_previousButton_clicked();
     void on_debugButton_clicked();
