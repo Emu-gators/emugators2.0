@@ -576,12 +576,8 @@ void MainWindow::dropEvent(QDropEvent *event)
     
     //Bring the game image back to the front
     ui->label->raise();
-    //Iterate to next rom after game is dropped
-    //TODO:FIX THIS LOGIC(likely by using next and previous button functions)
-    on_nextButton_clicked();
     
     this->lower();
-    
 
     event->acceptProposedAction();
 }
