@@ -104,7 +104,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(pollEjectTimer, SIGNAL(timeout()), this, SLOT(pollEjectFlag()));
     pollEjectTimer->start();
 
-    connect(playlist, SIGNAL(loaded), this, SLOT(setPlaylistLoadedFlag()));
+    playlistLoadedFlag = false;
+    connect(playlist, SIGNAL(loaded()), this, SLOT(setPlaylistLoadedFlag()));
 }
 
 /*
