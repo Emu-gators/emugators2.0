@@ -603,7 +603,7 @@ void MainWindow::pollEjectFlag(){
         sendCloseROM();
         music->setPlaylist(playlist);
         playlist->setCurrentIndex(curRom);
-        while(music->MediaStatus == QMediaPlayer::LoadingMedia);
+        while(music->mediaStatus == QMediaPlayer::LoadingMedia);
         music->play();
         playMusic = true;
     }
