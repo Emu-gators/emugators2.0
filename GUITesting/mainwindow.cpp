@@ -103,6 +103,8 @@ MainWindow::MainWindow(QWidget *parent)
     pollEjectTimer->setInterval(17);
     connect(pollEjectTimer, SIGNAL(timeout()), this, SLOT(pollEjectFlag()));
     pollEjectTimer->start();
+
+    connect(playlist, SIGNAL(loaded), this, SLOT(setPlaylistLoadedFlag()));
 }
 
 /*
@@ -585,6 +587,10 @@ void MainWindow::sendCloseROM(){
     send(client_fd, "close\0", strlen("close\0"), 0);
 }
 
+void MainWindow::setPlaylistLoadedFlag(){
+    playlistLoadedFlag = true;
+}
+
 extern MainWindow* mwPointer;
 void ejectButton(int e, lgGpioAlert_p evt, void *data){
     printf("Eject was pressed!\n");
@@ -604,6 +610,7 @@ void MainWindow::pollEjectFlag(){
         //playlist->setCurrentIndex(curRom);
         music->setPlaylist(playlist);
         playlist->setCurrentIndex(curRom);
+        while(!playlistLoadedFlag);
         music->play();
         playMusic = true;
     }
