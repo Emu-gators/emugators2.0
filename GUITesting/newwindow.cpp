@@ -29,7 +29,7 @@ NewWindow::NewWindow(QWidget *parent) :
     this->setPalette(palette);
     
     ui->topLeft->setIcon(QIcon("./GUI_ASSETS/Target.png"));
-    ui->topLeft->move(0.27 * screen->availableSize().width(), 0.16 * screen->availableSize().height());
+    ui->topLeft->move(0.19 * screen->availableSize().width(), 0.16 * screen->availableSize().height());
     ui->topLeft->setIconSize(QSize(100 * widthRatio,100 * heightRatio));
     ui->topLeft->setMinimumWidth(100 * widthRatio);
     ui->topLeft->setMinimumHeight(100 * heightRatio);
@@ -37,7 +37,7 @@ NewWindow::NewWindow(QWidget *parent) :
     ui->topLeft->setStyleSheet("QPushButton { background-color: transparent }");
 
     ui->bottomRight->setIcon(QIcon("./GUI_ASSETS/Target.png"));
-    ui->bottomRight->move(0.68 * screen->availableSize().width(), 0.63 * screen->availableSize().height());
+    ui->bottomRight->move(0.60 * screen->availableSize().width(), 0.63 * screen->availableSize().height());
     ui->bottomRight->setIconSize(QSize(100 * widthRatio,100 * heightRatio));
     ui->bottomRight->setMinimumWidth(100 * widthRatio);
     ui->bottomRight->setMinimumHeight(100 * heightRatio);
