@@ -97,6 +97,11 @@ MainWindow::MainWindow(QWidget *parent)
     connectWithFCEUX();
     this->setAcceptDrops(true);
 
+    ejectFlag = false;
+
+    pollEjectTimer = new QTimer(this);
+    pollEjectTimer->setInterval(17);
+    connect(pollEjectTimer, SIGNAL(timeout()), this, SLOT(pollEject()));
 }
 
 /*
@@ -587,11 +592,22 @@ void MainWindow::sendCloseROM(){
 extern MainWindow* mwPointer;
 void ejectButton(int e, lgGpioAlert_p evt, void *data){
     printf("Eject was pressed!\n");
-    mwPointer->raise();
-    mwPointer->activateWindow();
-    mwPointer->sendCloseROM();
-    //mwPointer->music->setPlaylist(mwPointer->playlist);
-    mwPointer->playMusic = true;
+    mwPointer->setEjectFlag();
+}
+
+void MainWindow::setEjectFlag(){
+    ejectFlag = true;
+}
+
+void MainWindow::pollEjectFlag(){
+    if(ejectFlag){
+        raise();
+        activateWindow();
+        sendCloseROM();
+        music->setPlaylist(playlist);
+        playMusic = true;
+        ejectFlag = false;
+    }
 }
 
 void setupGPIO(){

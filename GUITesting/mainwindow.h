@@ -28,6 +28,8 @@ public:
     int curRom;
     void handleEjectMusic();
     void displayCurROM();
+    void pollEject();
+    void setEjectFlag();
 
 private slots:
     void on_nextButton_clicked();
@@ -72,6 +74,10 @@ private:
     QScreen* screen;
     double widthRatio;
     double heightRatio;
+
+    QTimer* pollEjectTimer;
+
+    bool ejectFlag;
 };
 
 void setupGPIO();
