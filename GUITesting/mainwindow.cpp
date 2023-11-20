@@ -610,10 +610,10 @@ void MainWindow::pollEjectFlag(){
         sendCloseROM();
         //playlist->setCurrentIndex(curRom);
         music->setPlaylist(playlist);
-        playlistLoadedFlag = false;
+        /*playlistLoadedFlag = false;
         playlist->setCurrentIndex(curRom);
         while(!playlistLoadedFlag);
-        music->play();
+        music->play();*/
         playMusic = true;
 
         on_nextButton_clicked();
