@@ -544,6 +544,8 @@ void MainWindow::dropEvent(QDropEvent *event)
     //gamedrop->setVolume(50);
     playMusic = false;
     music->stop();
+    music->setMedia(nullptr);
+    
     //gamedrop->play();
     //Debugging print statement
     printf("After send\n");
