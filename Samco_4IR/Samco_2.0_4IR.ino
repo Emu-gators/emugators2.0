@@ -375,6 +375,7 @@ void mouseCount() {    // Set count down on trigger
       count--;
       delay(10);
       AbsMouse.release(MOUSE_LEFT);
+      delay(10);
     }
     else { // do nothing
       AbsMouse.release(MOUSE_LEFT);

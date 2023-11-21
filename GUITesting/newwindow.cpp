@@ -70,8 +70,6 @@ NewWindow::NewWindow(QWidget *parent) :
     closeButton->raise();
     //connect the button to the close function
     connect(closeButton, SIGNAL (released()), this, SLOT (close()));
-
-    //hide the cursor
     QApplication::setOverrideCursor(QCursor(Qt::CrossCursor));
 
 
@@ -196,10 +194,9 @@ void NewWindow::explode(){
 }
 
 void NewWindow::close(){
+    QApplication::restoreOverrideCursor();
     music->setMedia(nullptr);
     mwPointer->playMusic = true;
     mwPointer->music->play();
-    QApplication::restoreOverrideCursor();
-
     QMainWindow::close();
 }
