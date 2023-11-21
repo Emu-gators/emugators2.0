@@ -9,6 +9,15 @@
 #include <QMimeType>
 #include <QGuiApplication>
 
+//Socket Programming
+#include <netinet/in.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <unistd.h>
+#define PORT 8080
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -52,6 +61,7 @@ private:
     void OpenFCEUX();
     void changeRomPath();
     void connectWithFCEUX();
+    void initServerSocket();
 
     QImage processImage(QImage unprocessedImage);
     QString nameFromNES(QString);
@@ -60,8 +70,14 @@ private:
     std::vector<std::string> romPaths;
     std::vector<std::string> musicPaths;
     //Socket
+    char buffer[1024];
     int server_fd;
     int client_fd;
+    int addrlen;
+    struct sockaddr_in address;
+    
+    std::string GUITestingPath;
+
     std::vector<QString> romNames;
 
     QMediaPlayer* gamedrop;

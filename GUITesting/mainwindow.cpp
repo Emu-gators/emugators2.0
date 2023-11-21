@@ -24,15 +24,6 @@
 #include <QThread>
 //#include <string.h>
 
-//Socket Programming
-#include <netinet/in.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/socket.h>
-#include <unistd.h>
-#define PORT 8080
-
 #include <QtCore>
 #include <QtGui>
 #include <QPushButton>
@@ -55,6 +46,8 @@
 
 
 #include <errno.h>
+
+#include <cstring>
 
 
 /*
@@ -91,9 +84,12 @@ MainWindow::MainWindow(QWidget *parent)
     widthRatio = screen->availableSize().width() / 720.0;
     heightRatio = screen->availableSize().height() / 480.0;
     loadGUIImages();
+
     loadROMPaths();
+    loadGUIImages();
     displayCurROM();
     setupGPIO();
+    initServerSocket();
     connectWithFCEUX();
     this->setAcceptDrops(true);
 
@@ -176,6 +172,7 @@ void MainWindow::loadROMPaths()
         getline(configFile, romPath);
         getline(configFile, romImagePath);
         getline(configFile, musicPath);
+        getline(configFile, GUITestingPath);
 
         configFile.close();
 
@@ -192,9 +189,13 @@ void MainWindow::loadROMPaths()
         QString QmusicPath = QFileDialog::getExistingDirectory(this, tr("Select Music Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
         musicPath = QmusicPath.toStdString();
 
+        QString QGUITestingPath = QFileDialog::getExistingDirectory(this, tr("Select GUITesting Directory"), "/home", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+        GUITestingPath = QGUITestingPath.toStdString();
+
         newConfigFile << romPath << "\n";
         newConfigFile << romImagePath << "\n";
         newConfigFile << musicPath << "\n";
+        newConfigFile << GUITestingPath << "\n";
 
         newConfigFile.close();
     }
@@ -236,7 +237,7 @@ void MainWindow::loadROMPaths()
         //if the rom image file does not exist, use the stock image instead
         if (!QFile::exists(QString::fromStdString(romImages.at(i))))
         {
-            romImages.at(i) = "./GUI_ASSETS/stockimage.png";
+            romImages.at(i) = GUITestingPath + "/GUI_ASSETS/stockimage.png";
         }
         QImage unprocessedImage(QString::fromStdString(romImages.at(i)));
         //qDebug() << QString::fromStdString(romImages.at(i));
@@ -318,8 +319,7 @@ QImage MainWindow::processImage(QImage unprocessedImage)
  */ 
 void MainWindow::loadGUIImages()
 {
-
-    QPixmap bg("./GUI_ASSETS/background.jpg");
+    QPixmap bg(QString::fromStdString(GUITestingPath) + "./GUI_ASSETS/background.jpg");
     bg = bg.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette palette;
     palette.setBrush(QPalette::Window, bg);
@@ -328,8 +328,9 @@ void MainWindow::loadGUIImages()
     //screen->availableSize();
 
     //Loads the Famicom image, scales it, and connects to ui element
-    QImage famicom("./GUI_ASSETS/Nintendo-Famicom-Disk-System.png");
+    QImage famicom(String::fromStdString(GUITestingPath) + "./GUI_ASSETS/Nintendo-Famicom-Disk-System.png");
     QImage scaleFam = famicom.scaled(180 * widthRatio, 150 * heightRatio, Qt::IgnoreAspectRatio);
+
     ui->famicom->setPixmap(QPixmap::fromImage(scaleFam));
  
 
@@ -339,42 +340,43 @@ void MainWindow::loadGUIImages()
     helpScreen->move(this->centralWidget()->rect().center() - helpScreen->rect().center());
 
     helpScreen->show();
-    QImage help("./GUI_ASSETS/help.png");
+    QImage help(QString::fromStdString(GUITestingPath) + "./GUI_ASSETS/help.png");
     QImage scaleHelp = help.scaled(600 * widthRatio,500 * heightRatio,Qt::IgnoreAspectRatio);
     helpScreen->setPixmap(QPixmap::fromImage(scaleHelp));
     helpScreen->raise();
 
-    int id = QFontDatabase::addApplicationFont("./GUI_ASSETS/ARCADECLASSIC.TTF");
+    int id = QFontDatabase::addApplicationFont(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/ARCADECLASSIC.TTF");
     QString family = QFontDatabase::applicationFontFamilies(id).at(0);
     QFont monospace(family);
     monospace.setPointSize(15 * heightRatio);
     ui->gameTitle->setFont(monospace);
     ui->gameTitle->setStyleSheet("QLabel { color : orange; }");
 
-    ui->nextButton->setIcon(QIcon("./GUI_ASSETS/rightArrow.png"));
+    ui->nextButton->setIcon(QIcon(QString::fromStdString(GUITestingPath) + "./GUI_ASSETS/rightArrow.png"));
     ui->nextButton->setIconSize(QSize(100 * widthRatio,100 * heightRatio));
     ui->nextButton->setMinimumWidth(100 * widthRatio);
     ui->nextButton->setMinimumHeight(100 * heightRatio);
     ui->nextButton->setFlat(true);
     ui->nextButton->setStyleSheet("QPushButton { background-color: transparent }");
-    ui->previousButton->setIcon(QIcon("./GUI_ASSETS/leftArrow.png"));
+    ui->previousButton->setIcon(QIcon(QString::fromStdString(GUITestingPath) + "./GUI_ASSETS/leftArrow.png"));
     ui->previousButton->setIconSize(QSize(100 * widthRatio,100 * heightRatio));
     ui->previousButton->setMinimumWidth(100 * widthRatio);
     ui->previousButton->setMinimumHeight(100 * heightRatio);
+
     ui->previousButton->setFlat(true);
     ui->previousButton->setStyleSheet("QPushButton { background-color: transparent }");
 
     ui->debugButton->setIcon(QIcon("./GUI_ASSETS/calibrate.png"));
-    ui->debugButton->setIconSize(QSize(23 * widthRatio,23 * heightRatio));
-    ui->debugButton->setMinimumWidth(23 * widthRatio);
-    ui->debugButton->setMinimumHeight(23 * heightRatio);
+    ui->debugButton->setIconSize(QSize(50 * widthRatio,50 * heightRatio));
+    ui->debugButton->setMinimumWidth(50 * widthRatio);
+    ui->debugButton->setMinimumHeight(50 * heightRatio);
     ui->debugButton->setFlat(true);
     ui->debugButton->setStyleSheet("QPushButton { background-color: transparent }");
 
     ui->helpButton->setIcon(QIcon("./GUI_ASSETS/info.png"));
-    ui->helpButton->setIconSize(QSize(23 * widthRatio,23 * heightRatio));
-    ui->helpButton->setMinimumWidth(23 * widthRatio);
-    ui->helpButton->setMinimumHeight(23 * heightRatio);
+    ui->helpButton->setIconSize(QSize(50 * widthRatio,50 * heightRatio));
+    ui->helpButton->setMinimumWidth(50 * widthRatio);
+    ui->helpButton->setMinimumHeight(50 * heightRatio);
     ui->helpButton->setFlat(true);
     ui->helpButton->setStyleSheet("QPushButton { background-color: transparent }");
 
@@ -529,6 +531,7 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event)
     drag->setMimeData(mimeData);
     drag->setPixmap(QPixmap::fromImage(roms.at(curRom)));
 
+<<<<<<< HEAD
     Qt::DropAction dropAction = drag->exec(Qt::CopyAction | Qt::MoveAction);
 }
 
@@ -630,14 +633,13 @@ void setupGPIO(){
     lgGpioClaimAlert(handle,LG_SET_PULL_DOWN,LG_RISING_EDGE,buttonC4,-1);
 }
 
-void MainWindow::connectWithFCEUX(){
+void MainWindow::initServerSocket(){
     //Socket server code specified below was adapted from an example at
     //www.geeksforgeeks.org/socket-programming-cc/
     //Socket Server code sample
-    struct sockaddr_in address;
     int opt = 1;
-    int addrlen = sizeof(address);
-    char buffer[1024] = { 0 };
+    addrlen = sizeof(address);
+    std::memset(buffer, 0, 1024);
     
     // Creating socket file descriptor
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
@@ -669,7 +671,9 @@ void MainWindow::connectWithFCEUX(){
 		perror("listen");
 		exit(EXIT_FAILURE);
 	}
+}
 
+void MainWindow::connectWithFCEUX(){
     //Launching FCEUX
     OpenFCEUX();
 

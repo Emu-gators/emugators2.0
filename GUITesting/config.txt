@@ -1,3 +1,0 @@
-/mnt/c/Emugators/ROMs
-/mnt/c/Emugators/ROM_Carts
-/mnt/c/Emugators/ROM_Music
