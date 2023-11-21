@@ -65,7 +65,7 @@
        <enum>Qt::LeftToRight</enum>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>

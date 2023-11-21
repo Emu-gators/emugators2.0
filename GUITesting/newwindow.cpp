@@ -35,7 +35,7 @@ NewWindow::NewWindow(QWidget *parent) :
     ui->topLeft->setMinimumHeight(100 * heightRatio);
     ui->topLeft->setFlat(true);
     ui->topLeft->setStyleSheet("QPushButton { background-color: transparent }");
-    ui->topLeft->move((300 * (screen->availableSize().width() / 1063)) + (ui->topLeft->iconSize().width() / 2), (float)(200 * ((float)screen->availableSize().height() / 768.0)) - ((float)ui->topLeft->iconSize().height() / 2.0));
+    ui->topLeft->move((float)(0.29444 * (float)screen->availableSize().width() - (ui->topLeft->iconSize().width() / 2)), (float)(0.26041 * (float)screen->availableSize().height() - (ui->topLeft->iconSize().height() / 2)));
 
     ui->bottomRight->setIcon(QIcon("./GUI_ASSETS/Target.png"));
     ui->bottomRight->setIconSize(QSize(100 * widthRatio,100 * heightRatio));
@@ -44,7 +44,7 @@ NewWindow::NewWindow(QWidget *parent) :
     ui->bottomRight->setMinimumHeight(100 * heightRatio);
     ui->bottomRight->setFlat(true);
     ui->bottomRight->setStyleSheet("QPushButton { background-color: transparent }");
-    ui->bottomRight->move((float)screen->availableSize().width() - ((float)300 * ((float)screen->availableSize().width() / 1063.0)) - ((float)ui->topLeft->iconSize().width()/2.0), screen->availableSize().height() - (float)(200 * ((float)screen->availableSize().height() / 768.0)) - ((float)ui->topLeft->iconSize().height() / 2.0));
+    ui->bottomRight->move((float)(0.7055555 * (float)screen->availableSize().width() - (ui->bottomRight->iconSize().width() / 2 )), (float)(0.7416666 * (float)screen->availableSize().height() - (ui->bottomRight->iconSize().height() / 2)));
 
     mwPointer->playMusic = false;
     mwPointer->music->pause();
@@ -90,13 +90,20 @@ NewWindow::~NewWindow()
 
 void NewWindow::on_topLeft_clicked()
 {
+    t1 = true;
     ui->topLeft->setVisible(false);
+    if( t1 && t2) {
+        spawnUFO();
+    }
 }
 
 void NewWindow::on_bottomRight_clicked()
 {
+    t2 = true;
     ui->bottomRight->setVisible(false);
-    spawnUFO();
+    if( t1 && t2) {
+        spawnUFO();
+    }
 }
 
 

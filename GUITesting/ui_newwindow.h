@@ -66,7 +66,7 @@ public:
         NewWindow->setWindowTitle(QCoreApplication::translate("NewWindow", "Calibration", nullptr));
         topLeft->setText(QString());
         bottomRight->setText(QString());
-        scoreLabel->setText(QCoreApplication::translate("NewWindow", "TextLabel", nullptr));
+        scoreLabel->setText(QString());
     } // retranslateUi
 
 };

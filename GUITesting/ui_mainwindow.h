@@ -31,8 +31,6 @@ public:
     QSpacerItem *horizontalSpacer;
     QPushButton *debugButton;
     QPushButton *helpButton;
-    QSpacerItem *verticalSpacer_4;
-    QSpacerItem *verticalSpacer;
     QWidget *titleWidget;
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer_4;
@@ -49,7 +47,6 @@ public:
     QSpacerItem *horizontalSpacer_11;
     QPushButton *nextButton;
     QSpacerItem *horizontalSpacer_8;
-    QSpacerItem *verticalSpacer_3;
     QWidget *famicomWidget;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *famicomLeftSpacer;
@@ -95,14 +92,6 @@ public:
 
 
         verticalLayout->addWidget(menuWidget);
-
-        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer_4);
-
-        verticalSpacer = new QSpacerItem(20, 15, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        verticalLayout->addItem(verticalSpacer);
 
         titleWidget = new QWidget(centralWidget);
         titleWidget->setObjectName(QString::fromUtf8("titleWidget"));
@@ -174,10 +163,6 @@ public:
 
 
         verticalLayout->addWidget(romWidget);
-
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer_3);
 
         famicomWidget = new QWidget(centralWidget);
         famicomWidget->setObjectName(QString::fromUtf8("famicomWidget"));

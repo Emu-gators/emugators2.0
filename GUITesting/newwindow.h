@@ -36,12 +36,11 @@ class NewWindow : public QMainWindow
 
     private:
         Ui::NewWindow *ui;
-        int calibrationStage;
         QImage targetImg;
         QPixmap* ufoImg;
         QPixmap* explosionImg;
         int count;
-        bool t1,t2,t3,t4,t5;
+        bool t1,t2;
         QScreen* screen;
         double widthRatio;
         double heightRatio;

@@ -318,7 +318,7 @@ QImage MainWindow::processImage(QImage unprocessedImage)
  */ 
 void MainWindow::loadGUIImages()
 {
-    QPixmap bg(QString::fromStdString(GUITestingPath) + "./GUI_ASSETS/background.jpg");
+    QPixmap bg(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/background.jpg");
     bg = bg.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette palette;
     palette.setBrush(QPalette::Window, bg);
@@ -327,7 +327,7 @@ void MainWindow::loadGUIImages()
     //screen->availableSize();
 
     //Loads the Famicom image, scales it, and connects to ui element
-    QImage famicom(QString::fromStdString(GUITestingPath) + "./GUI_ASSETS/Nintendo-Famicom-Disk-System.png");
+    QImage famicom(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/Nintendo-Famicom-Disk-System.png");
     QImage scaleFam = famicom.scaled(180 * widthRatio, 150 * heightRatio, Qt::IgnoreAspectRatio);
 
     ui->famicom->setPixmap(QPixmap::fromImage(scaleFam));
@@ -339,7 +339,7 @@ void MainWindow::loadGUIImages()
     helpScreen->move(this->centralWidget()->rect().center() - helpScreen->rect().center());
 
     helpScreen->show();
-    QImage help(QString::fromStdString(GUITestingPath) + "./GUI_ASSETS/help.png");
+    QImage help(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/help.png");
     QImage scaleHelp = help.scaled(600 * widthRatio,500 * heightRatio,Qt::IgnoreAspectRatio);
     helpScreen->setPixmap(QPixmap::fromImage(scaleHelp));
     helpScreen->raise();
@@ -351,13 +351,13 @@ void MainWindow::loadGUIImages()
     ui->gameTitle->setFont(monospace);
     ui->gameTitle->setStyleSheet("QLabel { color : orange; }");
 
-    ui->nextButton->setIcon(QIcon(QString::fromStdString(GUITestingPath) + "./GUI_ASSETS/rightArrow.png"));
+    ui->nextButton->setIcon(QIcon(QString::fromStdString(GUITestingPath + "/GUI_ASSETS/rightArrow.png")));
     ui->nextButton->setIconSize(QSize(100 * widthRatio,100 * heightRatio));
     ui->nextButton->setMinimumWidth(100 * widthRatio);
     ui->nextButton->setMinimumHeight(100 * heightRatio);
     ui->nextButton->setFlat(true);
     ui->nextButton->setStyleSheet("QPushButton { background-color: transparent }");
-    ui->previousButton->setIcon(QIcon(QString::fromStdString(GUITestingPath) + "./GUI_ASSETS/leftArrow.png"));
+    ui->previousButton->setIcon(QIcon(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/leftArrow.png"));
     ui->previousButton->setIconSize(QSize(100 * widthRatio,100 * heightRatio));
     ui->previousButton->setMinimumWidth(100 * widthRatio);
     ui->previousButton->setMinimumHeight(100 * heightRatio);
@@ -365,17 +365,17 @@ void MainWindow::loadGUIImages()
     ui->previousButton->setFlat(true);
     ui->previousButton->setStyleSheet("QPushButton { background-color: transparent }");
 
-    ui->debugButton->setIcon(QIcon("./GUI_ASSETS/calibrate.png"));
-    ui->debugButton->setIconSize(QSize(50 * widthRatio,50 * heightRatio));
-    ui->debugButton->setMinimumWidth(50 * widthRatio);
-    ui->debugButton->setMinimumHeight(50 * heightRatio);
+    ui->debugButton->setIcon(QIcon(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/calibrate.png"));
+    ui->debugButton->setIconSize(QSize(35 * widthRatio,35 * heightRatio));
+    ui->debugButton->setMinimumWidth(35 * widthRatio);
+    ui->debugButton->setMinimumHeight(35 * heightRatio);
     ui->debugButton->setFlat(true);
     ui->debugButton->setStyleSheet("QPushButton { background-color: transparent }");
 
-    ui->helpButton->setIcon(QIcon("./GUI_ASSETS/info.png"));
-    ui->helpButton->setIconSize(QSize(50 * widthRatio,50 * heightRatio));
-    ui->helpButton->setMinimumWidth(50 * widthRatio);
-    ui->helpButton->setMinimumHeight(50 * heightRatio);
+    ui->helpButton->setIcon(QIcon(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/info.png"));
+    ui->helpButton->setIconSize(QSize(35 * widthRatio,35 * heightRatio));
+    ui->helpButton->setMinimumWidth(35 * widthRatio);
+    ui->helpButton->setMinimumHeight(35 * heightRatio);
     ui->helpButton->setFlat(true);
     ui->helpButton->setStyleSheet("QPushButton { background-color: transparent }");
 
@@ -535,7 +535,6 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event)
 
 void MainWindow::dragEnterEvent(QDragEnterEvent *event)
 {
-        std::cout << "\nDragged\n";
         event->acceptProposedAction();
 
 }
