@@ -83,7 +83,6 @@ MainWindow::MainWindow(QWidget *parent)
     screen = QGuiApplication::primaryScreen();
     widthRatio = screen->availableSize().width() / 720.0;
     heightRatio = screen->availableSize().height() / 480.0;
-    loadGUIImages();
 
     loadROMPaths();
     loadGUIImages();
