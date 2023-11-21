@@ -328,7 +328,7 @@ void MainWindow::loadGUIImages()
     //screen->availableSize();
 
     //Loads the Famicom image, scales it, and connects to ui element
-    QImage famicom(String::fromStdString(GUITestingPath) + "./GUI_ASSETS/Nintendo-Famicom-Disk-System.png");
+    QImage famicom(QString::fromStdString(GUITestingPath) + "./GUI_ASSETS/Nintendo-Famicom-Disk-System.png");
     QImage scaleFam = famicom.scaled(180 * widthRatio, 150 * heightRatio, Qt::IgnoreAspectRatio);
 
     ui->famicom->setPixmap(QPixmap::fromImage(scaleFam));
@@ -531,7 +531,6 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event)
     drag->setMimeData(mimeData);
     drag->setPixmap(QPixmap::fromImage(roms.at(curRom)));
 
-<<<<<<< HEAD
     Qt::DropAction dropAction = drag->exec(Qt::CopyAction | Qt::MoveAction);
 }
 
