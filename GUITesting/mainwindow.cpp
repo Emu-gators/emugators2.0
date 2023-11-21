@@ -347,7 +347,7 @@ void MainWindow::loadGUIImages()
     int id = QFontDatabase::addApplicationFont(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/ARCADECLASSIC.TTF");
     QString family = QFontDatabase::applicationFontFamilies(id).at(0);
     QFont monospace(family);
-    monospace.setPointSize(21 * heightRatio);
+    monospace.setPointSize(18 * heightRatio);
     ui->gameTitle->setFont(monospace);
     ui->gameTitle->setStyleSheet("QLabel { color : orange; }");
 
