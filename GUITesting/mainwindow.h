@@ -5,6 +5,9 @@
 #include "newwindow.h"
 #include <lgpio.h>
 #include <QMediaPlayer>
+#include <QLabel>
+#include <QMimeType>
+#include <QGuiApplication>
 
 //Socket Programming
 #include <netinet/in.h>
@@ -30,13 +33,24 @@ public:
     void sendCloseROM();
     bool playMusic;
     QMediaPlayer* music;
+    QMediaPlaylist* playlist;
+    int curRom;
+    void handleEjectMusic();
+    void displayCurROM();
+    void setEjectFlag();
 
 private slots:
+    void pollEjectFlag();
+    void setPlaylistLoadedFlag();
     void on_nextButton_clicked();
     void on_previousButton_clicked();
     void on_debugButton_clicked();
     void on_helpButton_clicked();
     void mousePressEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
+    void dragEnterEvent(QDragEnterEvent *event);
+    void dropEvent(QDropEvent *event);
+    void resizeEvent(QResizeEvent *evt);
 
 private:
     Ui::MainWindow *ui;
@@ -45,7 +59,6 @@ private:
     void loadROMImages();
     void loadROMPaths();
     void OpenFCEUX();
-    void displayCurROM();
     void changeRomPath();
     void connectWithFCEUX();
     void initServerSocket();
@@ -54,8 +67,6 @@ private:
     QString nameFromNES(QString);
     std::string convertExtension(std::string romImageDir, std::string path, std::string extension);
     std::vector<QImage> roms;
-    int curRom;
-    int draggedRom;
     std::vector<std::string> romPaths;
     std::vector<std::string> musicPaths;
     //Socket
@@ -70,9 +81,22 @@ private:
     std::vector<QString> romNames;
 
     QMediaPlayer* gamedrop;
-    QMediaPlaylist* playlist;
+
+    QLabel* helpScreen;
+
+    QPoint dragStartPosition;
+    QMimeType mimeType;
 
     bool showHelp;
+    QScreen* screen;
+    double widthRatio;
+    double heightRatio;
+
+    QTimer* pollEjectTimer;
+
+    bool ejectFlag;
+
+    bool playlistLoadedFlag;
 };
 
 void setupGPIO();

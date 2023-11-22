@@ -11,14 +11,12 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -27,30 +25,41 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
+    QVBoxLayout *verticalLayout;
+    QWidget *menuWidget;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
-    QWidget *widget;
-    QPushButton *previousButton;
-    QLabel *famicom;
-    QLabel *background;
     QPushButton *debugButton;
     QPushButton *helpButton;
-    QPushButton *nextButton;
-    QLabel *helpScreen;
-    QLabel *label;
-    QWidget *gridLayoutWidget;
-    QGridLayout *gridLayout;
+    QWidget *titleWidget;
+    QHBoxLayout *horizontalLayout_4;
+    QSpacerItem *horizontalSpacer_4;
     QLabel *gameTitle;
-    QSpacerItem *horizontalSpacer_2;
-    QMenuBar *menubar;
-    QStatusBar *statusbar;
+    QSpacerItem *horizontalSpacer_5;
+    QWidget *romWidget;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *romLeftSpacer1;
+    QPushButton *previousButton;
+    QSpacerItem *romLeftSpacer2;
+    QSpacerItem *romLeftSpacer3;
+    QLabel *label;
+    QSpacerItem *horizontalSpacer_9;
+    QSpacerItem *horizontalSpacer_11;
+    QPushButton *nextButton;
+    QSpacerItem *horizontalSpacer_8;
+    QWidget *famicomWidget;
+    QHBoxLayout *horizontalLayout_3;
+    QSpacerItem *famicomLeftSpacer;
+    QLabel *famicom;
+    QSpacerItem *famicomRightSpacer;
+    QSpacerItem *verticalSpacer_2;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(720, 522);
-        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        MainWindow->resize(720, 480);
+        QSizePolicy sizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
@@ -58,82 +67,133 @@ public:
         MainWindow->setMinimumSize(QSize(720, 480));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
+        sizePolicy.setHeightForWidth(centralWidget->sizePolicy().hasHeightForWidth());
+        centralWidget->setSizePolicy(sizePolicy);
         centralWidget->setMinimumSize(QSize(720, 480));
-        horizontalLayout = new QHBoxLayout(centralWidget);
+        verticalLayout = new QVBoxLayout(centralWidget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        menuWidget = new QWidget(centralWidget);
+        menuWidget->setObjectName(QString::fromUtf8("menuWidget"));
+        horizontalLayout = new QHBoxLayout(menuWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        widget = new QWidget(centralWidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setMinimumSize(QSize(720, 480));
-        previousButton = new QPushButton(widget);
-        previousButton->setObjectName(QString::fromUtf8("previousButton"));
-        previousButton->setGeometry(QRect(50, 140, 80, 23));
-        famicom = new QLabel(widget);
-        famicom->setObjectName(QString::fromUtf8("famicom"));
-        famicom->setGeometry(QRect(180, 160, 400, 300));
-        famicom->setAlignment(Qt::AlignCenter);
-        background = new QLabel(widget);
-        background->setObjectName(QString::fromUtf8("background"));
-        background->setGeometry(QRect(0, 0, 720, 480));
-        background->setScaledContents(true);
-        debugButton = new QPushButton(widget);
+        debugButton = new QPushButton(menuWidget);
         debugButton->setObjectName(QString::fromUtf8("debugButton"));
-        debugButton->setGeometry(QRect(510, 10, 80, 23));
-        helpButton = new QPushButton(widget);
+
+        horizontalLayout->addWidget(debugButton);
+
+        helpButton = new QPushButton(menuWidget);
         helpButton->setObjectName(QString::fromUtf8("helpButton"));
-        helpButton->setGeometry(QRect(590, 10, 80, 23));
-        nextButton = new QPushButton(widget);
-        nextButton->setObjectName(QString::fromUtf8("nextButton"));
-        nextButton->setGeometry(QRect(560, 140, 80, 23));
-        helpScreen = new QLabel(widget);
-        helpScreen->setObjectName(QString::fromUtf8("helpScreen"));
-        helpScreen->setGeometry(QRect(60, 40, 600, 400));
-        helpScreen->setMinimumSize(QSize(600, 400));
-        helpScreen->setScaledContents(true);
-        label = new QLabel(widget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(290, 150, 151, 71));
-        label->setAlignment(Qt::AlignCenter);
-        gridLayoutWidget = new QWidget(widget);
-        gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(100, 100, 531, 80));
-        gridLayout = new QGridLayout(gridLayoutWidget);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        gridLayout->setContentsMargins(0, 0, 0, 0);
-        gameTitle = new QLabel(gridLayoutWidget);
+
+        horizontalLayout->addWidget(helpButton);
+
+
+        verticalLayout->addWidget(menuWidget);
+
+        titleWidget = new QWidget(centralWidget);
+        titleWidget->setObjectName(QString::fromUtf8("titleWidget"));
+        horizontalLayout_4 = new QHBoxLayout(titleWidget);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_4);
+
+        gameTitle = new QLabel(titleWidget);
         gameTitle->setObjectName(QString::fromUtf8("gameTitle"));
-        gameTitle->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(gameTitle, 0, 0, 1, 1);
+        horizontalLayout_4->addWidget(gameTitle);
 
-        helpScreen->raise();
-        background->raise();
-        previousButton->raise();
-        famicom->raise();
-        debugButton->raise();
-        helpButton->raise();
-        nextButton->raise();
-        gridLayoutWidget->raise();
-        label->raise();
-        gridLayoutWidget->raise();
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addWidget(widget);
+        horizontalLayout_4->addItem(horizontalSpacer_5);
 
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addItem(horizontalSpacer_2);
+        verticalLayout->addWidget(titleWidget);
+
+        romWidget = new QWidget(centralWidget);
+        romWidget->setObjectName(QString::fromUtf8("romWidget"));
+        horizontalLayout_2 = new QHBoxLayout(romWidget);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        romLeftSpacer1 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(romLeftSpacer1);
+
+        previousButton = new QPushButton(romWidget);
+        previousButton->setObjectName(QString::fromUtf8("previousButton"));
+
+        horizontalLayout_2->addWidget(previousButton);
+
+        romLeftSpacer2 = new QSpacerItem(80, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(romLeftSpacer2);
+
+        romLeftSpacer3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(romLeftSpacer3);
+
+        label = new QLabel(romWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy);
+        label->setMinimumSize(QSize(100, 100));
+        label->setScaledContents(false);
+        label->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_2->addWidget(label);
+
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_9);
+
+        horizontalSpacer_11 = new QSpacerItem(80, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_11);
+
+        nextButton = new QPushButton(romWidget);
+        nextButton->setObjectName(QString::fromUtf8("nextButton"));
+
+        horizontalLayout_2->addWidget(nextButton);
+
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_8);
+
+
+        verticalLayout->addWidget(romWidget);
+
+        famicomWidget = new QWidget(centralWidget);
+        famicomWidget->setObjectName(QString::fromUtf8("famicomWidget"));
+        horizontalLayout_3 = new QHBoxLayout(famicomWidget);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        famicomLeftSpacer = new QSpacerItem(235, 20, QSizePolicy::MinimumExpanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(famicomLeftSpacer);
+
+        famicom = new QLabel(famicomWidget);
+        famicom->setObjectName(QString::fromUtf8("famicom"));
+        sizePolicy.setHeightForWidth(famicom->sizePolicy().hasHeightForWidth());
+        famicom->setSizePolicy(sizePolicy);
+        famicom->setMinimumSize(QSize(180, 150));
+        famicom->setScaledContents(false);
+        famicom->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_3->addWidget(famicom);
+
+        famicomRightSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(famicomRightSpacer);
+
+
+        verticalLayout->addWidget(famicomWidget);
+
+        verticalSpacer_2 = new QSpacerItem(20, 140, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_2);
 
         MainWindow->setCentralWidget(centralWidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 720, 20));
-        MainWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
 
@@ -143,15 +203,13 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        debugButton->setText(QString());
+        helpButton->setText(QString());
+        gameTitle->setText(QCoreApplication::translate("MainWindow", "gameTitle", nullptr));
         previousButton->setText(QString());
-        famicom->setText(QCoreApplication::translate("MainWindow", "Famicom", nullptr));
-        background->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        debugButton->setText(QCoreApplication::translate("MainWindow", "Calibrate", nullptr));
-        helpButton->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "rom", nullptr));
         nextButton->setText(QString());
-        helpScreen->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "ROM", nullptr));
-        gameTitle->setText(QCoreApplication::translate("MainWindow", "ROM Title", nullptr));
+        famicom->setText(QCoreApplication::translate("MainWindow", "famicom", nullptr));
     } // retranslateUi
 
 };
