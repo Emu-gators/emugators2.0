@@ -351,7 +351,7 @@ void MainWindow::loadGUIImages()
     ui->gameTitle->setFont(monospace);
     ui->gameTitle->setStyleSheet("QLabel { color : orange; }");
 
-    ui->nextButton->setIcon(QIcon(QString::fromStdString(GUITestingPath + "/GUI_ASSETS/rightArrow.png")));
+    ui->nextButton->setIcon(QIcon(QString::fromStdString(GUITestingPath) + "/GUI_ASSETS/rightArrow.png"));
     ui->nextButton->setIconSize(QSize(100 * widthRatio,100 * heightRatio));
     ui->nextButton->setMinimumWidth(100 * widthRatio);
     ui->nextButton->setMinimumHeight(100 * heightRatio);

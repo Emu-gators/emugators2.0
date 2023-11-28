@@ -38,6 +38,7 @@ public:
     void handleEjectMusic();
     void displayCurROM();
     void setEjectFlag();
+     std::string GUITestingPath;
 
 private slots:
     void pollEjectFlag();
@@ -76,7 +77,7 @@ private:
     int addrlen;
     struct sockaddr_in address;
     
-    std::string GUITestingPath;
+   
 
     std::vector<QString> romNames;
 

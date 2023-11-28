@@ -110,7 +110,7 @@ void NewWindow::on_bottomRight_clicked()
 
 void NewWindow::spawnUFO(){
 
-    int id = QFontDatabase::addApplicationFont("./GUI_ASSETS/ARCADECLASSIC.TTF");
+    int id = QFontDatabase::addApplicationFont( QString::fromStdString(mwPointer->GUITestingPath) + "/GUI_ASSETS/ARCADECLASSIC.TTF");
     QString family = QFontDatabase::applicationFontFamilies(id).at(0);
     QFont monospace(family);
     monospace.setPointSize(15 * heightRatio);
@@ -130,8 +130,8 @@ void NewWindow::spawnUFO(){
     ufoScene -> setSceneRect(0, 0, screen->availableSize().width(), screen->availableSize().height());
     ui->graphicsView->setScene(ufoScene);
     //create pixmap with ufo.png
-    ufoImg = new QPixmap("./GUI_ASSETS/ufo.png");
-    explosionImg = new QPixmap("./GUI_ASSETS/explode.png");
+    ufoImg = new QPixmap(QString::fromStdString(mwPointer->GUITestingPath) + "/GUI_ASSETS/ufo.png");
+    explosionImg = new QPixmap(QString::fromStdString(mwPointer->GUITestingPath) + "/GUI_ASSETS/explode.png");
     *ufoImg = ufoImg->scaled(100 * widthRatio, 100 * heightRatio, Qt::KeepAspectRatio);
     *explosionImg = explosionImg->scaled(100 * widthRatio, 100 * heightRatio, Qt::KeepAspectRatio);
 
@@ -163,7 +163,7 @@ void NewWindow::timerEvent(QTimerEvent *event){
 void NewWindow::resizeEvent(QResizeEvent *evt)
 {
     
-    QPixmap bg("./GUI_ASSETS/space.png");
+    QPixmap bg(QString::fromStdString(mwPointer->GUITestingPath) + "/GUI_ASSETS/space.png");
     bg = bg.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette palette;
     palette.setBrush(QPalette::Window, bg);
